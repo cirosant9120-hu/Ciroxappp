@@ -748,7 +748,7 @@ const CUPO_TOTAL   = 8400000;
 const UMBRAL_CUOTA = 500000;
 const CUOTA_MANEJO = 35000;
 const CORTE        = 8;
-const SHEETS_URL   = 'https://script.google.com/macros/s/AKfycbzz7lqqsXQDAzSdPrk4J_SDi323bdtZh0D9GuozyS3tYYKXfgWDo1oZODV3m_FwreG9Fw/exec';
+const SHEETS_URL   = 'https://script.google.com/macros/s/AKfycbz-d9HdqeumcFTNimny12YfSJIFkdcqTEyIvySEBOSssjaTq-dVrX-GCRJTss4L6mMiOw/exec';
 const MS = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
 const CATS = {'🏠 Casa':'#00e5ff','✈️ Vuelos':'#7c4dff','⛽ Gasolina':'#ff7a1a','🍔 Comida':'#ffd600','📱 Digital':'#ff4d9e','🔧 Varios':'#3b82f6'};
 
@@ -1441,10 +1441,12 @@ function guardarVenta(){
   const r=$('vc-rete').checked;const i=$('vc-ica').checked;
   const rfp=r?0.025:0;const rip=i?0.01104:0;
   const b=t/(1+0.19-rfp-rip);const iv=b*0.19;const rf=b*rfp;const ri=b*rip;const com=b*0.01;
-  venMovs.unshift({id:uid(),desc:cliente,fecha,totalPagado:t,base:b,iva:iv,retefuente:rf,reteica:ri,comision:com,aplicaRete:r,aplicaIca:i,estado});
+  const nuevaVenta = {id:uid(),desc:cliente,fecha,totalPagado:t,base:b,iva:iv,retefuente:rf,reteica:ri,comision:com,aplicaRete:r,aplicaIca:i,estado};
+  venMovs.unshift(nuevaVenta);
   saveData(KEYS.ventas,venMovs);
   $('vc-total').value='';$('vc-cliente').value='';$('vc-preview').style.display='none';$('vc-com-badge').style.display='none';
   renderVentas();setInner(3,0);toast('✓ Venta registrada · Comisión: '+fmt(com),'ok');
+  enviarSheets({modulo:'ventas', ...nuevaVenta});
 }
 
 function renderVentas(){
@@ -1483,13 +1485,15 @@ function guardarTcGasto(){
   const valor=parseFloat($('tg-valor').value);const fecha=$('tg-fecha').value;const cuotas=parseInt($('tg-cuotas').value)||1;
   if(!valor||valor<=0){toast('⚠ Valor requerido','err');return;}if(!fecha){toast('⚠ Fecha requerida','err');return;}
   const m={id:uid(),tipo:'compra',desc,cat,valor,fecha,cuotas};tcMovs.unshift(m);saveData(KEYS.tc,tcMovs);
-  closeM('m-gasto-tc');renderTC();toast('✓ Gasto en '+cat,'ok');enviarSheets({tipo:'compra',desc,cat,valor,fecha,cuotas});
+  closeM('m-gasto-tc');renderTC();toast('✓ Gasto en '+cat,'ok');
+  enviarSheets({modulo:'credito', tipo:'compra',desc,cat,valor,fecha,cuotas, id: tcMovs[0].id});
 }
 function guardarTcAbono(){
   const desc=$('ta-desc').value.trim()||'Abono';const valor=parseFloat($('ta-valor').value);const fecha=$('ta-fecha').value;
   if(!valor||valor<=0){toast('⚠ Valor requerido','err');return;}if(!fecha){toast('⚠ Fecha requerida','err');return;}
   const m={id:uid(),tipo:'pago',desc,cat:'💰 Abono',valor,fecha,cuotas:1};tcMovs.unshift(m);saveData(KEYS.tc,tcMovs);
-  closeM('m-abono-tc');renderTC();toast('✓ Abono registrado · Deuda actualizada','ok');enviarSheets({tipo:'pago',desc,valor,fecha,cuotas:1});
+  closeM('m-abono-tc');renderTC();toast('✓ Abono registrado · Deuda actualizada','ok');
+  enviarSheets({modulo:'credito', tipo:'pago',desc,valor,fecha,cuotas:1, id: tcMovs[0].id});
 }
 function guardarFinanza(){
   const tipo=$('fm-tipo').value;const desc=$('fm-desc').value.trim()||tipo;const valor=parseFloat($('fm-valor').value);const fecha=$('fm-fecha').value;
@@ -1511,26 +1515,138 @@ function guardarVuelo(){
 }
 
 // ══════════════════════════════════════════════
-//  SHEETS SYNC
+//  SHEETS SYNC — TODOS LOS MÓDULOS
 // ══════════════════════════════════════════════
-function setSyncState(state,txt){const dot=$('sync-dot');const stxt=$('sync-txt');stxt.textContent=txt;dot.className='sync-dot'+(state==='ok'?' ok':state==='loading'?' loading':'');}
+function setSyncState(state,txt){
+  const dot=$('sync-dot'), stxt=$('sync-txt');
+  if(stxt) stxt.textContent=txt;
+  if(dot) dot.className='sync-dot'+(state==='ok'?' ok':state==='loading'?' loading':'');
+}
+
+// ── LEER desde Sheets al abrir la app ──
 async function syncAll(){
-  if(!SHEETS_URL){setSyncState('','OFFLINE');return;}
+  if(!SHEETS_URL){ setSyncState('','OFFLINE'); return; }
   setSyncState('loading','SINCRONIZANDO…');
   try{
-    const res=await fetch(SHEETS_URL+'?t='+Date.now());const data=await res.json();
-    if(data.ok&&data.movimientos&&data.movimientos.length>0){
-      tcMovs=mergeTc(tcMovs,data.movimientos.map(m=>({...m,cat:m.cat||'🔧 Varios'})));
-      modoOnline=true;setSyncState('ok','CONECTADO');renderTC();
-    }else{setSyncState('ok','SINCRONIZADO');}
-  }catch(e){setSyncState('','OFFLINE');console.warn('Sheets:',e);}
+    const res  = await fetch(SHEETS_URL+'?modulo=all&t='+Date.now());
+    const data = await res.json();
+    if(!data.ok) throw new Error(data.error||'Error Sheets');
+
+    // CRÉDITO — merge (no borra datos locales)
+    if(data.credito && data.credito.length > 0){
+      tcMovs = mergeTc(tcMovs, data.credito.map(m=>({...m, cat: m.cat||'🔧 Varios'})));
+      saveData(KEYS.tc, tcMovs);
+    }
+
+    // VENTAS — merge
+    if(data.ventas && data.ventas.length > 0){
+      const localIds = new Set(venMovs.map(m=>String(m.id)));
+      const nuevas   = data.ventas.filter(v=>!localIds.has(String(v.id)));
+      if(nuevas.length > 0){
+        venMovs = [...venMovs, ...nuevas];
+        saveData(KEYS.ventas, venMovs);
+      }
+    }
+
+    modoOnline = true;
+    setSyncState('ok','✓ SHEETS CONECTADO');
+    renderTC();
+    if(moduloActual===3) renderVentas();
+
+  } catch(e){
+    setSyncState('','OFFLINE');
+    console.warn('Sheets sync:', e);
+  }
 }
-async function enviarSheets(p){if(!SHEETS_URL||!modoOnline)return;try{await fetch(SHEETS_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)});}catch(e){}}
+
+// ── ENVIAR un movimiento nuevo ──
+async function enviarSheets(payload){
+  if(!SHEETS_URL || !modoOnline) return;
+  try{
+    await fetch(SHEETS_URL, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
+    });
+  } catch(e){ console.warn('enviarSheets:', e); }
+}
+
+// ── SYNC COMPLETO — sube todo al hacer clic en SYNC ──
+async function syncCompletoSheets(){
+  if(!SHEETS_URL){ toast('⚠ Sin URL de Sheets configurada','err'); return; }
+  setSyncState('loading','SUBIENDO TODO…');
+  toast('⟳ Enviando datos a Sheets…','ok');
+
+  // Armar finanzas plano (últimos 6 meses)
+  const finanzasFlat = [];
+  const hoy3 = new Date();
+  for(let i=5; i>=0; i--){
+    const d  = new Date(hoy3.getFullYear(), hoy3.getMonth()-i, 1);
+    const y2 = d.getFullYear(), m2 = d.getMonth();
+    const k  = 'fin_mes_'+y2+'-'+String(m2).padStart(2,'0');
+    const raw = localStorage.getItem(k);
+    if(!raw) continue;
+    try{
+      const md = JSON.parse(raw);
+      const mk = y2+'-'+String(m2).padStart(2,'0');
+      md.ingresos.forEach(x => finanzasFlat.push({mesKey:mk,tipoItem:'ingreso',idItem:x.id,nombre:x.nombre,valor:x.monto,pagado:false,cat:'Ingreso',orden:0}));
+      md.gastos.forEach(x  => finanzasFlat.push({mesKey:mk,tipoItem:'gasto',idItem:x.id,nombre:x.nombre,valor:x.monto,pagado:x.pagado||false,cat:x.cat||'Varios',orden:x.orden||99}));
+    }catch(e){}
+  }
+
+  const payload = {
+    accion:   'sync_completo',
+    credito:  tcMovs,
+    finanzas: finanzasFlat,
+    clases:   claseMovs,
+    ventas:   venMovs,
+  };
+
+  try{
+    // Apps Script requiere no-cors para POST
+    // Los datos llegan aunque no podamos leer la respuesta
+    await fetch(SHEETS_URL, {
+      method:  'POST',
+      mode:    'no-cors',
+      headers: {'Content-Type':'text/plain'},
+      body:    JSON.stringify(payload)
+    });
+
+    modoOnline = true;
+    setSyncState('ok','✓ DATOS ENVIADOS');
+    const tc = tcMovs.length;
+    const fi = finanzasFlat.length;
+    const ve = venMovs.length;
+    toast(`✓ Enviado · ${tc} TC · ${fi} Finanzas · ${ve} Ventas`,'ok');
+
+  }catch(e){
+    setSyncState('','ERROR');
+    toast('⚠ Error: '+e.message,'err');
+    console.error('Sync error:',e);
+  }
+}
+
+// ── ENVIAR un item individual ──
+async function enviarSheets(payload){
+  if(!SHEETS_URL) return;
+  try{
+    await fetch(SHEETS_URL, {
+      method:  'POST',
+      mode:    'no-cors',
+      headers: {'Content-Type':'text/plain'},
+      body:    JSON.stringify(payload)
+    });
+    modoOnline = true;
+  }catch(e){ console.warn('enviarSheets:', e); }
+}
+
+// Asignar SYNC al botón
+document.getElementById('sync-txt').onclick = syncCompletoSheets;
 
 // ══════════════════════════════════════════════
 //  TOAST & UTILS
 // ══════════════════════════════════════════════
-function toast(msg,t='ok'){const el=$('toast');el.textContent=msg;el.className='toast '+t+' show';setTimeout(()=>el.classList.remove('show'),2800);}
+function toast(msg,t='ok'){const el=document.getElementById('toast');el.textContent=msg;el.className='toast '+t+' show';setTimeout(()=>el.classList.remove('show'),2800);}
 function $(id){return document.getElementById(id);}
 
 // ══════════════════════════════════════════════
@@ -1538,18 +1654,17 @@ function $(id){return document.getElementById(id);}
 // ══════════════════════════════════════════════
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 let dp=null;
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e;if(!localStorage.getItem('cirox_no_install'))setTimeout(()=>$('install-banner').classList.add('show'),5000);});
-$('btn-install').addEventListener('click',async()=>{if(!dp)return;dp.prompt();await dp.userChoice;dp=null;$('install-banner').classList.remove('show');toast('✓ CIROX instalado','ok');});
-function dismissInstall(){localStorage.setItem('cirox_no_install','1');$('install-banner').classList.remove('show');}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e;if(!localStorage.getItem('cirox_no_install'))setTimeout(()=>document.getElementById('install-banner').classList.add('show'),5000);});
+document.getElementById('btn-install').addEventListener('click',async()=>{if(!dp)return;dp.prompt();await dp.userChoice;dp=null;document.getElementById('install-banner').classList.remove('show');toast('✓ CIROX instalado','ok');});
+function dismissInstall(){localStorage.setItem('cirox_no_install','1');document.getElementById('install-banner').classList.remove('show');}
 
 // ══════════════════════════════════════════════
 //  INIT
 // ══════════════════════════════════════════════
 renderInnerTabs(0);
 renderTC();
-// Pre-calcular nómina (los inputs ya tienen values en el HTML)
 setTimeout(calcNomina, 100);
-document.getElementById('vc-fecha').value = hoy();
+document.getElementById('vc-fecha').value = new Date().toISOString().split('T')[0];
 syncAll();
 </script>
 </body>
