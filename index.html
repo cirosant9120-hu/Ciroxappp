@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>CIROX Â· Sistema Financiero</title>
+<title>CIROX · Sistema Financiero</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Barlow+Condensed:wght@300;400;600;700;900&family=Rajdhani:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
@@ -30,7 +30,7 @@ html,body{height:100%;}
 body{background:var(--bg);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:15px;overflow-x:hidden;padding-top:var(--safe-top);}
 body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 80% 50% at 5% 0%,rgba(59,130,246,0.05) 0%,transparent 60%),radial-gradient(ellipse 60% 60% at 95% 100%,rgba(124,77,255,0.04) 0%,transparent 60%);}
 
-/* â”€â”€ APP HEADER â”€â”€ */
+/* ── APP HEADER ── */
 .app-header{position:sticky;top:0;z-index:200;background:rgba(7,9,15,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:50px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;}
 .logo-wrap{display:flex;align-items:center;gap:8px;}
 .logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;letter-spacing:4px;background:linear-gradient(135deg,#ff3c2a,#ff7a1a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
@@ -42,7 +42,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .sync-txt{font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);letter-spacing:1px;cursor:pointer;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
 
-/* â”€â”€ MODULE TABS â”€â”€ */
+/* ── MODULE TABS ── */
 .mod-nav{background:rgba(7,9,15,0.9);border-bottom:1px solid var(--border);display:flex;overflow-x:auto;scrollbar-width:none;padding:0 4px;}
 .mod-nav::-webkit-scrollbar{display:none;}
 .mod-tab{flex-shrink:0;padding:0 16px;height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;-webkit-tap-highlight-color:transparent;}
@@ -51,13 +51,13 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .mod-tab.active .mod-tab-label{color:var(--text);}
 .mod-tab.active{border-bottom-color:var(--red);}
 
-/* â”€â”€ INNER TABS â”€â”€ */
+/* ── INNER TABS ── */
 .inner-nav{background:var(--bg2);border-bottom:1px solid var(--border);display:flex;overflow-x:auto;scrollbar-width:none;padding:0 12px;}
 .inner-nav::-webkit-scrollbar{display:none;}
 .inner-tab{flex-shrink:0;padding:8px 12px;font-family:'Space Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text2);cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;white-space:nowrap;-webkit-tap-highlight-color:transparent;}
 .inner-tab.active{color:var(--cyan);border-bottom-color:var(--cyan);}
 
-/* â”€â”€ STATUS BAR â”€â”€ */
+/* ── STATUS BAR ── */
 .status-bar{background:var(--bg2);border-bottom:1px solid var(--border);padding:5px 14px;display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);letter-spacing:1px;white-space:nowrap;}
 .status-bar::-webkit-scrollbar{display:none;}
 .dot{color:rgba(255,255,255,0.15);}
@@ -65,16 +65,16 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .b-ok{background:rgba(0,230,118,0.1);border:1px solid rgba(0,230,118,0.3);color:var(--green);}
 .b-warn{background:rgba(255,60,42,0.1);border:1px solid rgba(255,60,42,0.3);color:var(--red);}
 
-/* â”€â”€ VIEWS â”€â”€ */
+/* ── VIEWS ── */
 .module{display:none;position:relative;z-index:1;}.module.active{display:block;}
 .view{display:none;padding-bottom:80px;}.view.active{display:block;}
 .main{padding:14px;max-width:1400px;margin:0 auto;}
 
-/* â”€â”€ SECTION LABEL â”€â”€ */
+/* ── SECTION LABEL ── */
 .sl{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:3px;color:var(--text2);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:10px;}
 .sl::after{content:'';flex:1;height:1px;background:var(--border);}
 
-/* â”€â”€ KPI GRID â”€â”€ */
+/* ── KPI GRID ── */
 .kpi-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:12px;}
 .kpi-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px;}
 @media(max-width:900px){.kpi-grid{grid-template-columns:repeat(2,1fr);}}
@@ -98,14 +98,14 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .kpi-val.orange{color:var(--orange);} .kpi-val.pink{color:var(--pink);}
 .kpi-sub{font-size:8px;color:var(--text2);margin-top:3px;font-family:'Space Mono',monospace;}
 
-/* â”€â”€ ALERTA â”€â”€ */
+/* ── ALERTA ── */
 .alerta{background:linear-gradient(135deg,rgba(255,60,42,0.1),rgba(255,122,26,0.05));border:1px solid rgba(255,60,42,0.25);border-radius:8px;padding:11px 14px;margin-bottom:12px;display:flex;align-items:center;gap:10px;}
 .alerta.hide{display:none;}
 .al-ico{font-size:18px;flex-shrink:0;}
 .al-tit{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;color:var(--red);}
 .al-desc{font-size:11px;color:var(--text3);margin-top:1px;}
 
-/* â”€â”€ CUPO BAR â”€â”€ */
+/* ── CUPO BAR ── */
 .cupo-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:12px;box-shadow:var(--card);}
 .cupo-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
 .cupo-ttl{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:2px;color:var(--text2);text-transform:uppercase;}
@@ -115,7 +115,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .cupo-stats{display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:7px;}
 .cupo-stats span:first-child{color:var(--text3);} .cupo-stats span:nth-child(2){color:var(--emerald);} .cupo-stats span:last-child{color:var(--text2);}
 
-/* â”€â”€ CICLO BIG â”€â”€ */
+/* ── CICLO BIG ── */
 .ciclo-big{background:linear-gradient(135deg,rgba(0,229,255,0.05),rgba(124,77,255,0.02));border:1px solid rgba(0,229,255,0.12);border-radius:10px;padding:14px 16px;margin-bottom:12px;}
 .ciclo-big-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
 .ciclo-big-ttl{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:2px;color:rgba(0,229,255,0.5);text-transform:uppercase;}
@@ -126,17 +126,17 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .ci-lbl{font-family:'Space Mono',monospace;font-size:7px;letter-spacing:1px;color:var(--text2);text-transform:uppercase;margin-bottom:3px;}
 .ci-val{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;}
 
-/* â”€â”€ GRID â”€â”€ */
+/* ── GRID ── */
 .grid2{display:grid;grid-template-columns:1fr 300px;gap:12px;}
 @media(max-width:900px){.grid2{grid-template-columns:1fr;}}
 .side-col{display:flex;flex-direction:column;gap:10px;}
 
-/* â”€â”€ CARD â”€â”€ */
+/* ── CARD ── */
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;box-shadow:var(--card);overflow:hidden;margin-bottom:12px;}
 .card-hdr{padding:11px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
 .card-ttl{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:2px;color:var(--text2);text-transform:uppercase;}
 
-/* â”€â”€ FINANZAS HEADER â”€â”€ */
+/* ── FINANZAS HEADER ── */
 .fin-header{margin-bottom:20px;animation:fadeDown 0.5s ease both;}
 .fin-h1{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,5vw,2.8rem);line-height:1;background:linear-gradient(135deg,#e2e8f0 0%,#3b82f6 60%,#8b5cf6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .fin-h1 em{font-style:italic;}
@@ -144,7 +144,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .fin-mes-badge{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--blue);background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:6px 14px;letter-spacing:1px;text-transform:uppercase;}
 @keyframes fadeDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
 
-/* â”€â”€ PROGRESS BAR â”€â”€ */
+/* ── PROGRESS BAR ── */
 .prog-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin-bottom:12px;}
 .prog-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
 .prog-ttl{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3);}
@@ -153,7 +153,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .prog-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--yellow),var(--red));transition:width 1s ease;}
 .prog-labels{display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);}
 
-/* â”€â”€ GASTOS LIST â”€â”€ */
+/* ── GASTOS LIST ── */
 .gasto-item{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:7px;margin-bottom:3px;transition:background 0.15s;cursor:pointer;}
 .gasto-item:hover{background:var(--bg3);}
 .gasto-nom{font-size:13px;color:var(--text);display:flex;align-items:center;gap:7px;}
@@ -163,7 +163,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .gasto-est{font-family:'Space Mono',monospace;font-size:7px;text-transform:uppercase;letter-spacing:1px;margin-top:1px;}
 .est-pagado{color:var(--emerald);} .est-pendiente{color:var(--yellow);}
 
-/* â”€â”€ DONUT â”€â”€ */
+/* ── DONUT ── */
 .donut-wrap{display:flex;align-items:center;gap:16px;padding:6px 0;}
 .donut-legend{flex:1;}
 .leg-item{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;font-family:'Space Mono',monospace;font-size:9px;}
@@ -171,18 +171,18 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .leg-nm{color:var(--text3);display:flex;align-items:center;}
 .leg-pct{font-family:'Syne',sans-serif;font-weight:700;font-size:10px;}
 
-/* â”€â”€ CUENTAS â”€â”€ */
+/* ── CUENTAS ── */
 .cuenta-item{display:flex;justify-content:space-between;align-items:center;padding:9px 11px;background:var(--bg3);border-radius:8px;margin-bottom:7px;border:1px solid var(--border);}
 .cuenta-nom{font-family:'Space Mono',monospace;font-size:10px;color:var(--text3);}
 .cuenta-val{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;}
 
-/* â”€â”€ ORDEN PAGO â”€â”€ */
+/* ── ORDEN PAGO ── */
 .orden-item{display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:7px;margin-bottom:3px;}
 .orden-num{width:20px;height:20px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:9px;font-weight:700;color:var(--blue);flex-shrink:0;}
 .orden-nom{font-size:12px;flex:1;}
 .orden-monto{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;}
 
-/* â”€â”€ NÃ“MINA CALCULATOR â”€â”€ */
+/* ── NÓMINA CALCULATOR ── */
 .nomina-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px;margin-bottom:12px;}
 .nomina-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
 @media(max-width:480px){.nomina-grid{grid-template-columns:1fr;}}
@@ -195,7 +195,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .nom-neto-lbl{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:1px;color:var(--blue);}
 .nom-neto-val{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;color:var(--blue);}
 
-/* â”€â”€ TABLA â”€â”€ */
+/* ── TABLA ── */
 .tbl{width:100%;border-collapse:collapse;}
 .tbl th{font-family:'Space Mono',monospace;font-size:7px;letter-spacing:1.5px;color:var(--text2);text-transform:uppercase;padding:8px 12px;text-align:left;border-bottom:1px solid var(--border);background:var(--bg3);white-space:nowrap;}
 .tbl td{padding:9px 12px;font-family:'Rajdhani',sans-serif;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.022);}
@@ -216,7 +216,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .btn-del{background:none;border:none;color:var(--text2);cursor:pointer;font-size:13px;padding:3px 7px;-webkit-tap-highlight-color:transparent;}
 .mini-sel{background:var(--bg3);border:1px solid var(--border);color:var(--text3);padding:4px 9px;border-radius:4px;font-family:'Space Mono',monospace;font-size:8px;letter-spacing:1px;outline:none;cursor:pointer;-webkit-appearance:none;}
 
-/* â”€â”€ ABONO CTA â”€â”€ */
+/* ── ABONO CTA ── */
 .abono-cta{background:linear-gradient(135deg,rgba(0,230,118,0.07),rgba(0,230,118,0.02));border:1px solid rgba(0,230,118,0.15);border-radius:10px;padding:14px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
 .abono-cta-top{display:flex;align-items:center;gap:10px;margin-bottom:7px;}
 .abono-ico{width:36px;height:36px;border-radius:6px;background:rgba(0,230,118,0.1);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
@@ -224,14 +224,14 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .abono-cta-sub{font-size:11px;color:var(--text3);margin-bottom:8px;}
 .abono-cta-btn{display:flex;align-items:center;justify-content:center;background:rgba(0,230,118,0.08);border:1px solid rgba(0,230,118,0.25);border-radius:5px;padding:9px;color:var(--emerald);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;}
 
-/* â”€â”€ CICLO LATERAL â”€â”€ */
+/* ── CICLO LATERAL ── */
 .ciclo-lat{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px;}
 .ciclo-lat-lbl{font-family:'Space Mono',monospace;font-size:7px;letter-spacing:2px;color:var(--text2);text-transform:uppercase;margin-bottom:10px;}
 .cr{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.04);font-size:12px;}
 .cr:last-child{border-bottom:none;}
 .cr .ck{color:var(--text3);}
 
-/* â”€â”€ MINI CHART â”€â”€ */
+/* ── MINI CHART ── */
 .mini-chart{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:13px 14px;}
 .mini-chart-ttl{font-family:'Space Mono',monospace;font-size:7px;letter-spacing:2px;color:var(--text2);text-transform:uppercase;margin-bottom:10px;}
 .bar-chart{display:flex;align-items:flex-end;gap:4px;height:60px;}
@@ -242,7 +242,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .bf-e{background:rgba(255,255,255,0.06);}
 .bar-lbl{font-family:'Space Mono',monospace;font-size:6px;color:var(--text2);}
 
-/* â”€â”€ CAT GRID â”€â”€ */
+/* ── CAT GRID ── */
 .cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px;}
 @media(min-width:600px){.cat-grid{grid-template-columns:repeat(3,1fr);}}
 .cat-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:border-color 0.2s;}
@@ -255,7 +255,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .cat-bar-bg{height:3px;background:var(--bg4);border-radius:2px;margin-top:7px;overflow:hidden;}
 .cat-bar-fill{height:100%;border-radius:2px;}
 
-/* â”€â”€ VENTAS CALC â”€â”€ */
+/* ── VENTAS CALC ── */
 .venta-preview{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:13px 15px;margin-top:12px;}
 .vp-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.04);font-family:'Space Mono',monospace;font-size:10px;}
 .vp-row:last-child{border-bottom:none;}
@@ -265,7 +265,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .com-lbl{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:1px;color:var(--orange);}
 .com-val{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;color:var(--orange);}
 
-/* â”€â”€ VUELO CARD â”€â”€ */
+/* ── VUELO CARD ── */
 .vuelo-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;}
 .vuelo-ico{width:40px;height:40px;border-radius:8px;background:rgba(124,77,255,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
 .vuelo-info{flex:1;}
@@ -274,11 +274,11 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .vuelo-estado{margin-top:5px;}
 .vuelo-val{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;color:var(--red);white-space:nowrap;}
 
-/* â”€â”€ CLASE CARD â”€â”€ */
+/* ── CLASE CARD ── */
 .clase-presencial{background:linear-gradient(135deg,rgba(124,77,255,0.06),rgba(59,130,246,0.03));border:1px solid rgba(124,77,255,0.15);}
 .clase-virtual{background:var(--bg2);border:1px solid rgba(59,130,246,0.12);}
 
-/* â”€â”€ MODALES â”€â”€ */
+/* ── MODALES ── */
 .modal-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);backdrop-filter:blur(8px);z-index:1000;align-items:flex-end;justify-content:center;}
 @media(min-width:600px){.modal-ov{align-items:center;padding:20px;} .modal{border-radius:12px!important;max-width:460px;}}
 .modal-ov.open{display:flex;}
@@ -302,20 +302,20 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .bg-blue{background:var(--blue);} .bg-orange{background:var(--orange);}
 .bg-purple{background:var(--purple);}
 
-/* â”€â”€ FAB â”€â”€ */
+/* ── FAB ── */
 .fabs{position:fixed;bottom:calc(20px + var(--safe-bottom));right:14px;display:flex;flex-direction:column;gap:10px;z-index:150;}
 .fab{width:50px;height:50px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent;transition:transform 0.15s;}
 .fab:active{transform:scale(0.92);}
 .fab-gasto{background:var(--red);color:#fff;font-size:22px;box-shadow:0 4px 18px rgba(255,60,42,0.4);}
 .fab-abono{background:rgba(16,185,129,0.15);border:1px solid var(--emerald);color:var(--emerald);font-size:17px;}
 
-/* â”€â”€ TOAST â”€â”€ */
+/* ── TOAST ── */
 .toast{position:fixed;bottom:calc(18px + var(--safe-bottom));left:14px;right:14px;text-align:center;padding:10px 16px;border-radius:8px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:1px;z-index:9999;transform:translateY(100px);opacity:0;transition:all 0.3s;}
 .toast.show{transform:translateY(0);opacity:1;}
 .toast.ok{background:var(--bg2);border:1px solid var(--emerald);color:var(--emerald);}
 .toast.err{background:var(--bg2);border:1px solid var(--red);color:var(--red);}
 
-/* â”€â”€ INSTALL â”€â”€ */
+/* ── INSTALL ── */
 .install-banner{display:none;position:fixed;bottom:calc(14px + var(--safe-bottom));left:14px;right:14px;background:var(--bg2);border:1px solid rgba(0,229,255,0.25);border-radius:10px;padding:13px 14px;z-index:500;flex-direction:column;gap:8px;}
 .install-banner.show{display:flex;}
 .ib-txt{font-family:'Rajdhani',sans-serif;font-size:13px;color:var(--text3);}
@@ -336,7 +336,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   <div class="logo-wrap">
     <div>
       <div class="logo">CIROX</div>
-      <div class="logo-sub">Sistema Financiero Â· Ciro Santos</div>
+      <div class="logo-sub">Sistema Financiero · Ciro Santos</div>
     </div>
   </div>
   <div class="sync-area">
@@ -345,35 +345,35 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   </div>
 </div>
 
-<!-- MÃ“DULOS -->
+<!-- MÓDULOS -->
 <div class="mod-nav">
-  <div class="mod-tab active" onclick="setMod(0)"><div class="mod-tab-emoji">ðŸ’³</div><div class="mod-tab-label">TC</div></div>
-  <div class="mod-tab" onclick="setMod(1)"><div class="mod-tab-emoji">ðŸ’°</div><div class="mod-tab-label">Finanzas</div></div>
-  <div class="mod-tab" onclick="setMod(2)"><div class="mod-tab-emoji">ðŸ“š</div><div class="mod-tab-label">Clases &amp; Vuelos</div></div>
+  <div class="mod-tab active" onclick="setMod(0)"><div class="mod-tab-emoji">💳</div><div class="mod-tab-label">TC</div></div>
+  <div class="mod-tab" onclick="setMod(1)"><div class="mod-tab-emoji">💰</div><div class="mod-tab-label">Finanzas</div></div>
+  <div class="mod-tab" onclick="setMod(2)"><div class="mod-tab-emoji">📚</div><div class="mod-tab-label">Clases &amp; Vuelos</div></div>
 </div>
 
 <!-- STATUS BAR -->
 <div class="status-bar">
-  <span id="st-info">â€”</span><span class="dot">Â·</span>
-  <span id="st-ciclo" style="color:var(--text3)">â€”</span><span class="dot">Â·</span>
+  <span id="st-info">—</span><span class="dot">·</span>
+  <span id="st-ciclo" style="color:var(--text3)">—</span><span class="dot">·</span>
   <span id="st-abonado" style="color:var(--emerald)">$0 abonado</span>
-  <span id="cuota-badge" class="badge-sm b-ok" style="margin-left:auto">âœ… SIN CUOTA</span>
+  <span id="cuota-badge" class="badge-sm b-ok" style="margin-left:auto">✅ SIN CUOTA</span>
 </div>
 
 <!-- INNER TABS -->
 <div class="inner-nav" id="inner-nav"></div>
 
-<!-- â•â•â•â•â•â•â•â•â•â• MOD 0: TC â•â•â•â•â•â•â•â•â•â• -->
+<!-- ══════════ MOD 0: TC ══════════ -->
 <div class="module active" id="mod-0">
   <div class="view active" id="tc-v0"><div class="main">
     <div class="sl">RESUMEN GENERAL</div>
-    <div class="alerta hide" id="tc-alerta"><div class="al-ico">âš ï¸</div><div><div class="al-tit" id="tc-al-tit">ALERTA</div><div class="al-desc" id="tc-al-desc"></div></div></div>
+    <div class="alerta hide" id="tc-alerta"><div class="al-ico">⚠️</div><div><div class="al-tit" id="tc-al-tit">ALERTA</div><div class="al-desc" id="tc-al-desc"></div></div></div>
     <div class="kpi-grid">
-      <div class="kc red"><div class="kpi-icon ki-r">ðŸ’³</div><div class="kpi-lbl">Deuda Total</div><div class="kpi-val red" id="tc-deuda">$0</div><div class="kpi-sub" id="tc-deuda-sub">â€”</div></div>
-      <div class="kc orange"><div class="kpi-icon ki-o">â—‰</div><div class="kpi-lbl">Cupo Disponible</div><div class="kpi-val orange" id="tc-cupo">$0</div><div class="kpi-sub">Cupo: $8.400.000</div></div>
-      <div class="kc cyan"><div class="kpi-icon ki-c">ðŸ“…</div><div class="kpi-lbl">Este Ciclo</div><div class="kpi-val cyan" id="tc-ciclo-kpi">$0</div><div class="kpi-sub">Corte dÃ­a 8</div></div>
-      <div class="kc green"><div class="kpi-icon ki-g">â†‘</div><div class="kpi-lbl">Total Abonado</div><div class="kpi-val green" id="tc-abonado">$0</div><div class="kpi-sub" id="tc-ab-sub">0 abonos</div></div>
-      <div class="kc yellow"><div class="kpi-icon ki-y">â˜…</div><div class="kpi-lbl">Mes MÃ¡s Alto</div><div class="kpi-val yellow" id="tc-mesalto">â€”</div><div class="kpi-sub" id="tc-mesalto-sub">$0</div></div>
+      <div class="kc red"><div class="kpi-icon ki-r">💳</div><div class="kpi-lbl">Deuda Total</div><div class="kpi-val red" id="tc-deuda">$0</div><div class="kpi-sub" id="tc-deuda-sub">—</div></div>
+      <div class="kc orange"><div class="kpi-icon ki-o">◉</div><div class="kpi-lbl">Cupo Disponible</div><div class="kpi-val orange" id="tc-cupo">$0</div><div class="kpi-sub">Cupo: $8.400.000</div></div>
+      <div class="kc cyan"><div class="kpi-icon ki-c">📅</div><div class="kpi-lbl">Este Ciclo</div><div class="kpi-val cyan" id="tc-ciclo-kpi">$0</div><div class="kpi-sub">Corte día 8</div></div>
+      <div class="kc green"><div class="kpi-icon ki-g">↑</div><div class="kpi-lbl">Total Abonado</div><div class="kpi-val green" id="tc-abonado">$0</div><div class="kpi-sub" id="tc-ab-sub">0 abonos</div></div>
+      <div class="kc yellow"><div class="kpi-icon ki-y">★</div><div class="kpi-lbl">Mes Más Alto</div><div class="kpi-val yellow" id="tc-mesalto">—</div><div class="kpi-sub" id="tc-mesalto-sub">$0</div></div>
     </div>
     <div class="cupo-card">
       <div class="cupo-hdr"><div class="cupo-ttl">USO DEL CUPO</div><div class="cupo-pct" id="tc-cupo-pct">0%</div></div>
@@ -381,38 +381,38 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
       <div class="cupo-stats"><span id="tc-usado">Usado: $0</span><span id="tc-disp">Disponible: $1.779.018</span><span>Total: $8.400.000</span></div>
     </div>
     <div class="cupo-card" style="background:linear-gradient(135deg, rgba(255,173,73,0.1), rgba(255,107,107,0.05));border-color:var(--orange);margin-top:18px">
-      <div class="cupo-hdr"><div class="cupo-ttl">ðŸ’³ TARJETA DE CRÃ‰DITO</div><div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--orange)">DAVIVIENDA</div></div>
+      <div class="cupo-hdr"><div class="cupo-ttl">💳 TARJETA DE CRÉDITO</div><div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--orange)">DAVIVIENDA</div></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-family:'Space Mono',monospace;font-size:9px;margin-bottom:8px;color:var(--text2)">
         <div><span style="color:var(--text3)">TITULAR</span><div style="color:var(--text);margin-top:3px">CIRO V. SANTOS L.</div></div>
-        <div><span style="color:var(--text3)">TARJETA</span><div style="color:var(--text);margin-top:3px">Â·Â·Â·Â· 8762</div></div>
+        <div><span style="color:var(--text3)">TARJETA</span><div style="color:var(--text);margin-top:3px">···· 8762</div></div>
         <div><span style="color:var(--text3)">VENCIMIENTO</span><div style="color:var(--orange);margin-top:3px">25 Abr 2026</div></div>
         <div><span style="color:var(--text3)">CICLO</span><div style="color:var(--cyan);margin-top:3px">08 Mar - 08 Abr</div></div>
       </div>
-      <div class="cupo-stats"><span id="cc-pago">Pago Total: $6.620.982</span><span style="color:var(--text3)">|</span><span>Pago MÃ­n: $1.919.634</span></div>
+      <div class="cupo-stats"><span id="cc-pago">Pago Total: $6.620.982</span><span style="color:var(--text3)">|</span><span>Pago Mín: $1.919.634</span></div>
     </div>
     <div class="ciclo-big">
-      <div class="ciclo-big-hdr"><div class="ciclo-big-ttl">ðŸ—“ COMPRAS CICLO ACTUAL</div><div class="ciclo-big-fecha" id="tc-ciclo-fecha">â€”</div></div>
+      <div class="ciclo-big-hdr"><div class="ciclo-big-ttl">🗓 COMPRAS CICLO ACTUAL</div><div class="ciclo-big-fecha" id="tc-ciclo-fecha">—</div></div>
       <div class="ciclo-items">
         <div class="ci"><div class="ci-lbl">Comprado</div><div class="ci-val" style="color:var(--orange)" id="cc-comp">$0</div></div>
         <div class="ci"><div class="ci-lbl">Abonado</div><div class="ci-val" style="color:var(--emerald)" id="cc-abon">$0</div></div>
         <div class="ci"><div class="ci-lbl">Neto a pagar</div><div class="ci-val" style="color:var(--red)" id="cc-neto">$0</div></div>
-        <div class="ci"><div class="ci-lbl">NÂ° compras</div><div class="ci-val" style="color:var(--cyan)" id="cc-n">0</div></div>
-        <div class="ci"><div class="ci-lbl">Cuota manejo</div><div class="ci-val" id="cc-cuota" style="font-size:13px">â€”</div></div>
-        <div class="ci"><div class="ci-lbl">DÃ­as restantes</div><div class="ci-val" style="color:var(--purple)" id="cc-dias">â€”</div></div>
+        <div class="ci"><div class="ci-lbl">N° compras</div><div class="ci-val" style="color:var(--cyan)" id="cc-n">0</div></div>
+        <div class="ci"><div class="ci-lbl">Cuota manejo</div><div class="ci-val" id="cc-cuota" style="font-size:13px">—</div></div>
+        <div class="ci"><div class="ci-lbl">Días restantes</div><div class="ci-val" style="color:var(--purple)" id="cc-dias">—</div></div>
       </div>
     </div>
     <div class="grid2">
       <div>
-        <div class="card"><div class="card-hdr"><div class="card-ttl">Ãšltimos movimientos</div></div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>CONCEPTO</th><th>CAT</th><th>FECHA</th><th>CUOTAS</th><th>VALOR</th></tr></thead><tbody id="tc-dash-tb"></tbody></table></div></div>
+        <div class="card"><div class="card-hdr"><div class="card-ttl">Últimos movimientos</div></div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>CONCEPTO</th><th>CAT</th><th>FECHA</th><th>CUOTAS</th><th>VALOR</th></tr></thead><tbody id="tc-dash-tb"></tbody></table></div></div>
       </div>
       <div class="side-col">
-        <div class="abono-cta" onclick="openM('m-abono-tc')"><div class="abono-cta-top"><div class="abono-ico">ðŸ’°</div><div><div style="font-family:'Space Mono',monospace;font-size:7px;color:rgba(0,230,118,0.5);letter-spacing:2px;margin-bottom:3px">REDUCIR DEUDA</div><div class="abono-cta-ttl">Registrar Abono</div></div></div><div class="abono-cta-sub">Â¿Pagaste a la TC? RegÃ­stralo aquÃ­ y tu saldo baja al instante.</div><div class="abono-cta-btn">â†‘ NUEVO ABONO / PAGO</div></div>
-        <div class="ciclo-lat"><div class="ciclo-lat-lbl">CICLO Â· CORTE DÃA 8</div>
-          <div class="cr"><span class="ck">Ciclo</span><span id="sc-ciclo" style="color:var(--cyan);font-size:10px;font-family:'Space Mono',monospace">â€”</span></div>
+        <div class="abono-cta" onclick="openM('m-abono-tc')"><div class="abono-cta-top"><div class="abono-ico">💰</div><div><div style="font-family:'Space Mono',monospace;font-size:7px;color:rgba(0,230,118,0.5);letter-spacing:2px;margin-bottom:3px">REDUCIR DEUDA</div><div class="abono-cta-ttl">Registrar Abono</div></div></div><div class="abono-cta-sub">¿Pagaste a la TC? Regístralo aquí y tu saldo baja al instante.</div><div class="abono-cta-btn">↑ NUEVO ABONO / PAGO</div></div>
+        <div class="ciclo-lat"><div class="ciclo-lat-lbl">CICLO · CORTE DÍA 8</div>
+          <div class="cr"><span class="ck">Ciclo</span><span id="sc-ciclo" style="color:var(--cyan);font-size:10px;font-family:'Space Mono',monospace">—</span></div>
           <div class="cr"><span class="ck">Compras</span><span style="color:var(--orange)" id="sc-comp">$0</span></div>
           <div class="cr"><span class="ck">Abonos</span><span style="color:var(--emerald)" id="sc-pag">$0</span></div>
           <div class="cr"><span class="ck">Neto</span><span style="color:var(--red)" id="sc-neto">$0</span></div>
-          <div class="cr"><span class="ck">Cuota manejo</span><span id="sc-cuota">â€”</span></div>
+          <div class="cr"><span class="ck">Cuota manejo</span><span id="sc-cuota">—</span></div>
         </div>
         <div class="mini-chart"><div class="mini-chart-ttl">COMPRAS POR MES</div><div class="bar-chart" id="tc-chart"></div></div>
       </div>
@@ -420,55 +420,55 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   </div></div>
 
   <div class="view" id="tc-v1"><div class="main">
-    <div class="sl">GASTOS POR CATEGORÃA</div>
+    <div class="sl">GASTOS POR CATEGORÍA</div>
     <div class="cat-grid" id="tc-cat-grid"></div>
-    <div class="card"><div class="card-hdr"><div class="card-ttl" id="tc-cat-ttl">Todos</div><select class="mini-sel" id="tc-cat-fil" onchange="renderTcCatDet()"><option value="TODAS">TODAS</option><option value="ðŸ  Casa">ðŸ  CASA</option><option value="âœˆï¸ Vuelos">âœˆï¸ VUELOS</option><option value="â›½ Gasolina">â›½ GASOLINA</option><option value="ðŸ” Comida">ðŸ” COMIDA</option><option value="ðŸ“± Digital">ðŸ“± DIGITAL</option><option value="ðŸ”§ Varios">ðŸ”§ VARIOS</option></select></div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>CONCEPTO</th><th>FECHA</th><th>CUOTAS</th><th>VALOR</th><th></th></tr></thead><tbody id="tc-cat-tb"></tbody></table></div></div>
+    <div class="card"><div class="card-hdr"><div class="card-ttl" id="tc-cat-ttl">Todos</div><select class="mini-sel" id="tc-cat-fil" onchange="renderTcCatDet()"><option value="TODAS">TODAS</option><option value="🏠 Casa">🏠 CASA</option><option value="✈️ Vuelos">✈️ VUELOS</option><option value="⛽ Gasolina">⛽ GASOLINA</option><option value="🍔 Comida">🍔 COMIDA</option><option value="📱 Digital">📱 DIGITAL</option><option value="🔧 Varios">🔧 VARIOS</option></select></div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>CONCEPTO</th><th>FECHA</th><th>CUOTAS</th><th>VALOR</th><th></th></tr></thead><tbody id="tc-cat-tb"></tbody></table></div></div>
   </div></div>
 
   <div class="view" id="tc-v2"><div class="main">
-    <div class="sl">PROYECCIÃ“N Â· PRÃ“XIMOS 12 MESES</div>
+    <div class="sl">PROYECCIÓN · PRÓXIMOS 12 MESES</div>
     <div class="kpi-grid-3">
-      <div class="kc purple"><div class="kpi-icon ki-p">ðŸ“Š</div><div class="kpi-lbl">En cuotas</div><div class="kpi-val purple" id="proy-n">0</div><div class="kpi-sub">gastos diferidos</div></div>
-      <div class="kc orange"><div class="kpi-icon ki-o">ðŸ“…</div><div class="kpi-lbl">Cuota prom/mes</div><div class="kpi-val orange" id="proy-prom">$0</div><div class="kpi-sub">obligaciÃ³n mensual</div></div>
-      <div class="kc pink"><div class="kpi-icon ki-pk">ðŸ’¸</div><div class="kpi-lbl">Deuda en cuotas</div><div class="kpi-val pink" id="proy-tot">$0</div><div class="kpi-sub">pendiente total</div></div>
+      <div class="kc purple"><div class="kpi-icon ki-p">📊</div><div class="kpi-lbl">En cuotas</div><div class="kpi-val purple" id="proy-n">0</div><div class="kpi-sub">gastos diferidos</div></div>
+      <div class="kc orange"><div class="kpi-icon ki-o">📅</div><div class="kpi-lbl">Cuota prom/mes</div><div class="kpi-val orange" id="proy-prom">$0</div><div class="kpi-sub">obligación mensual</div></div>
+      <div class="kc pink"><div class="kpi-icon ki-pk">💸</div><div class="kpi-lbl">Deuda en cuotas</div><div class="kpi-val pink" id="proy-tot">$0</div><div class="kpi-sub">pendiente total</div></div>
     </div>
     <div class="card"><div class="card-hdr"><div class="card-ttl">PAGO MENSUAL PROYECTADO</div></div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>MES</th><th>CONTADO</th><th>CUOTAS VIGENTES</th><th>TOTAL A PAGAR</th><th>SALDO RESTANTE</th></tr></thead><tbody id="tc-proy-tb"></tbody></table></div></div>
   </div></div>
 
   <div class="view" id="tc-v3"><div class="main">
     <div class="sl">TODOS LOS MOVIMIENTOS</div>
-    <div class="card"><div class="card-hdr"><div class="card-ttl" id="tc-mov-cnt">â€”</div><select class="mini-sel" id="tc-fil" onchange="renderTcMovs()"><option value="todos">TODOS</option><option value="compra">COMPRAS</option><option value="pago">ABONOS</option></select></div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>CONCEPTO</th><th>TIPO</th><th>CAT</th><th>FECHA</th><th>CUOTAS</th><th>VALOR</th><th></th></tr></thead><tbody id="tc-mov-tb"></tbody></table></div></div>
+    <div class="card"><div class="card-hdr"><div class="card-ttl" id="tc-mov-cnt">—</div><select class="mini-sel" id="tc-fil" onchange="renderTcMovs()"><option value="todos">TODOS</option><option value="compra">COMPRAS</option><option value="pago">ABONOS</option></select></div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>CONCEPTO</th><th>TIPO</th><th>CAT</th><th>FECHA</th><th>CUOTAS</th><th>VALOR</th><th></th></tr></thead><tbody id="tc-mov-tb"></tbody></table></div></div>
   </div></div>
 </div>
 
-<!-- â•â•â•â•â•â•â•â•â•â• MOD 1: FINANZAS â•â•â•â•â•â•â•â•â•â• -->
+<!-- ══════════ MOD 1: FINANZAS ══════════ -->
 <div class="module" id="mod-1">
   <div class="view active" id="fin-v0"><div class="main">
-    <!-- HEADER con navegaciÃ³n de meses -->
+    <!-- HEADER con navegación de meses -->
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:10px;">
       <div class="fin-header" style="margin:0">
         <div class="fin-h1">Finanzas <em>Personales</em></div>
-        <div class="fin-sub">Ciro Santos Â· Seguimiento mensual 2026</div>
+        <div class="fin-sub">Ciro Santos · Seguimiento mensual 2026</div>
       </div>
       <div style="display:flex;align-items:center;gap:8px;">
-        <button onclick="finMesNav(-1)" style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);width:32px;height:32px;border-radius:6px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center">â€¹</button>
+        <button onclick="finMesNav(-1)" style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);width:32px;height:32px;border-radius:6px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center">‹</button>
         <div class="fin-mes-badge" id="fin-mes-badge">Abril 2026</div>
-        <button onclick="finMesNav(1)" style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);width:32px;height:32px;border-radius:6px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center">â€º</button>
+        <button onclick="finMesNav(1)" style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);width:32px;height:32px;border-radius:6px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center">›</button>
       </div>
     </div>
 
-    <div class="alerta hide" id="fin-alerta"><div class="al-ico">âš ï¸</div><div><div class="al-tit" id="fin-al-tit">DÃ‰FICIT ACTIVO</div><div class="al-desc" id="fin-al-desc"></div></div></div>
+    <div class="alerta hide" id="fin-alerta"><div class="al-ico">⚠️</div><div><div class="al-tit" id="fin-al-tit">DÉFICIT ACTIVO</div><div class="al-desc" id="fin-al-desc"></div></div></div>
 
     <div class="kpi-grid">
-      <div class="kc blue"><div class="kpi-icon ki-b">ðŸ’¼</div><div class="kpi-lbl">Ingresos del mes</div><div class="kpi-val blue" id="fin-ing">$0</div><div class="kpi-sub" id="fin-ing-sub">â€”</div></div>
-      <div class="kc red"><div class="kpi-icon ki-r">ðŸ“‹</div><div class="kpi-lbl">Gastos totales</div><div class="kpi-val red" id="fin-gas">$0</div><div class="kpi-sub">Compromisos del mes</div></div>
-      <div class="kc green"><div class="kpi-icon ki-g">âœ…</div><div class="kpi-lbl">Pagado ya</div><div class="kpi-val green" id="fin-pagado">$0</div><div class="kpi-sub">Del total gastos</div></div>
-      <div class="kc yellow"><div class="kpi-icon ki-y">â³</div><div class="kpi-lbl">Pendiente pagar</div><div class="kpi-val yellow" id="fin-pend">$0</div><div class="kpi-sub">AÃºn por cubrir</div></div>
-      <div class="kc purple"><div class="kpi-icon ki-p">ðŸ¦</div><div class="kpi-lbl">Balance</div><div class="kpi-val" id="fin-balance" style="color:var(--emerald)">$0</div><div class="kpi-sub">Ingresos âˆ’ Gastos</div></div>
+      <div class="kc blue"><div class="kpi-icon ki-b">💼</div><div class="kpi-lbl">Ingresos del mes</div><div class="kpi-val blue" id="fin-ing">$0</div><div class="kpi-sub" id="fin-ing-sub">—</div></div>
+      <div class="kc red"><div class="kpi-icon ki-r">📋</div><div class="kpi-lbl">Gastos totales</div><div class="kpi-val red" id="fin-gas">$0</div><div class="kpi-sub">Compromisos del mes</div></div>
+      <div class="kc green"><div class="kpi-icon ki-g">✅</div><div class="kpi-lbl">Pagado ya</div><div class="kpi-val green" id="fin-pagado">$0</div><div class="kpi-sub">Del total gastos</div></div>
+      <div class="kc yellow"><div class="kpi-icon ki-y">⏳</div><div class="kpi-lbl">Pendiente pagar</div><div class="kpi-val yellow" id="fin-pend">$0</div><div class="kpi-sub">Aún por cubrir</div></div>
+      <div class="kc purple"><div class="kpi-icon ki-p">🏦</div><div class="kpi-lbl">Balance</div><div class="kpi-val" id="fin-balance" style="color:var(--emerald)">$0</div><div class="kpi-sub">Ingresos − Gastos</div></div>
     </div>
 
     <div class="prog-card">
-      <div class="prog-hdr"><span class="prog-ttl">ðŸ“Š Progreso de pagos del mes</span><span class="prog-pct" id="fin-prog-pct">0%</span></div>
+      <div class="prog-hdr"><span class="prog-ttl">📊 Progreso de pagos del mes</span><span class="prog-pct" id="fin-prog-pct">0%</span></div>
       <div class="prog-bg"><div class="prog-fill" id="fin-prog-bar" style="width:0%"></div></div>
       <div class="prog-labels"><span id="fin-prog-l">$0 pagado</span><span id="fin-prog-r">$0 pendiente</span></div>
     </div>
@@ -476,7 +476,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
     <!-- INGRESOS EDITABLES -->
     <div class="card" style="margin-bottom:12px">
       <div class="card-hdr">
-        <div class="card-ttl">ðŸ’µ INGRESOS DEL MES <span id="fin-ing-total-hdr" style="color:var(--emerald);margin-left:8px">$0</span></div>
+        <div class="card-ttl">💵 INGRESOS DEL MES <span id="fin-ing-total-hdr" style="color:var(--emerald);margin-left:8px">$0</span></div>
         <button onclick="finAddIngreso()" style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:var(--emerald);padding:4px 12px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;cursor:pointer">+ AGREGAR</button>
       </div>
       <div id="fin-ing-list" style="padding:4px 0"></div>
@@ -487,7 +487,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
         <!-- GASTOS EDITABLES -->
         <div class="card">
           <div class="card-hdr">
-            <div class="card-ttl">ðŸ  COMPROMISOS DEL MES <span id="fin-gas-total-hdr" style="color:var(--red);margin-left:8px">$0</span></div>
+            <div class="card-ttl">🏠 COMPROMISOS DEL MES <span id="fin-gas-total-hdr" style="color:var(--red);margin-left:8px">$0</span></div>
             <button onclick="finAddGasto()" style="background:rgba(255,60,42,0.1);border:1px solid rgba(255,60,42,0.3);color:var(--red);padding:4px 12px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;cursor:pointer">+ AGREGAR</button>
           </div>
           <div id="fin-gastos-list" style="padding:4px 0"></div>
@@ -499,7 +499,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
       </div>
       <div class="side-col">
         <div class="card" style="margin:0">
-          <div class="card-hdr"><div class="card-ttl">ðŸ© DistribuciÃ³n</div></div>
+          <div class="card-hdr"><div class="card-ttl">🍩 Distribución</div></div>
           <div style="padding:12px">
             <div class="donut-wrap">
               <div style="position:relative;width:120px;height:120px;flex-shrink:0">
@@ -514,11 +514,11 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
           </div>
         </div>
         <div class="card" style="margin:0">
-          <div class="card-hdr"><div class="card-ttl">ðŸ’° Dinero en cuentas</div><button onclick="editarCuentas()" style="background:none;border:none;color:var(--text2);cursor:pointer;font-size:11px;font-family:'Space Mono',monospace">editar</button></div>
+          <div class="card-hdr"><div class="card-ttl">💰 Dinero en cuentas</div><button onclick="editarCuentas()" style="background:none;border:none;color:var(--text2);cursor:pointer;font-size:11px;font-family:'Space Mono',monospace">editar</button></div>
           <div style="padding:10px" id="fin-ctas-list"></div>
         </div>
         <div class="card" style="margin:0">
-          <div class="card-hdr"><div class="card-ttl">ðŸŽ¯ Orden de pago</div></div>
+          <div class="card-hdr"><div class="card-ttl">🎯 Orden de pago</div></div>
           <div style="padding:8px" id="fin-orden-list"></div>
         </div>
       </div>
@@ -526,16 +526,16 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   </div></div>
 
   <div class="view" id="fin-v1"><div class="main">
-    <div class="sl">PROYECCIÃ“N DE PAGO</div>
+    <div class="sl">PROYECCIÓN DE PAGO</div>
     <div class="nomina-card">
-      <div class="card-ttl" style="margin-bottom:16px">ðŸ’¼ PROYECCIÃ“N DE PAGO â€” Ciro Santos</div>
+      <div class="card-ttl" style="margin-bottom:16px">💼 PROYECCIÓN DE PAGO — Ciro Santos</div>
 
       <!-- Tabla estilo planilla -->
       <div style="border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:14px">
 
         <!-- Encabezado mes -->
         <div style="background:var(--bg4);padding:10px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);border-bottom:1px solid var(--border)">
-          ProyecciÃ³n <span id="nom-mes-titulo">Abril 2026</span>
+          Proyección <span id="nom-mes-titulo">Abril 2026</span>
         </div>
 
         <!-- Sueldo Fijo -->
@@ -551,7 +551,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
         <div style="display:grid;grid-template-columns:1fr 180px;border-bottom:1px solid var(--border)">
           <div style="padding:12px 16px">
             <div style="font-size:14px;color:var(--text)">Comisiones por ventas</div>
-            <div style="font-family:'Space Mono',monospace;font-size:8px;color:rgba(0,230,118,0.5);margin-top:2px">Suma al total Â· no genera deduc.</div>
+            <div style="font-family:'Space Mono',monospace;font-size:8px;color:rgba(0,230,118,0.5);margin-top:2px">Suma al total · no genera deduc.</div>
           </div>
           <div style="padding:8px 14px;border-left:1px solid var(--border)">
             <input type="number" id="nom-comision" value="1672090" inputmode="numeric" oninput="calcNomina()"
@@ -577,14 +577,14 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
           </div>
         </div>
 
-        <!-- Deduc salud y pensiÃ³n -->
+        <!-- Deduc salud y pensión -->
         <div style="display:grid;grid-template-columns:1fr 180px;border-bottom:2px solid var(--border);background:rgba(255,60,42,0.02)">
           <div style="padding:12px 16px">
-            <div style="font-size:14px;color:var(--text)">Deducciones salud y pensiÃ³n</div>
+            <div style="font-size:14px;color:var(--text)">Deducciones salud y pensión</div>
             <div style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);margin-top:2px">
               Salud 4%: <span id="nr-salud" style="color:var(--red)">$0</span>
-              &nbsp;&nbsp;PensiÃ³n 4%: <span id="nr-pension" style="color:var(--red)">$0</span>
-              &nbsp;â†’ calculado sobre sueldo fijo
+              &nbsp;&nbsp;Pensión 4%: <span id="nr-pension" style="color:var(--red)">$0</span>
+              &nbsp;→ calculado sobre sueldo fijo
             </div>
           </div>
           <div style="padding:12px 14px;border-left:1px solid var(--border);display:flex;align-items:center;justify-content:flex-end">
@@ -595,8 +595,8 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
         <!-- PAGO TOTAL -->
         <div style="display:grid;grid-template-columns:1fr 180px;background:rgba(59,130,246,0.08)">
           <div style="padding:14px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:17px;letter-spacing:1px;color:var(--blue);display:flex;align-items:center;gap:8px">
-            ðŸ’µ Pago total
-            <span style="font-family:'Space Mono',monospace;font-size:8px;font-weight:400;color:var(--text2);letter-spacing:1px">(sueldo âˆ’ deduc + comisiÃ³n)</span>
+            💵 Pago total
+            <span style="font-family:'Space Mono',monospace;font-size:8px;font-weight:400;color:var(--text2);letter-spacing:1px">(sueldo − deduc + comisión)</span>
           </div>
           <div style="padding:12px 14px;border-left:1px solid rgba(59,130,246,0.2);display:flex;align-items:center;justify-content:flex-end">
             <span id="nr-neto" style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:24px;color:var(--blue)">$0</span>
@@ -625,14 +625,14 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   </div></div>
 </div>
 
-<!-- â•â•â•â•â•â•â•â•â•â• MOD 2: CLASES & VUELOS â•â•â•â•â•â•â•â•â•â• -->
+<!-- ══════════ MOD 2: CLASES & VUELOS ══════════ -->
 <div class="module" id="mod-2">
   <div class="view active" id="cla-v0"><div class="main">
-    <div class="sl">MBA Â· CONTROL DE CLASES 2025</div>
+    <div class="sl">MBA · CONTROL DE CLASES 2025</div>
     <div class="kpi-grid-3">
-      <div class="kc purple"><div class="kpi-icon ki-p">ðŸ“š</div><div class="kpi-lbl">Total clases</div><div class="kpi-val purple" id="cla-total">0</div><div class="kpi-sub">presenciales + virtuales</div></div>
-      <div class="kc green"><div class="kpi-icon ki-g">âœ…</div><div class="kpi-lbl">Completadas</div><div class="kpi-val green" id="cla-comp">0</div><div class="kpi-sub">con vuelo confirmado</div></div>
-      <div class="kc orange"><div class="kpi-icon ki-o">âœˆï¸</div><div class="kpi-lbl">PrÃ³xima clase</div><div class="kpi-val orange" style="font-size:15px" id="cla-prox">â€”</div><div class="kpi-sub" id="cla-prox-sub">â€”</div></div>
+      <div class="kc purple"><div class="kpi-icon ki-p">📚</div><div class="kpi-lbl">Total clases</div><div class="kpi-val purple" id="cla-total">0</div><div class="kpi-sub">presenciales + virtuales</div></div>
+      <div class="kc green"><div class="kpi-icon ki-g">✅</div><div class="kpi-lbl">Completadas</div><div class="kpi-val green" id="cla-comp">0</div><div class="kpi-sub">con vuelo confirmado</div></div>
+      <div class="kc orange"><div class="kpi-icon ki-o">✈️</div><div class="kpi-lbl">Próxima clase</div><div class="kpi-val orange" style="font-size:15px" id="cla-prox">—</div><div class="kpi-sub" id="cla-prox-sub">—</div></div>
     </div>
     <div id="cla-list"></div>
   </div></div>
@@ -640,32 +640,32 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   <div class="view" id="cla-v1"><div class="main">
     <div class="sl">CONTROL DE VUELOS</div>
     <div class="kpi-grid-3">
-      <div class="kc purple"><div class="kpi-icon ki-p">âœˆï¸</div><div class="kpi-lbl">Vuelos totales</div><div class="kpi-val purple" id="vue-total">0</div><div class="kpi-sub">registrados</div></div>
-      <div class="kc red"><div class="kpi-icon ki-r">ðŸ’¸</div><div class="kpi-lbl">Gasto en vuelos</div><div class="kpi-val red" id="vue-gasto">$0</div><div class="kpi-sub">total invertido</div></div>
-      <div class="kc cyan"><div class="kpi-icon ki-c">ðŸ›«</div><div class="kpi-lbl">PrÃ³ximo vuelo</div><div class="kpi-val cyan" style="font-size:14px" id="vue-prox">â€”</div><div class="kpi-sub" id="vue-prox-sub">â€”</div></div>
+      <div class="kc purple"><div class="kpi-icon ki-p">✈️</div><div class="kpi-lbl">Vuelos totales</div><div class="kpi-val purple" id="vue-total">0</div><div class="kpi-sub">registrados</div></div>
+      <div class="kc red"><div class="kpi-icon ki-r">💸</div><div class="kpi-lbl">Gasto en vuelos</div><div class="kpi-val red" id="vue-gasto">$0</div><div class="kpi-sub">total invertido</div></div>
+      <div class="kc cyan"><div class="kpi-icon ki-c">🛫</div><div class="kpi-lbl">Próximo vuelo</div><div class="kpi-val cyan" style="font-size:14px" id="vue-prox">—</div><div class="kpi-sub" id="vue-prox-sub">—</div></div>
     </div>
     <div id="vue-list"></div>
-    <div class="card" style="margin-top:12px"><div class="card-hdr"><div class="card-ttl">Vuelos adicionales</div></div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>RUTA</th><th>FECHA</th><th>AEROLÃNEA</th><th>RESERVA</th><th>ESTADO</th><th>COSTO</th><th></th></tr></thead><tbody id="vue-extra-tb"></tbody></table></div></div>
+    <div class="card" style="margin-top:12px"><div class="card-hdr"><div class="card-ttl">Vuelos adicionales</div></div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>RUTA</th><th>FECHA</th><th>AEROLÍNEA</th><th>RESERVA</th><th>ESTADO</th><th>COSTO</th><th></th></tr></thead><tbody id="vue-extra-tb"></tbody></table></div></div>
   </div></div>
 </div>
 
 <!-- FABs -->
 <div class="fabs" id="fabs">
-  <div><button class="fab fab-abono" id="fab-abono" onclick="fabAbono()" title="Registrar abono">â†‘</button></div>
+  <div><button class="fab fab-abono" id="fab-abono" onclick="fabAbono()" title="Registrar abono">↑</button></div>
   <div><button class="fab fab-gasto" onclick="fabGasto()">+</button></div>
 </div>
 
 <!-- INSTALL BANNER -->
 <div class="install-banner" id="install-banner">
-  <div class="ib-txt"><strong>CIROX APP</strong><br>Instala en tu pantalla para acceso rÃ¡pido.</div>
+  <div class="ib-txt"><strong>CIROX APP</strong><br>Instala en tu pantalla para acceso rápido.</div>
   <div class="ib-btns"><button class="btn-install" id="btn-install">INSTALAR</button><button class="btn-dismiss" onclick="dismissInstall()">Ahora no</button></div>
 </div>
 
-<!-- â”€â”€ MODALES TC â”€â”€ -->
+<!-- ── MODALES TC ── -->
 <div class="modal-ov" id="m-gasto-tc"><div class="modal m-red">
   <div class="m-drag"></div><h2>+ Nuevo Gasto TC</h2>
-  <div class="fg"><label class="fl">DescripciÃ³n</label><input class="fi" id="tg-desc" type="text" placeholder="Ej: Mercado, Gasolinaâ€¦" autocomplete="off"></div>
-  <div class="fg"><label class="fl">CategorÃ­a</label><select class="fs" id="tg-cat"><option value="ðŸ  Casa">ðŸ  Casa</option><option value="âœˆï¸ Vuelos">âœˆï¸ Vuelos</option><option value="â›½ Gasolina">â›½ Gasolina</option><option value="ðŸ” Comida">ðŸ” Comida</option><option value="ðŸ“± Digital">ðŸ“± Digital</option><option value="ðŸ”§ Varios">ðŸ”§ Varios</option></select></div>
+  <div class="fg"><label class="fl">Descripción</label><input class="fi" id="tg-desc" type="text" placeholder="Ej: Mercado, Gasolina…" autocomplete="off"></div>
+  <div class="fg"><label class="fl">Categoría</label><select class="fs" id="tg-cat"><option value="🏠 Casa">🏠 Casa</option><option value="✈️ Vuelos">✈️ Vuelos</option><option value="⛽ Gasolina">⛽ Gasolina</option><option value="🍔 Comida">🍔 Comida</option><option value="📱 Digital">📱 Digital</option><option value="🔧 Varios">🔧 Varios</option></select></div>
   <div class="fg"><label class="fl">Valor (COP)</label><input class="fi" id="tg-valor" type="number" placeholder="0" inputmode="numeric"></div>
   <div class="fg"><label class="fl">Fecha</label><input class="fi" id="tg-fecha" type="date"></div>
   <div class="fg"><label class="fl">Cuotas</label><select class="fs" id="tg-cuotas"><option value="1">1 cuota (contado)</option><option value="2">2</option><option value="3">3</option><option value="6">6</option><option value="8">8</option><option value="12">12</option><option value="17">17</option><option value="24">24</option><option value="36">36</option></select></div>
@@ -673,8 +673,8 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 </div></div>
 
 <div class="modal-ov" id="m-abono-tc"><div class="modal m-green">
-  <div class="m-drag"></div><h2>â†‘ Registrar Abono TC</h2>
-  <div class="fg"><label class="fl">DescripciÃ³n</label><input class="fi" id="ta-desc" type="text" placeholder="Ej: Pago marzo, Zona de pagosâ€¦" autocomplete="off"></div>
+  <div class="m-drag"></div><h2>↑ Registrar Abono TC</h2>
+  <div class="fg"><label class="fl">Descripción</label><input class="fi" id="ta-desc" type="text" placeholder="Ej: Pago marzo, Zona de pagos…" autocomplete="off"></div>
   <div class="fg"><label class="fl">Valor (COP)</label><input class="fi" id="ta-valor" type="number" placeholder="0" inputmode="numeric"></div>
   <div class="fg"><label class="fl">Fecha</label><input class="fi" id="ta-fecha" type="date"></div>
   <div class="macts"><button class="btn-cancel" onclick="closeM('m-abono-tc')">CANCELAR</button><button class="btn-ok bg-green" onclick="guardarTcAbono()">REGISTRAR</button></div>
@@ -683,8 +683,8 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 <!-- MODAL FINANZAS EXTRA -->
 <div class="modal-ov" id="m-finanza"><div class="modal m-blue">
   <div class="m-drag"></div><h2 id="fin-modal-ttl">Movimiento</h2>
-  <div class="fg"><label class="fl">Tipo</label><select class="fs" id="fm-tipo"><option value="ingreso">ðŸ’µ Ingreso</option><option value="gasto">ðŸ’¸ Gasto extra</option></select></div>
-  <div class="fg"><label class="fl">Concepto</label><input class="fi" id="fm-desc" type="text" placeholder="Ej: Salario extra, Compraâ€¦" autocomplete="off"></div>
+  <div class="fg"><label class="fl">Tipo</label><select class="fs" id="fm-tipo"><option value="ingreso">💵 Ingreso</option><option value="gasto">💸 Gasto extra</option></select></div>
+  <div class="fg"><label class="fl">Concepto</label><input class="fi" id="fm-desc" type="text" placeholder="Ej: Salario extra, Compra…" autocomplete="off"></div>
   <div class="fg"><label class="fl">Valor (COP)</label><input class="fi" id="fm-valor" type="number" placeholder="0" inputmode="numeric"></div>
   <div class="fg"><label class="fl">Fecha</label><input class="fi" id="fm-fecha" type="date"></div>
   <div class="macts"><button class="btn-cancel" onclick="closeM('m-finanza')">CANCELAR</button><button class="btn-ok bg-blue" onclick="guardarFinanza()">GUARDAR</button></div>
@@ -692,89 +692,89 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 
 <!-- MODAL VUELO -->
 <div class="modal-ov" id="m-vuelo"><div class="modal m-purple">
-  <div class="m-drag"></div><h2>âœˆï¸ Nuevo Vuelo</h2>
-  <div class="fg"><label class="fl">Ruta (ej: BOG â†’ MDE)</label><input class="fi" id="vf-ruta" type="text" placeholder="BOG â†’ PEI" autocomplete="off"></div>
-  <div class="fg"><label class="fl">AerolÃ­nea</label><input class="fi" id="vf-aero" type="text" placeholder="Avianca, JetSmartâ€¦" autocomplete="off"></div>
-  <div class="fg"><label class="fl">CÃ³digo de reserva</label><input class="fi" id="vf-reserva" type="text" placeholder="ATZXDK" autocomplete="off"></div>
+  <div class="m-drag"></div><h2>✈️ Nuevo Vuelo</h2>
+  <div class="fg"><label class="fl">Ruta (ej: BOG → MDE)</label><input class="fi" id="vf-ruta" type="text" placeholder="BOG → PEI" autocomplete="off"></div>
+  <div class="fg"><label class="fl">Aerolínea</label><input class="fi" id="vf-aero" type="text" placeholder="Avianca, JetSmart…" autocomplete="off"></div>
+  <div class="fg"><label class="fl">Código de reserva</label><input class="fi" id="vf-reserva" type="text" placeholder="ATZXDK" autocomplete="off"></div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
     <div class="fg"><label class="fl">Fecha vuelo</label><input class="fi" id="vf-fecha" type="date"></div>
     <div class="fg"><label class="fl">Costo (COP)</label><input class="fi" id="vf-costo" type="number" placeholder="0" inputmode="numeric"></div>
   </div>
-  <div class="fg"><label class="fl">Estado</label><select class="fs" id="vf-estado"><option value="confirmado">âœ… Confirmado</option><option value="pendiente">â³ Pendiente</option><option value="completado">ðŸ Completado</option></select></div>
+  <div class="fg"><label class="fl">Estado</label><select class="fs" id="vf-estado"><option value="confirmado">✅ Confirmado</option><option value="pendiente">⏳ Pendiente</option><option value="completado">🏁 Completado</option></select></div>
   <div class="macts"><button class="btn-cancel" onclick="closeM('m-vuelo')">CANCELAR</button><button class="btn-ok bg-purple" onclick="guardarVuelo()">GUARDAR</button></div>
 </div></div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  CONSTANTES
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 const CUPO_TOTAL   = 8400000;
 const UMBRAL_CUOTA = 500000;
 const CUOTA_MANEJO = 35000;
 const CORTE        = 8;
 const SHEETS_URL   = 'https://script.google.com/macros/s/AKfycbzGdVzzRy1aBsc6mYp2INb2bOKoF0QjvhVK1Z46ZiaNbfp0_SKxorRZJWomPQB8DJz9_g/exec';
 const MS = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
-const CATS = {'ðŸ  Casa':'#00e5ff','âœˆï¸ Vuelos':'#7c4dff','â›½ Gasolina':'#ff7a1a','ðŸ” Comida':'#ffd600','ðŸ“± Digital':'#ff4d9e','ðŸ”§ Varios':'#3b82f6'};
+const CATS = {'🏠 Casa':'#00e5ff','✈️ Vuelos':'#7c4dff','⛽ Gasolina':'#ff7a1a','🍔 Comida':'#ffd600','📱 Digital':'#ff4d9e','🔧 Varios':'#3b82f6'};
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  DATOS BASE TC (2025 + nuevos 2026)
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 const TC_BASE_2025 = [
-  {id:1,tipo:'compra',desc:'Vuelo',cat:'âœˆï¸ Vuelos',valor:77150,fecha:'2025-03-01',cuotas:1},
-  {id:2,tipo:'compra',desc:'Vuelo',cat:'âœˆï¸ Vuelos',valor:115330,fecha:'2025-03-01',cuotas:1},
-  {id:3,tipo:'compra',desc:'Vuelo',cat:'âœˆï¸ Vuelos',valor:154400,fecha:'2025-03-01',cuotas:1},
-  {id:4,tipo:'compra',desc:'Didifood',cat:'ðŸ” Comida',valor:30429,fecha:'2025-03-01',cuotas:1},
-  {id:5,tipo:'compra',desc:'Vuelo',cat:'âœˆï¸ Vuelos',valor:62251,fecha:'2025-03-01',cuotas:1},
-  {id:6,tipo:'compra',desc:'Rappiunivers',cat:'ðŸ”§ Varios',valor:59650,fecha:'2025-03-01',cuotas:1},
-  {id:7,tipo:'compra',desc:'Easy Pintura y Closet',cat:'ðŸ  Casa',valor:1859680,fecha:'2025-03-10',cuotas:8},
-  {id:8,tipo:'compra',desc:'Fkte Closet',cat:'ðŸ  Casa',valor:51200,fecha:'2025-03-10',cuotas:1},
-  {id:9,tipo:'compra',desc:'Mundimotos',cat:'ðŸ”§ Varios',valor:65100,fecha:'2025-03-10',cuotas:1},
-  {id:10,tipo:'compra',desc:'Combustible',cat:'â›½ Gasolina',valor:36951,fecha:'2025-03-10',cuotas:1},
-  {id:11,tipo:'compra',desc:'Piso',cat:'ðŸ  Casa',valor:1404920,fecha:'2025-03-12',cuotas:8},
-  {id:12,tipo:'compra',desc:'Almuerzo Pereira',cat:'ðŸ” Comida',valor:20320,fecha:'2025-03-15',cuotas:1},
-  {id:13,tipo:'compra',desc:'Taxi Aeropuerto Pereira',cat:'âœˆï¸ Vuelos',valor:8300,fecha:'2025-03-15',cuotas:1},
-  {id:14,tipo:'compra',desc:'Pintura Puertas y Vent.',cat:'ðŸ  Casa',valor:80000,fecha:'2025-03-15',cuotas:8},
-  {id:15,tipo:'compra',desc:'Baldosas',cat:'ðŸ  Casa',valor:71000,fecha:'2025-03-15',cuotas:8},
-  {id:16,tipo:'compra',desc:'Cocina Integral',cat:'ðŸ  Casa',valor:1795000,fecha:'2025-03-18',cuotas:17},
-  {id:17,tipo:'compra',desc:'BaÃ±o',cat:'ðŸ  Casa',valor:465000,fecha:'2025-03-18',cuotas:8},
-  {id:18,tipo:'compra',desc:'Gasolina carro',cat:'â›½ Gasolina',valor:30000,fecha:'2025-03-20',cuotas:1},
-  {id:19,tipo:'compra',desc:'Gasolina Moto esp',cat:'â›½ Gasolina',valor:30780,fecha:'2025-03-20',cuotas:1},
-  {id:20,tipo:'compra',desc:'Cortinas',cat:'ðŸ  Casa',valor:246100,fecha:'2025-03-22',cuotas:8},
-  {id:21,tipo:'compra',desc:'Cortinas',cat:'ðŸ  Casa',valor:30000,fecha:'2025-03-22',cuotas:1},
-  {id:22,tipo:'compra',desc:'Gasolina carro',cat:'â›½ Gasolina',valor:45960,fecha:'2025-03-25',cuotas:1},
-  {id:23,tipo:'compra',desc:'Peaje',cat:'â›½ Gasolina',valor:43300,fecha:'2025-03-25',cuotas:1},
-  {id:24,tipo:'compra',desc:'Bus Pereira',cat:'âœˆï¸ Vuelos',valor:108000,fecha:'2025-03-25',cuotas:1},
+  {id:1,tipo:'compra',desc:'Vuelo',cat:'✈️ Vuelos',valor:77150,fecha:'2025-03-01',cuotas:1},
+  {id:2,tipo:'compra',desc:'Vuelo',cat:'✈️ Vuelos',valor:115330,fecha:'2025-03-01',cuotas:1},
+  {id:3,tipo:'compra',desc:'Vuelo',cat:'✈️ Vuelos',valor:154400,fecha:'2025-03-01',cuotas:1},
+  {id:4,tipo:'compra',desc:'Didifood',cat:'🍔 Comida',valor:30429,fecha:'2025-03-01',cuotas:1},
+  {id:5,tipo:'compra',desc:'Vuelo',cat:'✈️ Vuelos',valor:62251,fecha:'2025-03-01',cuotas:1},
+  {id:6,tipo:'compra',desc:'Rappiunivers',cat:'🔧 Varios',valor:59650,fecha:'2025-03-01',cuotas:1},
+  {id:7,tipo:'compra',desc:'Easy Pintura y Closet',cat:'🏠 Casa',valor:1859680,fecha:'2025-03-10',cuotas:8},
+  {id:8,tipo:'compra',desc:'Fkte Closet',cat:'🏠 Casa',valor:51200,fecha:'2025-03-10',cuotas:1},
+  {id:9,tipo:'compra',desc:'Mundimotos',cat:'🔧 Varios',valor:65100,fecha:'2025-03-10',cuotas:1},
+  {id:10,tipo:'compra',desc:'Combustible',cat:'⛽ Gasolina',valor:36951,fecha:'2025-03-10',cuotas:1},
+  {id:11,tipo:'compra',desc:'Piso',cat:'🏠 Casa',valor:1404920,fecha:'2025-03-12',cuotas:8},
+  {id:12,tipo:'compra',desc:'Almuerzo Pereira',cat:'🍔 Comida',valor:20320,fecha:'2025-03-15',cuotas:1},
+  {id:13,tipo:'compra',desc:'Taxi Aeropuerto Pereira',cat:'✈️ Vuelos',valor:8300,fecha:'2025-03-15',cuotas:1},
+  {id:14,tipo:'compra',desc:'Pintura Puertas y Vent.',cat:'🏠 Casa',valor:80000,fecha:'2025-03-15',cuotas:8},
+  {id:15,tipo:'compra',desc:'Baldosas',cat:'🏠 Casa',valor:71000,fecha:'2025-03-15',cuotas:8},
+  {id:16,tipo:'compra',desc:'Cocina Integral',cat:'🏠 Casa',valor:1795000,fecha:'2025-03-18',cuotas:17},
+  {id:17,tipo:'compra',desc:'Baño',cat:'🏠 Casa',valor:465000,fecha:'2025-03-18',cuotas:8},
+  {id:18,tipo:'compra',desc:'Gasolina carro',cat:'⛽ Gasolina',valor:30000,fecha:'2025-03-20',cuotas:1},
+  {id:19,tipo:'compra',desc:'Gasolina Moto esp',cat:'⛽ Gasolina',valor:30780,fecha:'2025-03-20',cuotas:1},
+  {id:20,tipo:'compra',desc:'Cortinas',cat:'🏠 Casa',valor:246100,fecha:'2025-03-22',cuotas:8},
+  {id:21,tipo:'compra',desc:'Cortinas',cat:'🏠 Casa',valor:30000,fecha:'2025-03-22',cuotas:1},
+  {id:22,tipo:'compra',desc:'Gasolina carro',cat:'⛽ Gasolina',valor:45960,fecha:'2025-03-25',cuotas:1},
+  {id:23,tipo:'compra',desc:'Peaje',cat:'⛽ Gasolina',valor:43300,fecha:'2025-03-25',cuotas:1},
+  {id:24,tipo:'compra',desc:'Bus Pereira',cat:'✈️ Vuelos',valor:108000,fecha:'2025-03-25',cuotas:1},
 ];
 // Nuevas transacciones reales Marzo 2026
 const TC_BASE_2026 = [
-  {id:201,tipo:'pago',desc:'Zona de Pagos',cat:'ðŸ’° Abono',valor:100000,fecha:'2026-03-30',cuotas:1},
-  {id:202,tipo:'compra',desc:'InterÃ©s Mora',cat:'ðŸ”§ Varios',valor:318,fecha:'2026-03-30',cuotas:1},
-  {id:203,tipo:'compra',desc:'Didi Ride',cat:'ðŸ”§ Varios',valor:14200,fecha:'2026-03-28',cuotas:1},
-  {id:204,tipo:'compra',desc:'Didi Ride',cat:'ðŸ”§ Varios',valor:6500,fecha:'2026-03-27',cuotas:1},
-  {id:205,tipo:'compra',desc:'Didi Ride',cat:'ðŸ”§ Varios',valor:7890,fecha:'2026-03-27',cuotas:1},
-  {id:206,tipo:'compra',desc:'Didi Ride',cat:'ðŸ”§ Varios',valor:18100,fecha:'2026-03-26',cuotas:1},
-  {id:207,tipo:'compra',desc:'Facebook Ads',cat:'ðŸ“± Digital',valor:13453,fecha:'2026-03-25',cuotas:1},
-  {id:208,tipo:'compra',desc:'EDS Intexzona',cat:'â›½ Gasolina',valor:35657,fecha:'2026-03-25',cuotas:1},
-  {id:209,tipo:'compra',desc:'Sodimac Colombia',cat:'ðŸ  Casa',valor:214400,fecha:'2026-03-23',cuotas:1},
-  {id:210,tipo:'compra',desc:'Homecenter',cat:'ðŸ  Casa',valor:159900,fecha:'2026-03-23',cuotas:1},
-  {id:211,tipo:'pago',desc:'Zona de Pagos',cat:'ðŸ’° Abono',valor:143000,fecha:'2026-03-23',cuotas:1},
-  {id:212,tipo:'compra',desc:'Autocombustibles',cat:'â›½ Gasolina',valor:59000,fecha:'2026-03-18',cuotas:1},
-  {id:213,tipo:'pago',desc:'Pago',cat:'ðŸ’° Abono',valor:848,fecha:'2026-03-18',cuotas:1},
-  {id:214,tipo:'pago',desc:'Zona de Pagos',cat:'ðŸ’° Abono',valor:211000,fecha:'2026-03-18',cuotas:1},
-  {id:215,tipo:'compra',desc:'EDS Alvasar',cat:'â›½ Gasolina',valor:38788,fecha:'2026-03-17',cuotas:1},
-  {id:216,tipo:'compra',desc:'Bamboo Redbus',cat:'âœˆï¸ Vuelos',valor:107100,fecha:'2026-03-17',cuotas:1},
-  {id:217,tipo:'pago',desc:'Pago',cat:'ðŸ’° Abono',valor:287000,fecha:'2026-03-17',cuotas:1},
-  {id:218,tipo:'compra',desc:'Icotrans',cat:'ðŸ”§ Varios',valor:29760,fecha:'2026-03-16',cuotas:1},
-  {id:219,tipo:'compra',desc:'Didi Ride',cat:'ðŸ”§ Varios',valor:31800,fecha:'2026-03-13',cuotas:1},
-  {id:220,tipo:'compra',desc:'EDS Primax Americana',cat:'â›½ Gasolina',valor:29720,fecha:'2026-03-13',cuotas:1},
-  {id:221,tipo:'compra',desc:'Didi Ride',cat:'ðŸ”§ Varios',valor:26200,fecha:'2026-03-09',cuotas:1},
+  {id:201,tipo:'pago',desc:'Zona de Pagos',cat:'💰 Abono',valor:100000,fecha:'2026-03-30',cuotas:1},
+  {id:202,tipo:'compra',desc:'Interés Mora',cat:'🔧 Varios',valor:318,fecha:'2026-03-30',cuotas:1},
+  {id:203,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:14200,fecha:'2026-03-28',cuotas:1},
+  {id:204,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:6500,fecha:'2026-03-27',cuotas:1},
+  {id:205,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:7890,fecha:'2026-03-27',cuotas:1},
+  {id:206,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:18100,fecha:'2026-03-26',cuotas:1},
+  {id:207,tipo:'compra',desc:'Facebook Ads',cat:'📱 Digital',valor:13453,fecha:'2026-03-25',cuotas:1},
+  {id:208,tipo:'compra',desc:'EDS Intexzona',cat:'⛽ Gasolina',valor:35657,fecha:'2026-03-25',cuotas:1},
+  {id:209,tipo:'compra',desc:'Sodimac Colombia',cat:'🏠 Casa',valor:214400,fecha:'2026-03-23',cuotas:1},
+  {id:210,tipo:'compra',desc:'Homecenter',cat:'🏠 Casa',valor:159900,fecha:'2026-03-23',cuotas:1},
+  {id:211,tipo:'pago',desc:'Zona de Pagos',cat:'💰 Abono',valor:143000,fecha:'2026-03-23',cuotas:1},
+  {id:212,tipo:'compra',desc:'Autocombustibles',cat:'⛽ Gasolina',valor:59000,fecha:'2026-03-18',cuotas:1},
+  {id:213,tipo:'pago',desc:'Pago',cat:'💰 Abono',valor:848,fecha:'2026-03-18',cuotas:1},
+  {id:214,tipo:'pago',desc:'Zona de Pagos',cat:'💰 Abono',valor:211000,fecha:'2026-03-18',cuotas:1},
+  {id:215,tipo:'compra',desc:'EDS Alvasar',cat:'⛽ Gasolina',valor:38788,fecha:'2026-03-17',cuotas:1},
+  {id:216,tipo:'compra',desc:'Bamboo Redbus',cat:'✈️ Vuelos',valor:107100,fecha:'2026-03-17',cuotas:1},
+  {id:217,tipo:'pago',desc:'Pago',cat:'💰 Abono',valor:287000,fecha:'2026-03-17',cuotas:1},
+  {id:218,tipo:'compra',desc:'Icotrans',cat:'🔧 Varios',valor:29760,fecha:'2026-03-16',cuotas:1},
+  {id:219,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:31800,fecha:'2026-03-13',cuotas:1},
+  {id:220,tipo:'compra',desc:'EDS Primax Americana',cat:'⛽ Gasolina',valor:29720,fecha:'2026-03-13',cuotas:1},
+  {id:221,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:26200,fecha:'2026-03-09',cuotas:1},
 ];
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-//  STORAGE â€” PROTECCIÃ“N (nunca borra datos previos)
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
+//  STORAGE — PROTECCIÓN (nunca borra datos previos)
+// ══════════════════════════════════════════════
 const KEYS = {tc:'cirox_tc_v3',fin:'cirox_fin_v1',clases:'cirox_cla_v1',vuelos:'cirox_vue_v1',ventas:'cirox_ven_v1'};
 
 function loadData(key, fallback) {
@@ -800,7 +800,7 @@ function mergeTc(existing, newBase) {
 
 // Estado global
 let tcMovs    = loadData(KEYS.tc, () => [...TC_BASE_2025, ...TC_BASE_2026]);
-let finExtras = []; // legacy â€” now handled per-month
+let finExtras = []; // legacy — now handled per-month
 let claMovs   = loadData(KEYS.clases, () => []);
 let vueMovs   = loadData(KEYS.vuelos, () => []);
 let venMovs   = loadData(KEYS.ventas, () => []);
@@ -810,19 +810,19 @@ let moduloActual = 0;
 // Merge 2026 data en TC si no existe
 tcMovs = mergeTc(tcMovs, TC_BASE_2026);
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  DATOS FIJOS FINANZAS
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-//  FINANZAS â€” DATOS DINÃMICOS POR MES
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
+// ══════════════════════════════════════════════
+//  FINANZAS — DATOS DINÁMICOS POR MES
+// ══════════════════════════════════════════════
 const CAT_COLORS_FIN = {Casa:'#00e5ff',Deuda:'#ef4444',Familia:'#10b981',Estudio:'#f59e0b',Vida:'#8b5cf6',Varios:'#3b82f6'};
 const CAT_COLORS_DONUT = {Casa:'#00d4ff',Deuda:'#ff1a8c',Estudio:'#ffe600',Familia:'#00ff88',Vida:'#cc00ff',Varios:'#3b82f6'};
 
 // Template de gastos base (editable por mes)
 const FIN_GASTOS_TEMPLATE = [
   {id:'g1',nombre:'1. Diezmo',cat:'Familia',monto:300000,pagado:false,orden:1},
-  {id:'g2',nombre:'2. MatrÃ­cula Banco Agrario',cat:'Estudio',monto:1500000,pagado:false,orden:2},
+  {id:'g2',nombre:'2. Matrícula Banco Agrario',cat:'Estudio',monto:1500000,pagado:false,orden:2},
   {id:'g3',nombre:'3. Arriendo',cat:'Casa',monto:600000,pagado:false,orden:4},
   {id:'g4',nombre:'4. Mercado',cat:'Casa',monto:200000,pagado:false,orden:6},
   {id:'g5',nombre:'5. Servicios',cat:'Vida',monto:100000,pagado:false,orden:5},
@@ -834,7 +834,7 @@ const FIN_GASTOS_TEMPLATE = [
 ];
 const FIN_ING_TEMPLATE = [
   {id:'i1',nombre:'Sueldo',monto:2900000},
-  {id:'i2',nombre:'ComisiÃ³n por ventas',monto:1672090},
+  {id:'i2',nombre:'Comisión por ventas',monto:1672090},
 ];
 const FIN_CUENTAS_BASE = [
   {id:'c1',nombre:'NU',val:0,color:'#3b82f6'},
@@ -877,17 +877,17 @@ function finAddIngreso() {
   const val = parseFloat(prompt('Valor (COP):')); if (!val || val <= 0) return;
   data.ingresos.push({id: uid(), nombre, monto: val});
   saveFinMesData(y, m, data); renderFinanzas();
-  toast('âœ“ Ingreso agregado', 'ok');
+  toast('✓ Ingreso agregado', 'ok');
 }
 function finAddGasto() {
   const {year:y, month:m} = mesActualFin;
   const data = getFinMesData(y, m);
   const nombre = prompt('Nombre del gasto:'); if (!nombre) return;
   const val = parseFloat(prompt('Valor (COP):')); if (!val || val <= 0) return;
-  const cat = prompt('CategorÃ­a (Casa/Vida/Estudio/Deuda/Familia/Varios):') || 'Varios';
+  const cat = prompt('Categoría (Casa/Vida/Estudio/Deuda/Familia/Varios):') || 'Varios';
   data.gastos.push({id: uid(), nombre, monto: val, cat, pagado: false, orden: 99});
   saveFinMesData(y, m, data); renderFinanzas();
-  toast('âœ“ Gasto agregado', 'ok');
+  toast('✓ Gasto agregado', 'ok');
 }
 function finEditMonto(tipo, id, el) {
   const {year:y, month:m} = mesActualFin;
@@ -906,7 +906,7 @@ function finTogglePago(id) {
   if (g) { g.pagado = !g.pagado; saveFinMesData(y, m, data); renderFinanzas(); }
 }
 function finElim(tipo, id) {
-  if (!confirm('Â¿Eliminar este Ã­tem?')) return;
+  if (!confirm('¿Eliminar este ítem?')) return;
   const {year:y, month:m} = mesActualFin;
   const data = getFinMesData(y, m);
   if (tipo === 'ing') data.ingresos = data.ingresos.filter(x => x.id !== id);
@@ -918,43 +918,44 @@ function editarCuentas() {
   const {year:y, month:m} = mesActualFin;
   const data = getFinMesData(y, m);
   data.cuentas.forEach(c => {
-    const v = prompt(c.nombre + ' â€” saldo actual (COP):', c.val);
+    const v = prompt(c.nombre + ' — saldo actual (COP):', c.val);
     if (v !== null) c.val = parseFloat(v.replace(/[^0-9]/g,'')) || 0;
   });
   saveFinMesData(y, m, data); renderFinanzas();
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  DATOS FIJOS CLASES & VUELOS (MBA)
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 const CLASES_BASE = [
-  {fecha:'2025-03-27',modalidad:'Presencial',vuelo:{ruta:'BOG â†’ PEI (y regreso)',aero:'JetSmart',estado:'âœ… Comprado',sale:'â€”'}},
-  {fecha:'2025-03-28',modalidad:'Presencial',vuelo:{ruta:'PEI â†’ BOG',aero:'JetSmart',estado:'âœ… Comprado',sale:'10:13 PM â†’ 11:10 PM'}},
-  {fecha:'2025-04-24',modalidad:'Presencial',vuelo:{ruta:'BOG â†’ PEI',aero:'Avianca',estado:'âœ… Comprado',sale:'12:35 PM â†’ 01:35 PM',reserva:'ATZXDK',valor:'$154.400'}},
-  {fecha:'2025-04-25',modalidad:'Presencial',vuelo:{ruta:'PEI â†’ BOG',aero:'Avianca',estado:'âœ… Comprado',sale:'08:50 PM â†’ 09:45 PM',reserva:'ATZXDK',valor:'incluido'}},
-  {fecha:'2025-05-22',modalidad:'Presencial',vuelo:{estado:'â³ Pendiente'}},
-  {fecha:'2025-05-23',modalidad:'Presencial',vuelo:{estado:'â³ Pendiente'}},
-  {fecha:'2025-06-19',modalidad:'Presencial',vuelo:{estado:'â³ Pendiente'}},
-  {fecha:'2025-06-20',modalidad:'Presencial',vuelo:{estado:'â³ Pendiente'}},
-  {fecha:'2025-07-17',modalidad:'Presencial',vuelo:{estado:'â³ Pendiente'}},
-  {fecha:'2025-07-18',modalidad:'Presencial',vuelo:{estado:'â³ Pendiente'}},
+  {fecha:'2025-03-27',modalidad:'Presencial',vuelo:{ruta:'BOG → PEI (y regreso)',aero:'JetSmart',estado:'✅ Comprado',sale:'—'}},
+  {fecha:'2025-03-28',modalidad:'Presencial',vuelo:{ruta:'PEI → BOG',aero:'JetSmart',estado:'✅ Comprado',sale:'10:13 PM → 11:10 PM'}},
+  {fecha:'2025-04-24',modalidad:'Presencial',vuelo:{ruta:'BOG → PEI',aero:'Avianca',estado:'✅ Comprado',sale:'12:35 PM → 01:35 PM',reserva:'ATZXDK',valor:'$154.400'}},
+  {fecha:'2025-04-25',modalidad:'Presencial',vuelo:{ruta:'PEI → BOG',aero:'Avianca',estado:'✅ Comprado',sale:'08:50 PM → 09:45 PM',reserva:'ATZXDK',valor:'incluido'}},
+  {fecha:'2025-05-22',modalidad:'Presencial',vuelo:{estado:'⏳ Pendiente'}},
+  {fecha:'2025-05-23',modalidad:'Presencial',vuelo:{estado:'⏳ Pendiente'}},
+  {fecha:'2025-06-19',modalidad:'Presencial',vuelo:{estado:'⏳ Pendiente'}},
+  {fecha:'2025-06-20',modalidad:'Presencial',vuelo:{estado:'⏳ Pendiente'}},
+  {fecha:'2025-07-17',modalidad:'Presencial',vuelo:{estado:'⏳ Pendiente'}},
+  {fecha:'2025-07-18',modalidad:'Presencial',vuelo:{estado:'⏳ Pendiente'}},
 ];
 const VUELOS_BASE = [
-  {id:'v1',ruta:'BOG â†’ PEI',aero:'JetSmart',reserva:'-',fecha:'2025-03-27',sale:'â€”',costo:0,estado:'completado'},
-  {id:'v2',ruta:'PEI â†’ BOG',aero:'JetSmart',reserva:'-',fecha:'2025-03-28',sale:'10:13 PM â†’ 11:10 PM',costo:0,estado:'completado'},
-  {id:'v3',ruta:'BOG â†’ PEI',aero:'Avianca AV5246',reserva:'ATZXDK',fecha:'2025-04-24',sale:'12:35 PM â†’ 01:35 PM',costo:154400,estado:'confirmado'},
-  {id:'v4',ruta:'PEI â†’ BOG',aero:'Avianca AV9843',reserva:'ATZXDK',fecha:'2025-04-25',sale:'08:50 PM â†’ 09:45 PM',costo:0,estado:'confirmado'},
+  {id:'v1',ruta:'BOG → PEI',aero:'JetSmart',reserva:'-',fecha:'2025-03-27',sale:'—',costo:0,estado:'completado'},
+  {id:'v2',ruta:'PEI → BOG',aero:'JetSmart',reserva:'-',fecha:'2025-03-28',sale:'10:13 PM → 11:10 PM',costo:0,estado:'completado'},
+  {id:'v3',ruta:'BOG → PEI',aero:'Avianca AV5246',reserva:'ATZXDK',fecha:'2025-04-24',sale:'12:35 PM → 01:35 PM',costo:154400,estado:'confirmado'},
+  {id:'v4',ruta:'PEI → BOG',aero:'Avianca AV9843',reserva:'ATZXDK',fecha:'2025-04-25',sale:'08:50 PM → 09:45 PM',costo:0,estado:'confirmado'},
 ];
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  INNER TABS CONFIG
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 const INNER_CFG = [
-  ['ðŸ“Š Dashboard','ðŸ· CategorÃ­as','ðŸ“… ProyecciÃ³n','ðŸ“‹ Movimientos'],
-  ['ðŸ’° Resumen Mensual','ðŸ§® NÃ³mina & Extras'],
-  ['ðŸ“š Clases','âœˆï¸ Vuelos'],
+  ['📊 Dashboard','🏷 Categorías','📅 Proyección','📋 Movimientos'],
+  ['💰 Resumen Mensual','🧮 Nómina & Extras'],
+  ['📚 Clases','✈️ Vuelos'],
+  ['📋 Registro','🧮 Calculadora'],
 ];
-let innerActive = [0,0,0];
+let innerActive = [0,0,0,0];
 
 function renderInnerTabs(m) {
   const nav = document.getElementById('inner-nav');
@@ -989,9 +990,9 @@ function renderModulo(m) {
   if(m===3) {} // renderVentas removed - sales tab deleted
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  UTILS
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 function fmt(n){return '$'+Math.round(n).toLocaleString('es-CO');}
 function fmtF(f){return new Date(f+'T12:00:00').toLocaleDateString('es-CO',{day:'2-digit',month:'short',year:'2-digit'});}
 function fmtFull(f){return new Date(f+'T12:00:00').toLocaleDateString('es-CO',{day:'2-digit',month:'long'});}
@@ -999,12 +1000,12 @@ function hoy(){return new Date().toISOString().split('T')[0];}
 function uid(){return Date.now()+'_'+Math.random().toString(36).slice(2,6);}
 function getCiclo(){const h=new Date(),d=h.getDate(),mes=h.getMonth(),a=h.getFullYear();let ini,fin;if(d>=CORTE){ini=new Date(a,mes,CORTE);fin=new Date(a,mes+1,CORTE-1);}else{ini=new Date(a,mes-1,CORTE);fin=new Date(a,mes,CORTE-1);}return{ini,fin};}
 function inCiclo(f,c){const d=new Date(f+'T12:00:00');return d>=c.ini&&d<=c.fin;}
-function fmtCiclo(c){return`${c.ini.getDate()} ${MS[c.ini.getMonth()]} â€“ ${c.fin.getDate()} ${MS[c.fin.getMonth()]} ${c.fin.getFullYear()}`;}
+function fmtCiclo(c){return`${c.ini.getDate()} ${MS[c.ini.getMonth()]} – ${c.fin.getDate()} ${MS[c.fin.getMonth()]} ${c.fin.getFullYear()}`;}
 function diasR(ciclo){return Math.max(0,Math.ceil((new Date(ciclo.fin).setHours(23,59,59)-new Date())/86400000));}
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  RENDER TC
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 function renderTC(){
   const comp=tcMovs.filter(m=>m.tipo==='compra');
   const pag=tcMovs.filter(m=>m.tipo==='pago');
@@ -1021,10 +1022,10 @@ function renderTC(){
   const aplC=cC<UMBRAL_CUOTA;
   const pm={};comp.forEach(m=>{const k=m.fecha.slice(0,7);pm[k]=(pm[k]||0)+m.valor;});
   let mkH=null,mvH=0;Object.entries(pm).forEach(([k,v])=>{if(v>mvH){mvH=v;mkH=k;}});
-  const porCat={};comp.forEach(m=>{const c=m.cat||'ðŸ”§ Varios';if(!porCat[c])porCat[c]={total:0,items:[]};porCat[c].total+=m.valor;porCat[c].items.push(m);});
+  const porCat={};comp.forEach(m=>{const c=m.cat||'🔧 Varios';if(!porCat[c])porCat[c]={total:0,items:[]};porCat[c].total+=m.valor;porCat[c].items.push(m);});
 
   // KPIs
-  $('tc-deuda').textContent=fmt(deuda);$('tc-deuda-sub').textContent=comp.length+' compras Â· '+pct.toFixed(1)+'%';
+  $('tc-deuda').textContent=fmt(deuda);$('tc-deuda-sub').textContent=comp.length+' compras · '+pct.toFixed(1)+'%';
   $('tc-cupo').textContent=fmt(cupoD);$('tc-ciclo-kpi').textContent=fmt(neto);
   $('tc-abonado').textContent=fmt(sumP);$('tc-ab-sub').textContent=pag.length+' abono'+(pag.length!==1?'s':'');
   if(mkH){const[,mm]=mkH.split('-');$('tc-mesalto').textContent=MS[+mm-1];$('tc-mesalto-sub').textContent=fmt(mvH);}
@@ -1036,30 +1037,30 @@ function renderTC(){
 
   // Alerta
   const al=$('tc-alerta');
-  if(pct>=90){al.classList.remove('hide');$('tc-al-tit').textContent='ðŸš¨ CUPO CRÃTICO â€” '+ps+'% USADO';$('tc-al-desc').textContent='Solo quedan '+fmt(cupoD)+'. Evita nuevas compras.';}
-  else if(pct>=80){al.classList.remove('hide');$('tc-al-tit').textContent='âš ï¸ ALERTA â€” '+ps+'% DEL CUPO USADO';$('tc-al-desc').textContent='Tienes '+fmt(cupoD)+' disponibles. Controla tus gastos.';}
+  if(pct>=90){al.classList.remove('hide');$('tc-al-tit').textContent='🚨 CUPO CRÍTICO — '+ps+'% USADO';$('tc-al-desc').textContent='Solo quedan '+fmt(cupoD)+'. Evita nuevas compras.';}
+  else if(pct>=80){al.classList.remove('hide');$('tc-al-tit').textContent='⚠️ ALERTA — '+ps+'% DEL CUPO USADO';$('tc-al-desc').textContent='Tienes '+fmt(cupoD)+' disponibles. Controla tus gastos.';}
   else{al.classList.add('hide');}
 
   // Ciclo big
   $('tc-ciclo-fecha').textContent=fmtCiclo(ciclo);
   $('cc-comp').textContent=fmt(cC);$('cc-abon').textContent=fmt(cP);$('cc-neto').textContent=fmt(neto);
-  $('cc-n').textContent=cc.length;$('cc-dias').textContent=diasR(ciclo)+' dÃ­as';
-  const ce=$('cc-cuota');ce.textContent=aplC?'âŒ Aplica':'âœ… Sin cobro';ce.style.color=aplC?'var(--red)':'var(--emerald)';
+  $('cc-n').textContent=cc.length;$('cc-dias').textContent=diasR(ciclo)+' días';
+  const ce=$('cc-cuota');ce.textContent=aplC?'❌ Aplica':'✅ Sin cobro';ce.style.color=aplC?'var(--red)':'var(--emerald)';
 
   // Status bar
-  $('st-info').textContent=comp.length+' compras Â· '+fmt(deuda);
+  $('st-info').textContent=comp.length+' compras · '+fmt(deuda);
   $('st-ciclo').textContent=fmtCiclo(ciclo);
   $('st-abonado').textContent=fmt(sumP)+' abonado';
-  const b=$('cuota-badge');b.className='badge-sm '+(aplC?'b-warn':'b-ok');b.textContent=aplC?'âŒ APLICA CUOTA':'âœ… SIN CUOTA';
+  const b=$('cuota-badge');b.className='badge-sm '+(aplC?'b-warn':'b-ok');b.textContent=aplC?'❌ APLICA CUOTA':'✅ SIN CUOTA';
 
   // Ciclo lat
   $('sc-ciclo').textContent=fmtCiclo(ciclo);$('sc-comp').textContent=fmt(cC);$('sc-pag').textContent=fmt(cP);$('sc-neto').textContent=fmt(neto);
-  const sce=$('sc-cuota');sce.textContent=aplC?'âŒ Aplica ('+fmt(CUOTA_MANEJO)+')':'âœ… Sin cobro';sce.style.color=aplC?'var(--red)':'var(--emerald)';
+  const sce=$('sc-cuota');sce.textContent=aplC?'❌ Aplica ('+fmt(CUOTA_MANEJO)+')':'✅ Sin cobro';sce.style.color=aplC?'var(--red)':'var(--emerald)';
 
-  // Dash tabla (Ãºltimos 8)
+  // Dash tabla (últimos 8)
   const tb=$('tc-dash-tb');
   const d8=[...tcMovs].sort((a,b)=>new Date(b.fecha)-new Date(a.fecha)).slice(0,8);
-  tb.innerHTML=d8.map(m=>`<tr><td>${m.desc}</td><td style="font-size:12px">${(m.cat||'ðŸ”§').split(' ')[0]}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2)">${fmtF(m.fecha)}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);text-align:center">${(m.cuotas||1)>1?m.cuotas+'x':'â€”'}</td><td class="${m.tipo==='compra'?'vn':'vp'}">${m.tipo==='compra'?'â€“':'+'}${fmt(m.valor)}</td></tr>`).join('')||'<tr><td colspan="5"><div class="empty">SIN DATOS</div></td></tr>';
+  tb.innerHTML=d8.map(m=>`<tr><td>${m.desc}</td><td style="font-size:12px">${(m.cat||'🔧').split(' ')[0]}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2)">${fmtF(m.fecha)}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);text-align:center">${(m.cuotas||1)>1?m.cuotas+'x':'—'}</td><td class="${m.tipo==='compra'?'vn':'vp'}">${m.tipo==='compra'?'–':'+'}${fmt(m.valor)}</td></tr>`).join('')||'<tr><td colspan="5"><div class="empty">SIN DATOS</div></td></tr>';
 
   // Chart
   const h2=new Date();const keys=[];for(let i=5;i>=0;i--){const d2=new Date(h2.getFullYear(),h2.getMonth()-i,1);keys.push(d2.getFullYear()+'-'+String(d2.getMonth()+1).padStart(2,'0'));}
@@ -1070,7 +1071,7 @@ function renderTC(){
   // Cat grid
   const total2=Object.values(porCat).reduce((s,c)=>s+c.total,0)||1;
   const sorted=Object.entries(porCat).sort((a,b)=>b[1].total-a[1].total);
-  $('tc-cat-grid').innerHTML=sorted.map(([cat,data])=>{const col=CATS[cat]||'var(--text3)';const p=((data.total/total2)*100).toFixed(1);return`<div class="cat-card" onclick="filtrarCat('${cat}')"><div class="cat-top"><span class="cat-emoji">${cat.split(' ')[0]}</span><span class="cat-name" style="color:${col}">${cat.split(' ').slice(1).join(' ')}</span></div><div class="cat-amt" style="color:${col}">${fmt(data.total)}</div><div class="cat-cnt">${data.items.length} gastos Â· ${p}%</div><div class="cat-bar-bg"><div class="cat-bar-fill" style="width:${p}%;background:${col}"></div></div></div>`;}).join('');
+  $('tc-cat-grid').innerHTML=sorted.map(([cat,data])=>{const col=CATS[cat]||'var(--text3)';const p=((data.total/total2)*100).toFixed(1);return`<div class="cat-card" onclick="filtrarCat('${cat}')"><div class="cat-top"><span class="cat-emoji">${cat.split(' ')[0]}</span><span class="cat-name" style="color:${col}">${cat.split(' ').slice(1).join(' ')}</span></div><div class="cat-amt" style="color:${col}">${fmt(data.total)}</div><div class="cat-cnt">${data.items.length} gastos · ${p}%</div><div class="cat-bar-bg"><div class="cat-bar-fill" style="width:${p}%;background:${col}"></div></div></div>`;}).join('');
 }
 
 function filtrarCat(c){$('tc-cat-fil').value=c;setMod(0);setInner(0,1);}
@@ -1079,14 +1080,14 @@ function renderTcCatDet(){
   let lista=tcMovs.filter(m=>m.tipo==='compra').sort((a,b)=>new Date(b.fecha)-new Date(a.fecha));
   if(f!=='TODAS')lista=lista.filter(m=>m.cat===f);
   $('tc-cat-ttl').textContent=f==='TODAS'?'Todos los gastos':f;
-  $('tc-cat-tb').innerHTML=lista.map(m=>`<tr><td>${m.desc}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2)">${fmtF(m.fecha)}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);text-align:center">${(m.cuotas||1)>1?m.cuotas+'x':'â€”'}</td><td class="vn">â€“${fmt(m.valor)}</td><td><button class="btn-del" onclick="elimTc('${m.id}')">âœ•</button></td></tr>`).join('')||'<tr><td colspan="5"><div class="empty">SIN GASTOS</div></td></tr>';
+  $('tc-cat-tb').innerHTML=lista.map(m=>`<tr><td>${m.desc}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2)">${fmtF(m.fecha)}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);text-align:center">${(m.cuotas||1)>1?m.cuotas+'x':'—'}</td><td class="vn">–${fmt(m.valor)}</td><td><button class="btn-del" onclick="elimTc('${m.id}')">✕</button></td></tr>`).join('')||'<tr><td colspan="5"><div class="empty">SIN GASTOS</div></td></tr>';
 }
 function renderTcMovs(){
   const f=$('tc-fil').value;
   let lista=[...tcMovs].sort((a,b)=>new Date(b.fecha)-new Date(a.fecha));
   if(f!=='todos')lista=lista.filter(m=>m.tipo===f);
   $('tc-mov-cnt').textContent=lista.length+' movimiento'+(lista.length!==1?'s':'');
-  $('tc-mov-tb').innerHTML=lista.map(m=>`<tr><td>${m.desc}</td><td><span class="badge ${m.tipo==='compra'?'b-compra':'b-pago'}">${m.tipo==='compra'?'COMPRA':'ABONO'}</span></td><td style="font-size:12px;text-align:center">${(m.cat||'ðŸ”§').split(' ')[0]}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2)">${fmtF(m.fecha)}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);text-align:center">${(m.cuotas||1)>1?m.cuotas+'x':'â€”'}</td><td class="${m.tipo==='compra'?'vn':'vp'}">${m.tipo==='compra'?'â€“':'+'}${fmt(m.valor)}</td><td><button class="btn-del" onclick="elimTc('${m.id}')">âœ•</button></td></tr>`).join('')||'<tr><td colspan="7"><div class="empty">SIN MOVIMIENTOS</div></td></tr>';
+  $('tc-mov-tb').innerHTML=lista.map(m=>`<tr><td>${m.desc}</td><td><span class="badge ${m.tipo==='compra'?'b-compra':'b-pago'}">${m.tipo==='compra'?'COMPRA':'ABONO'}</span></td><td style="font-size:12px;text-align:center">${(m.cat||'🔧').split(' ')[0]}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2)">${fmtF(m.fecha)}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);text-align:center">${(m.cuotas||1)>1?m.cuotas+'x':'—'}</td><td class="${m.tipo==='compra'?'vn':'vp'}">${m.tipo==='compra'?'–':'+'}${fmt(m.valor)}</td><td><button class="btn-del" onclick="elimTc('${m.id}')">✕</button></td></tr>`).join('')||'<tr><td colspan="7"><div class="empty">SIN MOVIMIENTOS</div></td></tr>';
 }
 function renderTcProy(){
   const comp = tcMovs.filter(m => m.tipo === 'compra');
@@ -1098,7 +1099,7 @@ function renderTcProy(){
   const sumPag  = pagos.reduce((s,m) => s+m.valor, 0);
   let saldoPendiente = Math.max(0, sumComp - sumPag);
 
-  // Calcular total deuda pendiente en cuotas (valor restante no cobrado aÃºn)
+  // Calcular total deuda pendiente en cuotas (valor restante no cobrado aún)
   const hoyRef = new Date();
   let totCuotasRestantes = 0;
   cuotas.forEach(m => {
@@ -1148,17 +1149,17 @@ function renderTcProy(){
 
   $('tc-proy-tb').innerHTML = rows.map(r => `
     <tr style="${r.esActual?'background:rgba(0,229,255,0.04)':''}">
-      <td style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;color:${r.esActual?'var(--cyan)':'var(--text)'}">${r.esActual?'â–¶ ':''}${r.lbl}</td>
-      <td style="color:var(--text3)">${r.ct > 0 ? fmt(r.ct) : 'â€”'}</td>
-      <td class="vo">${r.cm > 0 ? fmt(r.cm) : 'â€”'}</td>
-      <td class="vn" style="font-size:16px;font-weight:700">${r.totalMes > 0 ? fmt(r.totalMes) : 'â€”'}</td>
+      <td style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;color:${r.esActual?'var(--cyan)':'var(--text)'}">${r.esActual?'▶ ':''}${r.lbl}</td>
+      <td style="color:var(--text3)">${r.ct > 0 ? fmt(r.ct) : '—'}</td>
+      <td class="vo">${r.cm > 0 ? fmt(r.cm) : '—'}</td>
+      <td class="vn" style="font-size:16px;font-weight:700">${r.totalMes > 0 ? fmt(r.totalMes) : '—'}</td>
       <td style="color:${r.saldo < 500000 ? 'var(--emerald)' : 'var(--text3)'}; font-family:'Barlow Condensed',sans-serif;font-size:14px">${fmt(r.saldo)}</td>
     </tr>`).join('');
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-//  RENDER FINANZAS (DINÃMICO)
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
+//  RENDER FINANZAS (DINÁMICO)
+// ══════════════════════════════════════════════
 let donutChart = null;
 function renderFinanzas() {
   const {year:y, month:m} = mesActualFin;
@@ -1185,13 +1186,13 @@ function renderFinanzas() {
   balEl.textContent = fmt(Math.abs(balance));
   balEl.style.color = balance >= 0 ? 'var(--emerald)' : 'var(--red)';
   const balLbl = document.querySelector('.kc:last-child .kpi-lbl');
-  if(balLbl) balLbl.textContent = balance >= 0 ? 'ðŸ’š Balance' : 'ðŸ”´ Balance';
+  if(balLbl) balLbl.textContent = balance >= 0 ? '💚 Balance' : '🔴 Balance';
 
   // Alerta
   const fal = $('fin-alerta');
   if (balance < 0) {
     fal.classList.remove('hide');
-    $('fin-al-tit').textContent = 'âš ï¸ DÃ‰FICIT: '+fmt(Math.abs(balance));
+    $('fin-al-tit').textContent = '⚠️ DÉFICIT: '+fmt(Math.abs(balance));
     $('fin-al-desc').textContent = 'Tus gastos ('+fmt(totalGas)+') superan tus ingresos ('+fmt(totalIng)+'). Revisa prioridades.';
   } else { fal.classList.add('hide'); }
 
@@ -1217,7 +1218,7 @@ function renderFinanzas() {
         <input type="number" value="${i.monto}" onchange="finEditMonto('ing','${i.id}',this)"
           style="background:var(--bg4);border:1px solid var(--border);color:var(--emerald);padding:4px 8px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;width:130px;outline:none;text-align:right"
           inputmode="numeric">
-        <button onclick="finElim('ing','${i.id}')" class="btn-del">âœ•</button>
+        <button onclick="finElim('ing','${i.id}')" class="btn-del">✕</button>
       </div>
     </div>`).join('');
 
@@ -1238,7 +1239,7 @@ function renderFinanzas() {
         <input type="number" value="${g.monto}" onchange="finEditMonto('gas','${g.id}',this)"
           style="background:var(--bg4);border:1px solid var(--border);color:${col};padding:4px 8px;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;width:130px;outline:none;text-align:right"
           inputmode="numeric">
-        <button onclick="finElim('gas','${g.id}')" class="btn-del">âœ•</button>
+        <button onclick="finElim('gas','${g.id}')" class="btn-del">✕</button>
       </div>
     </div>`;
   }).join('');
@@ -1270,7 +1271,7 @@ function renderFinanzas() {
   // Orden de pago
   const ord = data.gastos.filter(g => !g.pagado).sort((a,b) => (a.orden||99)-(b.orden||99));
   $('fin-orden-list').innerHTML = ord.length === 0
-    ? '<div class="empty" style="color:var(--emerald)">âœ… Â¡Todo pagado este mes!</div>'
+    ? '<div class="empty" style="color:var(--emerald)">✅ ¡Todo pagado este mes!</div>'
     : ord.slice(0,8).map((g,i) => {
         const col = CAT_COLORS_FIN[g.cat] || '#64748b';
         return `<div class="orden-item" onclick="finTogglePago('${g.id}')" style="cursor:pointer">
@@ -1289,23 +1290,23 @@ function calcNomina(){
   const comision = parseFloat($('nom-comision').value) || 0;
   const almuerzo = parseFloat($('nom-almuerzo').value) || 0;
 
-  // Salud y pensiÃ³n se calculan SOLO sobre sueldo fijo (no sobre comisiÃ³n variable)
+  // Salud y pensión se calculan SOLO sobre sueldo fijo (no sobre comisión variable)
   const salud   = sueldo * 0.04;
   const pension = sueldo * 0.04;
   const totalDeduc = salud + pension + almuerzo;
 
-  // Pago total = sueldo âˆ’ deducciones + comisiÃ³n
+  // Pago total = sueldo − deducciones + comisión
   const pagoSueldo = sueldo - salud - pension - almuerzo;
   const pagoTotal  = Math.max(0, pagoSueldo + comision);
   const devengado  = sueldo + comision;
 
-  // Actualizar mes en tÃ­tulo
+  // Actualizar mes en título
   const {year:y, month:m} = mesActualFin;
   const MESES_N=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
   const nomMesTit = $('nom-mes-titulo');
   if(nomMesTit) nomMesTit.textContent = MESES_N[m]+' '+y;
 
-  // Salud y pensiÃ³n (desglose)
+  // Salud y pensión (desglose)
   $('nr-salud').textContent   = fmt(salud);
   $('nr-pension').textContent = fmt(pension);
 
@@ -1319,37 +1320,37 @@ function calcNomina(){
   if($('nr-devengado'))   $('nr-devengado').textContent   = fmt(devengado);
   if($('nr-total-deduc')) $('nr-total-deduc').textContent = fmt(totalDeduc);
   if($('nr-neto2'))       $('nr-neto2').textContent       = fmt(pagoTotal);
-  // Color segÃºn si el pago cubre gastos del mes
+  // Color según si el pago cubre gastos del mes
   $('nr-neto').style.color = pagoTotal >= 4500000 ? 'var(--emerald)' : pagoTotal >= 3000000 ? 'var(--yellow)' : 'var(--blue)';
 }
 
 function renderFinExtras(){ /* legacy - datos manejados por mes */ }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  RENDER CLASES & VUELOS
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 function renderClases(){
   const hoy2=new Date();
-  const comp=CLASES_BASE.filter(c=>new Date(c.fecha+'T12:00:00')<=hoy2&&c.vuelo.estado==='âœ… Comprado').length;
+  const comp=CLASES_BASE.filter(c=>new Date(c.fecha+'T12:00:00')<=hoy2&&c.vuelo.estado==='✅ Comprado').length;
   $('cla-total').textContent=CLASES_BASE.length;$('cla-comp').textContent=comp;
   const prox=CLASES_BASE.find(c=>new Date(c.fecha+'T12:00:00')>=hoy2);
-  if(prox){$('cla-prox').textContent=fmtFull(prox.fecha);$('cla-prox-sub').textContent=prox.modalidad+' Â· '+prox.vuelo.estado;}
+  if(prox){$('cla-prox').textContent=fmtFull(prox.fecha);$('cla-prox-sub').textContent=prox.modalidad+' · '+prox.vuelo.estado;}
   const vuelosExtra=vueMovs;
   $('cla-list').innerHTML=CLASES_BASE.map((c,i)=>{
     const d=new Date(c.fecha+'T12:00:00');const isPast=d<hoy2;const isPresc=c.modalidad==='Presencial';
     return`<div class="card ${isPast?'':''}" style="margin-bottom:8px;border-color:${isPresc?'rgba(124,77,255,0.2)':'rgba(59,130,246,0.15)'}">
       <div style="padding:12px 14px;display:flex;gap:12px;align-items:flex-start">
-        <div style="width:38px;height:38px;border-radius:7px;background:${isPresc?'rgba(124,77,255,0.12)':'rgba(59,130,246,0.1)'};display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0">${isPresc?'ðŸŽ“':'ðŸ’»'}</div>
+        <div style="width:38px;height:38px;border-radius:7px;background:${isPresc?'rgba(124,77,255,0.12)':'rgba(59,130,246,0.1)'};display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0">${isPresc?'🎓':'💻'}</div>
         <div style="flex:1">
           <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
             <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;color:${isPast?'var(--text3)':'var(--text)'}">${fmtFull(c.fecha).toUpperCase()}</span>
             <span class="badge ${isPresc?'b-presencial':'b-virtual'}">${c.modalidad}</span>
-            ${isPast?'<span class="badge" style="background:rgba(16,185,129,0.1);color:var(--emerald);border:1px solid rgba(16,185,129,0.2)">âœ… COMPLETADA</span>':'<span class="badge b-pend">PRÃ“XIMA</span>'}
+            ${isPast?'<span class="badge" style="background:rgba(16,185,129,0.1);color:var(--emerald);border:1px solid rgba(16,185,129,0.2)">✅ COMPLETADA</span>':'<span class="badge b-pend">PRÓXIMA</span>'}
           </div>
-          ${isPresc&&c.vuelo.ruta?`<div style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);margin-top:3px">âœˆï¸ ${c.vuelo.ruta} Â· ${c.vuelo.aero} Â· ${c.vuelo.sale||'â€”'}</div>`:''}
-          ${c.vuelo.reserva?`<div style="font-family:'Space Mono',monospace;font-size:8px;color:rgba(124,77,255,0.6);margin-top:2px">RESERVA: ${c.vuelo.reserva}${c.vuelo.valor?' Â· '+c.vuelo.valor:''}</div>`:''}
+          ${isPresc&&c.vuelo.ruta?`<div style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);margin-top:3px">✈️ ${c.vuelo.ruta} · ${c.vuelo.aero} · ${c.vuelo.sale||'—'}</div>`:''}
+          ${c.vuelo.reserva?`<div style="font-family:'Space Mono',monospace;font-size:8px;color:rgba(124,77,255,0.6);margin-top:2px">RESERVA: ${c.vuelo.reserva}${c.vuelo.valor?' · '+c.vuelo.valor:''}</div>`:''}
         </div>
-        <div style="font-family:'Space Mono',monospace;font-size:8px;color:${c.vuelo.estado==='âœ… Comprado'?'var(--emerald)':'var(--yellow)'};text-align:right">${c.vuelo.estado}</div>
+        <div style="font-family:'Space Mono',monospace;font-size:8px;color:${c.vuelo.estado==='✅ Comprado'?'var(--emerald)':'var(--yellow)'};text-align:right">${c.vuelo.estado}</div>
       </div>
     </div>`;
   }).join('');
@@ -1361,28 +1362,28 @@ function renderVuelos(){
   const gastoTotal=allVuelos.reduce((s,v)=>s+(v.costo||0),0);
   const prox2=allVuelos.filter(v=>new Date(v.fecha+'T12:00:00')>=hoy3).sort((a,b)=>new Date(a.fecha)-new Date(b.fecha))[0];
   $('vue-total').textContent=allVuelos.length;$('vue-gasto').textContent=fmt(gastoTotal);
-  if(prox2){$('vue-prox').textContent=prox2.ruta;$('vue-prox-sub').textContent=fmtF(prox2.fecha)+' Â· '+prox2.aero;}
+  if(prox2){$('vue-prox').textContent=prox2.ruta;$('vue-prox-sub').textContent=fmtF(prox2.fecha)+' · '+prox2.aero;}
 
   $('vue-list').innerHTML=VUELOS_BASE.map(v=>{
     const isPast=new Date(v.fecha+'T12:00:00')<hoy3;
     return`<div class="vuelo-card" style="${isPast?'opacity:0.7':''}">
-      <div class="vuelo-ico">âœˆï¸</div>
+      <div class="vuelo-ico">✈️</div>
       <div class="vuelo-info">
         <div class="vuelo-ruta">${v.ruta}</div>
-        <div class="vuelo-meta">${v.aero} Â· ${fmtFull(v.fecha)} Â· ${v.sale}</div>
+        <div class="vuelo-meta">${v.aero} · ${fmtFull(v.fecha)} · ${v.sale}</div>
         ${v.reserva&&v.reserva!=='-'?`<div style="font-family:'Space Mono',monospace;font-size:7px;color:rgba(124,77,255,0.5);margin-top:3px">RESERVA: ${v.reserva}</div>`:''}
         <div class="vuelo-estado"><span class="badge ${v.estado==='completado'?'b-cobrado':v.estado==='confirmado'?'b-presencial':'b-pend'}">${v.estado.toUpperCase()}</span></div>
       </div>
-      <div class="vuelo-val">${v.costo>0?'â€“'+fmt(v.costo):'â€”'}</div>
+      <div class="vuelo-val">${v.costo>0?'–'+fmt(v.costo):'—'}</div>
     </div>`;
   }).join('');
 
-  $('vue-extra-tb').innerHTML=vueMovs.length===0?'<tr><td colspan="7"><div class="empty">Sin vuelos adicionales</div></td></tr>':vueMovs.map(v=>`<tr><td style="font-weight:600">${v.ruta}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2)">${fmtF(v.fecha)}</td><td>${v.aero||'â€”'}</td><td style="font-family:'Space Mono',monospace;font-size:9px;color:var(--purple)">${v.reserva||'â€”'}</td><td><span class="badge ${v.estado==='completado'?'b-cobrado':'b-pend'}">${(v.estado||'').toUpperCase()}</span></td><td class="vn">${v.costo>0?'â€“'+fmt(v.costo):'â€”'}</td><td><button class="btn-del" onclick="elimVue('${v.id}')">âœ•</button></td></tr>`).join('');
+  $('vue-extra-tb').innerHTML=vueMovs.length===0?'<tr><td colspan="7"><div class="empty">Sin vuelos adicionales</div></td></tr>':vueMovs.map(v=>`<tr><td style="font-weight:600">${v.ruta}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2)">${fmtF(v.fecha)}</td><td>${v.aero||'—'}</td><td style="font-family:'Space Mono',monospace;font-size:9px;color:var(--purple)">${v.reserva||'—'}</td><td><span class="badge ${v.estado==='completado'?'b-cobrado':'b-pend'}">${(v.estado||'').toUpperCase()}</span></td><td class="vn">${v.costo>0?'–'+fmt(v.costo):'—'}</td><td><button class="btn-del" onclick="elimVue('${v.id}')">✕</button></td></tr>`).join('');
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  RENDER VENTAS
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 function calcVenta(){
   const t=parseFloat($('vc-total').value)||0;
   const r=$('vc-rete').checked;const i=$('vc-ica').checked;
@@ -1400,9 +1401,9 @@ function guardarVenta(){
   const cliente=$('vc-cliente').value.trim();
   const fecha=$('vc-fecha').value;
   const estado=$('vc-estado').value;
-  if(!t||t<=0){toast('âš  Ingresa el valor','err');return;}
-  if(!cliente){toast('âš  Ingresa el cliente','err');return;}
-  if(!fecha){toast('âš  Ingresa la fecha','err');return;}
+  if(!t||t<=0){toast('⚠ Ingresa el valor','err');return;}
+  if(!cliente){toast('⚠ Ingresa el cliente','err');return;}
+  if(!fecha){toast('⚠ Ingresa la fecha','err');return;}
   const r=$('vc-rete').checked;const i=$('vc-ica').checked;
   const rfp=r?0.025:0;const rip=i?0.01104:0;
   const b=t/(1+0.19-rfp-rip);const iv=b*0.19;const rf=b*rfp;const ri=b*rip;const com=b*0.01;
@@ -1410,7 +1411,7 @@ function guardarVenta(){
   venMovs.unshift(nuevaVenta);
   saveData(KEYS.ventas,venMovs);
   $('vc-total').value='';$('vc-cliente').value='';$('vc-preview').style.display='none';$('vc-com-badge').style.display='none';
-  // renderVentas removed - sales tab deleted; setInner(3,0);toast('âœ“ Venta registrada Â· ComisiÃ³n: '+fmt(com),'ok');
+  // renderVentas removed - sales tab deleted; setInner(3,0);toast('✓ Venta registrada · Comisión: '+fmt(com),'ok');
   enviarSheets({modulo:'ventas', ...nuevaVenta});
 }
 
@@ -1423,46 +1424,46 @@ function renderVentas(){
   $('ven-mes').textContent=fmt(totalMes);$('ven-n-mes').textContent=mes.length+' venta'+(mes.length!==1?'s':'');$('ven-pend').textContent=fmt(pend2);$('ven-com').textContent=fmt(comMes);
   const f=$('ven-fil').value;let lista=[...venMovs].sort((a,b)=>new Date(b.fecha)-new Date(a.fecha));
   if(f!=='todos')lista=lista.filter(m=>m.estado===f);
-  $('ven-tb').innerHTML=lista.map(m=>`<tr><td style="font-weight:600">${m.desc}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2)">${fmtF(m.fecha)}</td><td class="vp">${fmt(m.totalPagado)}</td><td style="color:var(--blue)">${fmt(m.base||0)}</td><td style="color:var(--text3)">${fmt(m.iva||0)}</td><td style="color:var(--red)">${m.aplicaRete?fmt(m.retefuente||0):'â€”'}</td><td style="color:var(--red)">${m.aplicaIca?fmt(m.reteica||0):'â€”'}</td><td class="vo">${fmt(m.comision||0)}</td><td><span class="badge ${m.estado==='cobrado'?'b-cobrado':'b-pend'}">${m.estado.toUpperCase()}</span></td><td><button class="btn-del" onclick="elimVen('${m.id}')">âœ•</button></td></tr>`).join('')||'<tr><td colspan="10"><div class="empty">SIN VENTAS REGISTRADAS</div></td></tr>';
+  $('ven-tb').innerHTML=lista.map(m=>`<tr><td style="font-weight:600">${m.desc}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2)">${fmtF(m.fecha)}</td><td class="vp">${fmt(m.totalPagado)}</td><td style="color:var(--blue)">${fmt(m.base||0)}</td><td style="color:var(--text3)">${fmt(m.iva||0)}</td><td style="color:var(--red)">${m.aplicaRete?fmt(m.retefuente||0):'—'}</td><td style="color:var(--red)">${m.aplicaIca?fmt(m.reteica||0):'—'}</td><td class="vo">${fmt(m.comision||0)}</td><td><span class="badge ${m.estado==='cobrado'?'b-cobrado':'b-pend'}">${m.estado.toUpperCase()}</span></td><td><button class="btn-del" onclick="elimVen('${m.id}')">✕</button></td></tr>`).join('')||'<tr><td colspan="10"><div class="empty">SIN VENTAS REGISTRADAS</div></td></tr>';
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  CRUD
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-function elimTc(id){if(!confirm('Â¿Eliminar?'))return;tcMovs=tcMovs.filter(m=>String(m.id)!==String(id));saveData(KEYS.tc,tcMovs);renderTC();renderTcMovs();renderTcCatDet();toast('Eliminado','ok');}
-function elimFin(id){if(!confirm('Â¿Eliminar?'))return;finExtras=finExtras.filter(m=>String(m.id)!==String(id));saveData(KEYS.fin,finExtras);renderFinanzas();toast('Eliminado','ok');}
+// ══════════════════════════════════════════════
+function elimTc(id){if(!confirm('¿Eliminar?'))return;tcMovs=tcMovs.filter(m=>String(m.id)!==String(id));saveData(KEYS.tc,tcMovs);renderTC();renderTcMovs();renderTcCatDet();toast('Eliminado','ok');}
+function elimFin(id){if(!confirm('¿Eliminar?'))return;finExtras=finExtras.filter(m=>String(m.id)!==String(id));saveData(KEYS.fin,finExtras);renderFinanzas();toast('Eliminado','ok');}
 function renderFinExtras(){/* legacy */}
-function elimVue(id){if(!confirm('Â¿Eliminar?'))return;vueMovs=vueMovs.filter(m=>String(m.id)!==String(id));saveData(KEYS.vuelos,vueMovs);renderVuelos();toast('Eliminado','ok');}
-function elimVen(id){if(!confirm('Â¿Eliminar?'))return;venMovs=venMovs.filter(m=>String(m.id)!==String(id));saveData(KEYS.ventas,venMovs);renderVentas();toast('Eliminado','ok');}
+function elimVue(id){if(!confirm('¿Eliminar?'))return;vueMovs=vueMovs.filter(m=>String(m.id)!==String(id));saveData(KEYS.vuelos,vueMovs);renderVuelos();toast('Eliminado','ok');}
+function elimVen(id){if(!confirm('¿Eliminar?'))return;venMovs=venMovs.filter(m=>String(m.id)!==String(id));saveData(KEYS.ventas,venMovs);renderVentas();toast('Eliminado','ok');}
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  MODALES
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 function openM(id){document.getElementById(id).classList.add('open');const fi=document.getElementById(id).querySelector('input[type="date"]');if(fi&&!fi.value)fi.value=hoy();}
 function closeM(id){document.getElementById(id).classList.remove('open');}
 document.querySelectorAll('.modal-ov').forEach(o=>o.addEventListener('click',function(e){if(e.target===this)this.classList.remove('open');}));
 
-function fabGasto(){const mods=['m-gasto-tc','m-finanza','m-vuelo'];openM(mods[Math.min(moduloActual,2)]);}
+function fabGasto(){const mods=['m-gasto-tc','m-finanza','m-vuelo','m-vuelo'];openM(mods[Math.min(moduloActual,3)]);}
 function fabAbono(){openM('m-abono-tc');}
 
 function guardarTcGasto(){
-  const desc=$('tg-desc').value.trim()||'Sin descripciÃ³n';const cat=$('tg-cat').value;
+  const desc=$('tg-desc').value.trim()||'Sin descripción';const cat=$('tg-cat').value;
   const valor=parseFloat($('tg-valor').value);const fecha=$('tg-fecha').value;const cuotas=parseInt($('tg-cuotas').value)||1;
-  if(!valor||valor<=0){toast('âš  Valor requerido','err');return;}if(!fecha){toast('âš  Fecha requerida','err');return;}
+  if(!valor||valor<=0){toast('⚠ Valor requerido','err');return;}if(!fecha){toast('⚠ Fecha requerida','err');return;}
   const m={id:uid(),tipo:'compra',desc,cat,valor,fecha,cuotas};tcMovs.unshift(m);saveData(KEYS.tc,tcMovs);
-  closeM('m-gasto-tc');renderTC();toast('âœ“ Gasto en '+cat,'ok');
+  closeM('m-gasto-tc');renderTC();toast('✓ Gasto en '+cat,'ok');
   enviarSheets({modulo:'credito', tipo:'compra',desc,cat,valor,fecha,cuotas, id: tcMovs[0].id});
 }
 function guardarTcAbono(){
   const desc=$('ta-desc').value.trim()||'Abono';const valor=parseFloat($('ta-valor').value);const fecha=$('ta-fecha').value;
-  if(!valor||valor<=0){toast('âš  Valor requerido','err');return;}if(!fecha){toast('âš  Fecha requerida','err');return;}
-  const m={id:uid(),tipo:'pago',desc,cat:'ðŸ’° Abono',valor,fecha,cuotas:1};tcMovs.unshift(m);saveData(KEYS.tc,tcMovs);
-  closeM('m-abono-tc');renderTC();toast('âœ“ Abono registrado Â· Deuda actualizada','ok');
+  if(!valor||valor<=0){toast('⚠ Valor requerido','err');return;}if(!fecha){toast('⚠ Fecha requerida','err');return;}
+  const m={id:uid(),tipo:'pago',desc,cat:'💰 Abono',valor,fecha,cuotas:1};tcMovs.unshift(m);saveData(KEYS.tc,tcMovs);
+  closeM('m-abono-tc');renderTC();toast('✓ Abono registrado · Deuda actualizada','ok');
   enviarSheets({modulo:'credito', tipo:'pago',desc,valor,fecha,cuotas:1, id: tcMovs[0].id});
 }
 function guardarFinanza(){
   const tipo=$('fm-tipo').value;const desc=$('fm-desc').value.trim()||tipo;const valor=parseFloat($('fm-valor').value);const fecha=$('fm-fecha').value;
-  if(!valor||valor<=0){toast('âš  Valor requerido','err');return;}
+  if(!valor||valor<=0){toast('⚠ Valor requerido','err');return;}
   // Agregar al mes correspondiente
   const d = fecha ? new Date(fecha+'T12:00:00') : new Date();
   const {year:y, month:m2} = {year: d.getFullYear(), month: d.getMonth()};
@@ -1470,40 +1471,40 @@ function guardarFinanza(){
   if (tipo === 'ingreso') data.ingresos.push({id:uid(), nombre:desc, monto:valor});
   else data.gastos.push({id:uid(), nombre:desc, monto:valor, cat:'Varios', pagado:false, orden:99});
   saveFinMesData(y, m2, data);
-  closeM('m-finanza');renderFinanzas();toast('âœ“ Guardado en '+MS[m2]+' '+y,'ok');
+  closeM('m-finanza');renderFinanzas();toast('✓ Guardado en '+MS[m2]+' '+y,'ok');
 }
 function guardarVuelo(){
   const ruta=$('vf-ruta').value.trim();const aero=$('vf-aero').value.trim();const reserva=$('vf-reserva').value.trim();const fecha=$('vf-fecha').value;const costo=parseFloat($('vf-costo').value)||0;const estado=$('vf-estado').value;
-  if(!ruta||!fecha){toast('âš  Ruta y fecha requeridos','err');return;}
+  if(!ruta||!fecha){toast('⚠ Ruta y fecha requeridos','err');return;}
   vueMovs.unshift({id:uid(),ruta,aero,reserva,fecha,costo,estado});saveData(KEYS.vuelos,vueMovs);
-  closeM('m-vuelo');renderVuelos();toast('âœ“ Vuelo registrado','ok');
+  closeM('m-vuelo');renderVuelos();toast('✓ Vuelo registrado','ok');
 }
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-//  SHEETS SYNC â€” TODOS LOS MÃ“DULOS
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
+//  SHEETS SYNC — TODOS LOS MÓDULOS
+// ══════════════════════════════════════════════
 function setSyncState(state,txt){
   const dot=$('sync-dot'), stxt=$('sync-txt');
   if(stxt) stxt.textContent=txt;
   if(dot) dot.className='sync-dot'+(state==='ok'?' ok':state==='loading'?' loading':'');
 }
 
-// â”€â”€ LEER desde Sheets al abrir la app â”€â”€
+// ── LEER desde Sheets al abrir la app ──
 async function syncAll(){
   if(!SHEETS_URL){ setSyncState('','OFFLINE'); return; }
-  setSyncState('loading','SINCRONIZANDOâ€¦');
+  setSyncState('loading','SINCRONIZANDO…');
   try{
     const res  = await fetch(SHEETS_URL+'?modulo=all&t='+Date.now());
     const data = await res.json();
     if(!data.ok) throw new Error(data.error||'Error Sheets');
 
-    // CRÃ‰DITO â€” merge (no borra datos locales)
+    // CRÉDITO — merge (no borra datos locales)
     if(data.credito && data.credito.length > 0){
-      tcMovs = mergeTc(tcMovs, data.credito.map(m=>({...m, cat: m.cat||'ðŸ”§ Varios'})));
+      tcMovs = mergeTc(tcMovs, data.credito.map(m=>({...m, cat: m.cat||'🔧 Varios'})));
       saveData(KEYS.tc, tcMovs);
     }
 
-    // VENTAS â€” merge
+    // VENTAS — merge
     if(data.ventas && data.ventas.length > 0){
       const localIds = new Set(venMovs.map(m=>String(m.id)));
       const nuevas   = data.ventas.filter(v=>!localIds.has(String(v.id)));
@@ -1514,7 +1515,7 @@ async function syncAll(){
     }
 
     modoOnline = true;
-    setSyncState('ok','âœ“ SHEETS CONECTADO');
+    setSyncState('ok','✓ SHEETS CONECTADO');
     renderTC();
     // if(moduloActual===3) renderVentas(); - sales tab deleted
 
@@ -1524,7 +1525,7 @@ async function syncAll(){
   }
 }
 
-// â”€â”€ ENVIAR un movimiento nuevo â”€â”€
+// ── ENVIAR un movimiento nuevo ──
 async function enviarSheets(payload){
   if(!SHEETS_URL || !modoOnline) return;
   try{
@@ -1536,13 +1537,13 @@ async function enviarSheets(payload){
   } catch(e){ console.warn('enviarSheets:', e); }
 }
 
-// â”€â”€ SYNC COMPLETO â€” sube todo al hacer clic en SYNC â”€â”€
+// ── SYNC COMPLETO — sube todo al hacer clic en SYNC ──
 async function syncCompletoSheets(){
-  if(!SHEETS_URL){ toast('âš  Sin URL de Sheets configurada','err'); return; }
-  setSyncState('loading','SUBIENDO TODOâ€¦');
-  toast('âŸ³ Enviando datos a Sheetsâ€¦','ok');
+  if(!SHEETS_URL){ toast('⚠ Sin URL de Sheets configurada','err'); return; }
+  setSyncState('loading','SUBIENDO TODO…');
+  toast('⟳ Enviando datos a Sheets…','ok');
 
-  // Armar finanzas plano (Ãºltimos 6 meses)
+  // Armar finanzas plano (últimos 6 meses)
   const finanzasFlat = [];
   const hoy3 = new Date();
   for(let i=5; i>=0; i--){
@@ -1578,20 +1579,20 @@ async function syncCompletoSheets(){
     });
 
     modoOnline = true;
-    setSyncState('ok','âœ“ DATOS ENVIADOS');
+    setSyncState('ok','✓ DATOS ENVIADOS');
     const tc = tcMovs.length;
     const fi = finanzasFlat.length;
     const ve = venMovs.length;
-    toast(`âœ“ Enviado Â· ${tc} TC Â· ${fi} Finanzas Â· ${ve} Ventas`,'ok');
+    toast(`✓ Enviado · ${tc} TC · ${fi} Finanzas · ${ve} Ventas`,'ok');
 
   }catch(e){
     setSyncState('','ERROR');
-    toast('âš  Error: '+e.message,'err');
+    toast('⚠ Error: '+e.message,'err');
     console.error('Sync error:',e);
   }
 }
 
-// â”€â”€ ENVIAR un item individual â”€â”€
+// ── ENVIAR un item individual ──
 async function enviarSheets(payload){
   if(!SHEETS_URL) return;
   try{
@@ -1605,27 +1606,32 @@ async function enviarSheets(payload){
   }catch(e){ console.warn('enviarSheets:', e); }
 }
 
-// Asignar SYNC al botÃ³n
+// Asignar SYNC al botón
 document.getElementById('sync-txt').onclick = syncCompletoSheets;
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  TOAST & UTILS
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 function toast(msg,t='ok'){const el=document.getElementById('toast');el.textContent=msg;el.className='toast '+t+' show';setTimeout(()=>el.classList.remove('show'),2800);}
 function $(id){return document.getElementById(id);}
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  PWA
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 let dp=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e;if(!localStorage.getItem('cirox_no_install'))setTimeout(()=>document.getElementById('install-banner').classList.add('show'),5000);});
-document.getElementById('btn-install').addEventListener('click',async()=>{if(!dp)return;dp.prompt();await dp.userChoice;dp=null;document.getElementById('install-banner').classList.remove('show');toast('âœ“ CIROX instalado','ok');});
+document.getElementById('btn-install').addEventListener('click',async()=>{if(!dp)return;dp.prompt();await dp.userChoice;dp=null;document.getElementById('install-banner').classList.remove('show');toast('✓ CIROX instalado','ok');});
 function dismissInstall(){localStorage.setItem('cirox_no_install','1');document.getElementById('install-banner').classList.remove('show');}
 
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 //  DATOS DEL PDF - DAVIVIENDA ABRIL 2026
-// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ══════════════════════════════════════════════
 const DATOS_PDF_NUEVO = [
-  {id:1000,tipo:'compra',desc:'AVIANCASA',cat:'âœˆï¸ Vuelos',valor:115330,fecha:'2026-02-11',cuotas:1},
-  {id:1001,tipo:'c
+  {id:1000,tipo:'compra',desc:'AVIANCASA',cat:'✈️ Vuelos',valor:115330,fecha:'2026-02-11',cuotas:1},
+  {id:1001,tipo:'compra',desc:'SPOTIFY',cat:'🎵 Suscripciones',valor:19900,fecha:'2026-02-15',cuotas:1}
+];
+
+</script>
+</body>
+</html>
