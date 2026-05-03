@@ -326,86 +326,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 
 .empty{padding:28px;text-align:center;color:var(--text2);font-family:'Space Mono',monospace;font-size:9px;letter-spacing:1px;}
 ::-webkit-scrollbar{width:3px;height:3px;}::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.07);border-radius:2px;}
-
-/* ══════════════════════════════════════════════════════════════════════ */
-/* MÓDULO NU BANK - ESTILOS MINIMALISTAS Y OSCUROS TIPO NUBANK */
-/* ══════════════════════════════════════════════════════════════════════ */
-
-.nu-main{background:linear-gradient(135deg,rgba(139,61,220,0.03) 0%,rgba(0,0,0,0.2) 100%);min-height:100vh;padding:24px 16px!important;}
-
-/* Header */
-.nu-header{text-align:center;margin-bottom:32px;animation:fadeDown 0.6s ease both;}
-.nu-title{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;letter-spacing:2px;background:linear-gradient(135deg,#8b3ddc 0%,#d946ef 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.nu-subtitle{font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);letter-spacing:2px;margin-top:6px;text-transform:uppercase;}
-
-/* Tarjeta Visual */
-.nu-card-container{display:flex;justify-content:center;margin-bottom:40px;}
-.nu-card{width:100%;max-width:360px;aspect-ratio:1.586;background:linear-gradient(135deg,#1a0033 0%,#2d0652 50%,#1a0033 100%);border:1px solid rgba(139,61,220,0.3);border-radius:16px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 60px rgba(139,61,220,0.2),inset 0 1px 0 rgba(255,255,255,0.1);position:relative;overflow:hidden;}
-.nu-card::before{content:'';position:absolute;top:-50%;right:-50%;width:100%;height:100%;background:radial-gradient(ellipse 50% 50% at 100% 0%,rgba(217,70,239,0.1),transparent 70%);pointer-events:none;}
-
-.nu-card-header{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:2;}
-.nu-card-issuer{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:3px;color:#fff;text-transform:uppercase;}
-.nu-card-chip{font-size:28px;}
-
-.nu-card-middle{position:relative;z-index:2;text-align:center;}
-.nu-card-number{font-family:'Space Mono',monospace;font-size:18px;color:rgba(255,255,255,0.7);letter-spacing:4px;}
-
-.nu-card-footer{display:flex;justify-content:space-between;position:relative;z-index:2;}
-.nu-card-footer div{display:flex;flex-direction:column;}
-.nu-label{font-family:'Space Mono',monospace;font-size:7px;color:rgba(255,255,255,0.5);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;}
-.nu-cardholder{font-family:'Barlow Condensed',sans-serif;font-size:12px;color:#fff;letter-spacing:1px;font-weight:600;}
-.nu-expiry{font-family:'Space Mono',monospace;font-size:12px;color:#fff;}
-
-/* KPI Principal */
-.nu-kpi-main{background:rgba(139,61,220,0.08);border:1px solid rgba(139,61,220,0.25);border-radius:12px;padding:20px;text-align:center;margin-bottom:24px;}
-.nu-kpi-label{font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:block;}
-.nu-kpi-value{font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;color:#d946ef;margin-bottom:6px;}
-.nu-kpi-meta{font-family:'Space Mono',monospace;font-size:8px;color:var(--text3);letter-spacing:1px;}
-
-/* Cupo Section */
-.nu-cupo-section{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:24px;}
-.nu-cupo-hdr{display:flex;justify-content:space-between;margin-bottom:12px;font-family:'Space Mono',monospace;font-size:8px;font-weight:700;letter-spacing:2px;color:var(--text2);text-transform:uppercase;}
-.nu-cupo-pct{color:#d946ef;}
-.nu-cupo-bg{height:6px;background:rgba(139,61,220,0.1);border-radius:3px;overflow:hidden;margin-bottom:12px;}
-.nu-cupo-fill{height:100%;background:linear-gradient(90deg,#d946ef 0%,#8b3ddc 100%);border-radius:3px;transition:width 1s cubic-bezier(0.4,0,0.2,1);}
-.nu-cupo-stats{display:flex;justify-content:space-between;gap:12px;}
-.nu-cupo-stats div{flex:1;}
-.nu-stat-lbl{display:block;font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);letter-spacing:1px;margin-bottom:4px;text-transform:uppercase;}
-.nu-stat-val{display:block;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--text);}
-
-/* Info Grid */
-.nu-info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px;}
-@media(max-width:480px){.nu-info-grid{grid-template-columns:1fr 1fr;}}
-.nu-info-card{background:rgba(139,61,220,0.05);border:1px solid rgba(139,61,220,0.2);border-radius:10px;padding:14px 12px;text-align:center;}
-.nu-info-label{display:block;font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);letter-spacing:1px;margin-bottom:6px;text-transform:uppercase;}
-.nu-info-value{display:block;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:#d946ef;}
-
-/* Section */
-.nu-section{margin-bottom:24px;}
-.nu-section-title{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:2px;color:var(--text2);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;}
-.nu-section-title::after{content:'';flex:1;height:1px;background:var(--border);margin-left:10px;}
-
-/* Movimientos */
-.nu-movs-list{display:flex;flex-direction:column;gap:8px;}
-.nu-mov-item{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;}
-.nu-mov-left{display:flex;gap:10px;align-items:center;}
-.nu-mov-ico{font-size:18px;}
-.nu-mov-desc{flex:1;}
-.nu-mov-title{display:block;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px;}
-.nu-mov-date{display:block;font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);letter-spacing:1px;}
-.nu-mov-val{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;}
-.nu-mov-val.compra{color:var(--red);}
-.nu-mov-val.pago{color:var(--emerald);}
-
-/* Actions */
-.nu-actions{display:flex;gap:10px;margin-top:24px;margin-bottom:20px;}
-.nu-btn{flex:1;padding:14px;border:none;border-radius:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;}
-.nu-btn-primary{background:linear-gradient(135deg,#d946ef 0%,#8b3ddc 100%);color:#fff;box-shadow:0 8px 24px rgba(217,70,239,0.3);}
-.nu-btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(217,70,239,0.4);}
-.nu-btn-secondary{background:var(--bg2);color:var(--text);border:1px solid var(--border);}
-.nu-btn-secondary:hover{background:var(--bg3);border-color:rgba(139,61,220,0.3);}
-
-@media(max-width:480px){.kpi-val{font-size:17px;} .main{padding:10px;} .lhide{display:none;} .nu-title{font-size:24px;} .nu-card-number{font-size:14px;}}
+@media(max-width:480px){.kpi-val{font-size:17px;} .main{padding:10px;} .lhide{display:none;}}
 </style>
 </head>
 <body>
@@ -429,7 +350,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   <div class="mod-tab active" onclick="setMod(0)"><div class="mod-tab-emoji">💳</div><div class="mod-tab-label">TC</div></div>
   <div class="mod-tab" onclick="setMod(1)"><div class="mod-tab-emoji">💰</div><div class="mod-tab-label">Finanzas</div></div>
   <div class="mod-tab" onclick="setMod(2)"><div class="mod-tab-emoji">📚</div><div class="mod-tab-label">Clases &amp; Vuelos</div></div>
-  <div class="mod-tab" onclick="setMod(3)"><div class="mod-tab-emoji">💳</div><div class="mod-tab-label">NU BANK</div></div>
+  <div class="mod-tab" onclick="setMod(3)"><div class="mod-tab-emoji">📈</div><div class="mod-tab-label">Ventas</div></div>
 </div>
 
 <!-- STATUS BAR -->
@@ -446,190 +367,45 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 <!-- ══════════ MOD 0: TC ══════════ -->
 <div class="module active" id="mod-0">
   <div class="view active" id="tc-v0"><div class="main">
-    <div class="sl">TARJETA ACTIVA</div>
-    <!-- ✅ ALERTA MEJORADA CON COLOR-CODING -->
-    <div class="hide" id="tc-alerta" style="border-radius:12px;padding:16px;margin-bottom:16px;border-left:4px solid;display:flex;gap:12px;box-shadow:0 4px 12px rgba(0,0,0,0.08);background:linear-gradient(135deg, rgba(255,100,100,0.08), rgba(255,100,100,0.02))">
-      <div style="font-size:24px;flex-shrink:0;margin-top:2px">⚠️</div>
-      <div style="flex:1">
-        <div id="tc-al-tit" style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;letter-spacing:1px;color:var(--text);margin-bottom:6px;text-transform:uppercase">ALERTA</div>
-        <div id="tc-al-desc" style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);line-height:1.5">—</div>
-      </div>
+    <div class="sl">RESUMEN GENERAL</div>
+    <div class="alerta hide" id="tc-alerta"><div class="al-ico">⚠️</div><div><div class="al-tit" id="tc-al-tit">ALERTA</div><div class="al-desc" id="tc-al-desc"></div></div></div>
+    <div class="kpi-grid">
+      <div class="kc red"><div class="kpi-icon ki-r">💳</div><div class="kpi-lbl">Deuda Total</div><div class="kpi-val red" id="tc-deuda">$0</div><div class="kpi-sub" id="tc-deuda-sub">—</div></div>
+      <div class="kc orange"><div class="kpi-icon ki-o">◉</div><div class="kpi-lbl">Cupo Disponible</div><div class="kpi-val orange" id="tc-cupo">$0</div><div class="kpi-sub">Cupo: $8.400.000</div></div>
+      <div class="kc cyan"><div class="kpi-icon ki-c">📅</div><div class="kpi-lbl">Este Ciclo</div><div class="kpi-val cyan" id="tc-ciclo-kpi">$0</div><div class="kpi-sub">Corte día 8</div></div>
+      <div class="kc green"><div class="kpi-icon ki-g">↑</div><div class="kpi-lbl">Total Abonado</div><div class="kpi-val green" id="tc-abonado">$0</div><div class="kpi-sub" id="tc-ab-sub">0 abonos</div></div>
+      <div class="kc yellow"><div class="kpi-icon ki-y">★</div><div class="kpi-lbl">Mes Más Alto</div><div class="kpi-val yellow" id="tc-mesalto">—</div><div class="kpi-sub" id="tc-mesalto-sub">$0</div></div>
     </div>
-
-
-    <!-- ✅ TARJETA DAVIVIENDA COMPACTA STYLE NU BANK -->
-    <div style="background:linear-gradient(135deg, #E24B4A 0%, #d63a3a 100%);border-radius:16px;padding:20px;margin-bottom:24px;box-shadow:0 12px 32px rgba(226,75,74,0.2), 0 4px 8px rgba(0,0,0,0.1);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;color:white;aspect-ratio:16/10;max-width:400px" id="tarjeta-card">
-      <!-- Efecto shine -->
-      <div style="position:absolute;top:-50%;right:-20%;width:60%;height:60%;background:radial-gradient(ellipse, rgba(255,255,255,0.15), transparent 70%);pointer-events:none"></div>
-
-      <!-- Contenido Principal -->
-      <div style="position:relative;z-index:2">
-        <!-- Header: Logo y chip -->
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;letter-spacing:2px">DAVIVIENDA</div>
-          <div style="width:40px;height:26px;background:linear-gradient(135deg, #60a5fa, #3b82f6);border-radius:6px;border:1px solid rgba(255,255,255,0.3);opacity:0.85"></div>
-        </div>
-
-        <!-- Número tarjeta -->
-        <div style="font-family:'Space Mono',monospace;font-size:16px;letter-spacing:3px;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,0.2)">•••• •••• •••• 8762</div>
-      </div>
-
-      <!-- Footer: Info tarjeta -->
-      <div style="position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end">
-        <div>
-          <div style="font-family:'Space Mono',monospace;font-size:8px;opacity:0.7;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase">Titular</div>
-          <div style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700">CIRO SANTACRUZ</div>
-        </div>
-        <div style="text-align:right">
-          <div style="font-family:'Space Mono',monospace;font-size:8px;opacity:0.7;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase">Vence</div>
-          <div style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700" id="card-expiry">04/28</div>
-        </div>
-      </div>
+    <div class="cupo-card">
+      <div class="cupo-hdr"><div class="cupo-ttl">USO DEL CUPO</div><div class="cupo-pct" id="tc-cupo-pct">0%</div></div>
+      <div class="cupo-bg"><div class="cupo-fill" id="tc-cupo-bar" style="width:0%"></div></div>
+      <div class="cupo-stats"><span id="tc-usado">Usado: $0</span><span id="tc-disp">Disponible: $8.400.000</span><span>Total: $8.400.000</span></div>
     </div>
-
-    <!-- ✅ KPIS PRINCIPALES MEJORADOS -->
-    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));gap:14px;margin-bottom:24px">
-      <div style="background:linear-gradient(135deg, rgba(226,75,74,0.12), rgba(226,75,74,0.05));border:2px solid rgba(226,75,74,0.3);border-radius:12px;padding:16px;text-align:center;transition:all 0.3s ease;cursor:default">
-        <div style="font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:600">📊 Deuda Total</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;color:#E24B4A;text-shadow:0 2px 8px rgba(226,75,74,0.3)" id="tc-deuda">$0</div>
-        <div style="font-size:8px;color:var(--text2);margin-top:6px" id="tc-deuda-sub">—</div>
-      </div>
-      <div style="background:linear-gradient(135deg, rgba(16,185,129,0.12), rgba(16,185,129,0.05));border:2px solid rgba(16,185,129,0.3);border-radius:12px;padding:16px;text-align:center;transition:all 0.3s ease;cursor:default">
-        <div style="font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:600">💳 Disponible</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;color:#10b981;text-shadow:0 2px 8px rgba(16,185,129,0.3)" id="tc-cupo">$0</div>
-        <div style="font-size:8px;color:var(--text2);margin-top:6px" id="tc-cupo-sub">100%</div>
-      </div>
-      <div style="background:linear-gradient(135deg, rgba(0,229,255,0.12), rgba(0,229,255,0.05));border:2px solid rgba(0,229,255,0.3);border-radius:12px;padding:16px;text-align:center;transition:all 0.3s ease;cursor:default">
-        <div style="font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:600">⏱ Este Ciclo</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;color:#00e5ff;text-shadow:0 2px 8px rgba(0,229,255,0.3)" id="tc-ciclo-kpi">$0</div>
-        <div style="font-size:8px;color:var(--text2);margin-top:6px" id="tc-ciclo-sub">0 compras</div>
-      </div>
-      <div style="background:linear-gradient(135deg, rgba(168,85,247,0.12), rgba(168,85,247,0.05));border:2px solid rgba(168,85,247,0.3);border-radius:12px;padding:16px;text-align:center;transition:all 0.3s ease;cursor:default">
-        <div style="font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:600">💸 Pago Mín</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;color:#a855f7;text-shadow:0 2px 8px rgba(168,85,247,0.3)" id="tc-pago-min">$0</div>
-        <div style="font-size:9px;color:var(--text2);margin-top:4px">Próximo ciclo</div>
-      </div>
-    </div>
-
-    <div style="background:linear-gradient(135deg, rgba(255,122,26,0.08), rgba(255,122,26,0.02));border:1px solid rgba(255,122,26,0.2);border-radius:10px;padding:14px;margin-bottom:20px">
-      <!-- ✅ BARRA DE CUPO MEJORADA -->
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-        <div style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);letter-spacing:2px;text-transform:uppercase;font-weight:600">Uso del Cupo</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;background:linear-gradient(135deg, #ff7a1a, #ff9a4a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text" id="tc-cupo-pct">0%</div>
-      </div>
-      <div style="background:rgba(0,0,0,0.25);height:8px;border-radius:4px;overflow:hidden;margin-bottom:14px;box-shadow:inset 0 2px 4px rgba(0,0,0,0.3)">
-        <div id="tc-cupo-bar" style="background:linear-gradient(90deg, #ff7a1a 0%, #ff9a4a 50%, #ffa84d 100%);height:100%;width:0%;transition:width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);box-shadow:0 0 16px rgba(255,122,26,0.6)"></div>
-      </div>
-      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text2);gap:8px">
-        <span>Usado: <span id="tc-usado" style="color:#E24B4A;font-weight:600">$0</span></span>
-        <span style="flex:1;text-align:center;border-left:1px solid rgba(255,255,255,0.1);border-right:1px solid rgba(255,255,255,0.1)"></span>
-        <span style="text-align:right">Disponible: <span id="tc-disp" style="color:#10b981;font-weight:600">$8.400.000</span></span>
-      </div>
-    </div>
-    <!-- ✅ SECCIÓN CICLO ACTUAL MEJORADA -->
-    <div style="background:linear-gradient(135deg, rgba(255,122,26,0.08), rgba(255,122,26,0.02));border:1px solid rgba(255,122,26,0.2);border-radius:12px;padding:20px;margin-bottom:24px">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid rgba(255,122,26,0.15)">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;letter-spacing:2px;color:var(--text);text-transform:uppercase">🗓 Ciclo Actual</div>
-        <div style="font-family:'Space Mono',monospace;font-size:11px;color:#ff7a1a;font-weight:700;background:rgba(255,122,26,0.15);padding:6px 10px;border-radius:6px" id="tc-ciclo-fecha">—</div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(130px, 1fr));gap:12px">
-        <!-- Comprado -->
-        <div style="background:linear-gradient(135deg, rgba(255,122,26,0.12), rgba(255,122,26,0.05));border:1px solid rgba(255,122,26,0.2);border-radius:10px;padding:14px;text-align:center;transition:all 0.3s ease">
-          <div style="font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;font-weight:600">💳 Comprado</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:#ff7a1a;text-shadow:0 2px 6px rgba(255,122,26,0.3)" id="cc-comp">$0</div>
-        </div>
-        <!-- Abonado -->
-        <div style="background:linear-gradient(135deg, rgba(16,185,129,0.12), rgba(16,185,129,0.05));border:1px solid rgba(16,185,129,0.2);border-radius:10px;padding:14px;text-align:center;transition:all 0.3s ease">
-          <div style="font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;font-weight:600">✅ Abonado</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:#10b981;text-shadow:0 2px 6px rgba(16,185,129,0.3)" id="cc-abon">$0</div>
-        </div>
-        <!-- Neto -->
-        <div style="background:linear-gradient(135deg, rgba(226,75,74,0.12), rgba(226,75,74,0.05));border:1px solid rgba(226,75,74,0.2);border-radius:10px;padding:14px;text-align:center;transition:all 0.3s ease">
-          <div style="font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;font-weight:600">🔴 Neto a Pagar</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:#E24B4A;text-shadow:0 2px 6px rgba(226,75,74,0.3)" id="cc-neto">$0</div>
-        </div>
-        <!-- N° Compras -->
-        <div style="background:linear-gradient(135deg, rgba(0,229,255,0.12), rgba(0,229,255,0.05));border:1px solid rgba(0,229,255,0.2);border-radius:10px;padding:14px;text-align:center;transition:all 0.3s ease">
-          <div style="font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;font-weight:600">📊 Compras</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:#00e5ff;text-shadow:0 2px 6px rgba(0,229,255,0.3)" id="cc-n">0</div>
-        </div>
-        <!-- Cuota Manejo -->
-        <div style="background:linear-gradient(135deg, rgba(168,85,247,0.12), rgba(168,85,247,0.05));border:1px solid rgba(168,85,247,0.2);border-radius:10px;padding:14px;text-align:center;transition:all 0.3s ease">
-          <div style="font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;font-weight:600">💰 Cuota Manejo</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;color:#a855f7;text-shadow:0 2px 6px rgba(168,85,247,0.3)" id="cc-cuota">—</div>
-        </div>
-        <!-- Días Restantes -->
-        <div style="background:linear-gradient(135deg, rgba(239,68,68,0.12), rgba(239,68,68,0.05));border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:14px;text-align:center;transition:all 0.3s ease">
-          <div style="font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;font-weight:600">⏳ Días Restantes</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:#ef4444;text-shadow:0 2px 6px rgba(239,68,68,0.3)" id="cc-dias">—</div>
-        </div>
+    <div class="ciclo-big">
+      <div class="ciclo-big-hdr"><div class="ciclo-big-ttl">🗓 COMPRAS CICLO ACTUAL</div><div class="ciclo-big-fecha" id="tc-ciclo-fecha">—</div></div>
+      <div class="ciclo-items">
+        <div class="ci"><div class="ci-lbl">Comprado</div><div class="ci-val" style="color:var(--orange)" id="cc-comp">$0</div></div>
+        <div class="ci"><div class="ci-lbl">Abonado</div><div class="ci-val" style="color:var(--emerald)" id="cc-abon">$0</div></div>
+        <div class="ci"><div class="ci-lbl">Neto a pagar</div><div class="ci-val" style="color:var(--red)" id="cc-neto">$0</div></div>
+        <div class="ci"><div class="ci-lbl">N° compras</div><div class="ci-val" style="color:var(--cyan)" id="cc-n">0</div></div>
+        <div class="ci"><div class="ci-lbl">Cuota manejo</div><div class="ci-val" id="cc-cuota" style="font-size:13px">—</div></div>
+        <div class="ci"><div class="ci-lbl">Días restantes</div><div class="ci-val" style="color:var(--purple)" id="cc-dias">—</div></div>
       </div>
     </div>
     <div class="grid2">
       <div>
-        <!-- ✅ TABLA MOVIMIENTOS MEJORADA -->
-        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.08)">
-          <div style="background:linear-gradient(135deg, rgba(255,122,26,0.08), rgba(255,122,26,0.02));padding:16px;border-bottom:1px solid rgba(255,122,26,0.15)">
-            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;letter-spacing:1px;color:var(--text);text-transform:uppercase">📋 Últimos Movimientos</div>
-          </div>
-          <div style="overflow-x:auto">
-            <table style="width:100%;border-collapse:collapse">
-              <thead style="background:rgba(0,0,0,0.03);border-bottom:1px solid var(--border)">
-                <tr>
-                  <th style="padding:12px 14px;text-align:left;font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);letter-spacing:1px;font-weight:600;text-transform:uppercase">CONCEPTO</th>
-                  <th style="padding:12px 10px;text-align:center;font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);letter-spacing:1px;font-weight:600;text-transform:uppercase">CAT</th>
-                  <th style="padding:12px 10px;text-align:center;font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);letter-spacing:1px;font-weight:600;text-transform:uppercase">FECHA</th>
-                  <th style="padding:12px 10px;text-align:center;font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);letter-spacing:1px;font-weight:600;text-transform:uppercase">CUOTAS</th>
-                  <th style="padding:12px 14px;text-align:right;font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);letter-spacing:1px;font-weight:600;text-transform:uppercase">VALOR</th>
-                </tr>
-              </thead>
-              <tbody id="tc-dash-tb" style="font-size:12px"></tbody>
-            </table>
-          </div>
-        </div>
+        <div class="card"><div class="card-hdr"><div class="card-ttl">Últimos movimientos</div></div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>CONCEPTO</th><th>CAT</th><th>FECHA</th><th>CUOTAS</th><th>VALOR</th></tr></thead><tbody id="tc-dash-tb"></tbody></table></div></div>
       </div>
       <div class="side-col">
-        <!-- ✅ BOTÓN ABONO MEJORADO -->
-        <div style="background:linear-gradient(135deg, rgba(0,230,118,0.12), rgba(0,230,118,0.05));border:1px solid rgba(0,230,118,0.3);border-radius:12px;padding:18px;cursor:pointer;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(0,0,0,0.08)" onclick="openM('m-abono-tc')" onmouseover="this.style.boxShadow='0 8px 20px rgba(0,230,118,0.2), 0 4px 12px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)'">
-          <div style="display:flex;gap:12px;margin-bottom:12px;align-items:flex-start">
-            <div style="font-size:24px">💰</div>
-            <div>
-              <div style="font-family:'Space Mono',monospace;font-size:7px;color:rgba(0,230,118,0.6);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;font-weight:600">REDUCIR DEUDA</div>
-              <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;letter-spacing:1px;color:var(--text);text-transform:uppercase">Registrar Abono</div>
-            </div>
-          </div>
-          <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);line-height:1.5;margin-bottom:12px;border-bottom:1px solid rgba(0,230,118,0.15);padding-bottom:12px">¿Pagaste a la TC? Registra aquí y tu saldo baja al instante.</div>
-          <div style="background:linear-gradient(135deg, #00e676, #00c853);color:white;padding:10px 12px;border-radius:8px;text-align:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase">↑ Nuevo Abono</div>
+        <div class="abono-cta" onclick="openM('m-abono-tc')"><div class="abono-cta-top"><div class="abono-ico">💰</div><div><div style="font-family:'Space Mono',monospace;font-size:7px;color:rgba(0,230,118,0.5);letter-spacing:2px;margin-bottom:3px">REDUCIR DEUDA</div><div class="abono-cta-ttl">Registrar Abono</div></div></div><div class="abono-cta-sub">¿Pagaste a la TC? Regístralo aquí y tu saldo baja al instante.</div><div class="abono-cta-btn">↑ NUEVO ABONO / PAGO</div></div>
+        <div class="ciclo-lat"><div class="ciclo-lat-lbl">CICLO · CORTE DÍA 8</div>
+          <div class="cr"><span class="ck">Ciclo</span><span id="sc-ciclo" style="color:var(--cyan);font-size:10px;font-family:'Space Mono',monospace">—</span></div>
+          <div class="cr"><span class="ck">Compras</span><span style="color:var(--orange)" id="sc-comp">$0</span></div>
+          <div class="cr"><span class="ck">Abonos</span><span style="color:var(--emerald)" id="sc-pag">$0</span></div>
+          <div class="cr"><span class="ck">Neto</span><span style="color:var(--red)" id="sc-neto">$0</span></div>
+          <div class="cr"><span class="ck">Cuota manejo</span><span id="sc-cuota">—</span></div>
         </div>
-        <!-- ✅ CICLO LATERAL MEJORADO -->
-        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px;box-shadow:0 4px 12px rgba(0,0,0,0.08)">
-          <div style="font-family:'Space Mono',monospace;font-size:8px;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;font-weight:700;padding-bottom:10px;border-bottom:1px solid rgba(0,229,255,0.15)" id="ciclo-lat-lbl">CICLO · CORTE DÍA 8</div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border)">
-            <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;font-weight:600">Ciclo</span>
-            <span id="sc-ciclo" style="color:var(--cyan);font-size:11px;font-family:'Space Mono',monospace;font-weight:700">—</span>
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border)">
-            <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;font-weight:600">Compras</span>
-            <span style="color:var(--orange)" id="sc-comp" style="font-family:'Barlow Condensed',sans-serif;font-weight:700">$0</span>
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border)">
-            <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;font-weight:600">Abonos</span>
-            <span style="color:var(--emerald)" id="sc-pag" style="font-family:'Barlow Condensed',sans-serif;font-weight:700">$0</span>
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border)">
-            <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;font-weight:600">Neto</span>
-            <span style="color:var(--red)" id="sc-neto" style="font-family:'Barlow Condensed',sans-serif;font-weight:700">$0</span>
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;font-weight:600">Cuota Manejo</span>
-            <span id="sc-cuota" style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px">—</span>
-          </div>
-        </div>
-        <!-- ✅ MINI CHART MEJORADO -->
-        <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px;box-shadow:0 4px 12px rgba(0,0,0,0.08)">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:12px;letter-spacing:2px;color:var(--text2);text-transform:uppercase;margin-bottom:12px">📊 Compras por Mes</div>
-          <div style="display:flex;align-items:flex-end;gap:4px;height:60px;justify-content:space-around" id="tc-chart"></div>
-        </div>
+        <div class="mini-chart"><div class="mini-chart-ttl">COMPRAS POR MES</div><div class="bar-chart" id="tc-chart"></div></div>
       </div>
     </div>
   </div></div>
@@ -864,87 +640,47 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   </div></div>
 </div>
 
-<!-- ══════════════════════════════════════════════ -->
-<!-- MÓDULO 3: NU BANK (COMPLETAMENTE INDEPENDIENTE) -->
-<!-- ══════════════════════════════════════════════ -->
+<!-- ══════════ MOD 3: VENTAS ══════════ -->
 <div class="module" id="mod-3">
-  <div class="main nu-main">
-    <!-- HEADER NU -->
-    <div class="nu-header">
-      <div class="nu-title">NU BANK</div>
-      <div class="nu-subtitle">Tarjeta de crédito</div>
+  <div class="view active" id="ven-v0"><div class="main">
+    <div class="sl">CRM DE VENTAS</div>
+    <div class="kpi-grid-3">
+      <div class="kc green"><div class="kpi-icon ki-g">📈</div><div class="kpi-lbl">Ventas del mes</div><div class="kpi-val green" id="ven-mes">$0</div><div class="kpi-sub" id="ven-n-mes">0 ventas</div></div>
+      <div class="kc yellow"><div class="kpi-icon ki-y">⏳</div><div class="kpi-lbl">Por cobrar</div><div class="kpi-val yellow" id="ven-pend">$0</div><div class="kpi-sub">pendientes</div></div>
+      <div class="kc orange"><div class="kpi-icon ki-o">🏆</div><div class="kpi-lbl">Comisión del mes</div><div class="kpi-val orange" id="ven-com">$0</div><div class="kpi-sub">1% base gravable</div></div>
     </div>
+    <div class="card"><div class="card-hdr"><div class="card-ttl" id="ven-cnt">— ventas</div><select class="mini-sel" id="ven-fil" onchange="renderVentas()"><option value="todos">TODAS</option><option value="cobrado">COBRADAS</option><option value="pendiente">PENDIENTES</option></select></div><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>CLIENTE</th><th>FECHA</th><th>TOTAL PAGADO</th><th>BASE GRAV.</th><th>IVA 19%</th><th>RETEFUENTE</th><th>RETEICA</th><th>COMISIÓN 1%</th><th>ESTADO</th><th></th></tr></thead><tbody id="ven-tb"></tbody></table></div></div>
+  </div></div>
 
-    <!-- TARJETA VISUAL NU -->
-    <div class="nu-card-container">
-      <div class="nu-card">
-        <div class="nu-card-header">
-          <div class="nu-card-issuer" id="nu-issuer">NU BANK</div>
-          <div class="nu-card-chip">💳</div>
-        </div>
-        <div class="nu-card-middle">
-          <div class="nu-card-number">•••• •••• •••• 2024</div>
-        </div>
-        <div class="nu-card-footer">
-          <div><span class="nu-label">TITULAR</span><span class="nu-cardholder">CIRO SANTACRUZ</span></div>
-          <div><span class="nu-label">VENCE</span><span class="nu-expiry">12/27</span></div>
-        </div>
+  <div class="view" id="ven-v1"><div class="main">
+    <div class="sl">CALCULADORA FISCAL</div>
+    <div class="card" style="padding:18px">
+      <div class="card-ttl" style="margin-bottom:14px">🧮 NUEVA VENTA · DESGLOSE FISCAL</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+        <div class="fg"><label class="fl">Fecha</label><input class="fi" id="vc-fecha" type="date"></div>
+        <div class="fg"><label class="fl">Cliente</label><input class="fi" id="vc-cliente" type="text" placeholder="Nombre del cliente" autocomplete="off"></div>
+        <div class="fg"><label class="fl">Total a Pagar (COP)</label><input class="fi" id="vc-total" type="number" placeholder="1.006.271" inputmode="numeric" oninput="calcVenta()"></div>
+        <div class="fg"><label class="fl">Estado</label><select class="fs" id="vc-estado"><option value="cobrado">✅ Cobrado</option><option value="pendiente">⏳ Pendiente</option></select></div>
       </div>
-    </div>
-
-    <!-- KPI PRINCIPAL: CUPO DISPONIBLE -->
-    <div class="nu-kpi-main">
-      <div class="nu-kpi-label">Cupo disponible</div>
-      <div class="nu-kpi-value" id="nu-cupo-disp">$1.000.000</div>
-      <div class="nu-kpi-meta">De $1.000.000 de cupo total</div>
-    </div>
-
-    <!-- BARRA DE USO -->
-    <div class="nu-cupo-section">
-      <div class="nu-cupo-hdr">
-        <span>Uso del cupo</span>
-        <span class="nu-cupo-pct" id="nu-cupo-pct">0%</span>
+      <div style="display:flex;gap:20px;margin-bottom:10px;font-family:'Space Mono',monospace;font-size:10px;color:var(--text2)">
+        <label style="display:flex;align-items:center;gap:7px;cursor:pointer"><input type="checkbox" id="vc-rete" checked onchange="calcVenta()" style="accent-color:var(--blue);width:14px;height:14px"> Retefuente 2.5%</label>
+        <label style="display:flex;align-items:center;gap:7px;cursor:pointer"><input type="checkbox" id="vc-ica" checked onchange="calcVenta()" style="accent-color:var(--blue);width:14px;height:14px"> ReteICA 1.104%</label>
       </div>
-      <div class="nu-cupo-bg">
-        <div class="nu-cupo-fill" id="nu-cupo-bar" style="width: 0%"></div>
+      <div class="venta-preview" id="vc-preview" style="display:none">
+        <div class="vp-row"><span class="vp-lbl">Base Gravable</span><span class="vp-val" id="vc-base" style="color:var(--blue)">$0</span></div>
+        <div class="vp-row"><span class="vp-lbl">IVA 19%</span><span class="vp-val" id="vc-iva" style="color:var(--text3)">$0</span></div>
+        <div class="vp-row"><span class="vp-lbl">Retefuente 2.5%</span><span class="vp-val" id="vc-rf" style="color:var(--red)">—</span></div>
+        <div class="vp-row"><span class="vp-lbl">ReteICA 1.104%</span><span class="vp-val" id="vc-ri" style="color:var(--red)">—</span></div>
       </div>
-      <div class="nu-cupo-stats">
-        <div><span class="nu-stat-lbl">Usado</span><span class="nu-stat-val" id="nu-usado">$0</span></div>
-        <div><span class="nu-stat-lbl">Disponible</span><span class="nu-stat-val" id="nu-disp">$1.000.000</span></div>
+      <div class="comision-badge" id="vc-com-badge" style="display:none">
+        <div class="com-lbl">MI COMISIÓN (1%)</div>
+        <div class="com-val" id="vc-com-val">$0</div>
+      </div>
+      <div class="macts" style="margin-top:14px">
+        <button class="btn-ok bg-green" onclick="guardarVenta()" style="flex:1">💾 GUARDAR VENTA</button>
       </div>
     </div>
-
-    <!-- INFORMACIÓN CICLO -->
-    <div class="nu-info-grid">
-      <div class="nu-info-card">
-        <div class="nu-info-label">💳 Deuda actual</div>
-        <div class="nu-info-value" id="nu-deuda">$0</div>
-      </div>
-      <div class="nu-info-card">
-        <div class="nu-info-label">📅 Corte</div>
-        <div class="nu-info-value" id="nu-corte">Día 15</div>
-      </div>
-      <div class="nu-info-card">
-        <div class="nu-info-label">💳 Pago mín.</div>
-        <div class="nu-info-value" id="nu-pago-min">Día 4</div>
-      </div>
-    </div>
-
-    <!-- MOVIMIENTOS RECIENTES -->
-    <div class="nu-section">
-      <div class="nu-section-title">Movimientos recientes</div>
-      <div id="nu-movs-list" class="nu-movs-list">
-        <div class="nu-empty">Sin movimientos aún</div>
-      </div>
-    </div>
-
-    <!-- ACCIONES -->
-    <div class="nu-actions">
-      <button class="nu-btn nu-btn-primary" onclick="openNuCompraModal()">+ Registrar compra</button>
-      <button class="nu-btn nu-btn-secondary" onclick="openNuPagoModal()">↑ Registrar pago</button>
-    </div>
-
-  </div>
+  </div></div>
 </div>
 
 <!-- FABs -->
@@ -1002,23 +738,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   <div class="macts"><button class="btn-cancel" onclick="closeM('m-vuelo')">CANCELAR</button><button class="btn-ok bg-purple" onclick="guardarVuelo()">GUARDAR</button></div>
 </div></div>
 
-<!-- ── MODALES NU BANK ── -->
-<div class="modal-ov" id="m-nu-compra"><div class="modal" style="border-top:3px solid #8b3ddc">
-  <div class="m-drag"></div><h2 style="color:#8b3ddc">💳 Registrar Compra NU</h2>
-  <div class="fg"><label class="fl">Descripción</label><input class="fi" id="nu-g-desc" type="text" placeholder="Ej: Amazon, Mercado…" autocomplete="off"></div>
-  <div class="fg"><label class="fl">Valor (COP)</label><input class="fi" id="nu-g-valor" type="number" placeholder="0" inputmode="numeric"></div>
-  <div class="fg"><label class="fl">Fecha</label><input class="fi" id="nu-g-fecha" type="date"></div>
-  <div class="macts"><button class="btn-cancel" onclick="closeM('m-nu-compra')">CANCELAR</button><button class="btn-ok" style="background:#8b3ddc;border-color:#8b3ddc" onclick="guardarNuCompra()">REGISTRAR</button></div>
-</div></div>
-
-<div class="modal-ov" id="m-nu-pago"><div class="modal" style="border-top:3px solid #d946ef">
-  <div class="m-drag"></div><h2 style="color:#d946ef">💳 Registrar Pago NU</h2>
-  <div class="fg"><label class="fl">Descripción</label><input class="fi" id="nu-p-desc" type="text" placeholder="Ej: Pago NU, Abono…" autocomplete="off"></div>
-  <div class="fg"><label class="fl">Valor (COP)</label><input class="fi" id="nu-p-valor" type="number" placeholder="0" inputmode="numeric"></div>
-  <div class="fg"><label class="fl">Fecha</label><input class="fi" id="nu-p-fecha" type="date"></div>
-  <div class="macts"><button class="btn-cancel" onclick="closeM('m-nu-pago')">CANCELAR</button><button class="btn-ok" style="background:#d946ef;border-color:#d946ef" onclick="guardarNuPago()">REGISTRAR</button></div>
-</div></div>
-
 <div class="toast" id="toast"></div>
 
 <script>
@@ -1034,13 +753,57 @@ const MS = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','D
 const CATS = {'🏠 Casa':'#00e5ff','✈️ Vuelos':'#7c4dff','⛽ Gasolina':'#ff7a1a','🍔 Comida':'#ffd600','📱 Digital':'#ff4d9e','🔧 Varios':'#3b82f6'};
 
 // ══════════════════════════════════════════════
-//  DATOS BASE TC - DATOS REALES DEL BANCO (Mayo 2026)
+//  DATOS BASE TC (2025 + nuevos 2026)
 // ══════════════════════════════════════════════
-const TC_BASE_2025 = [];
-
-// Transacciones actuales - Sincronizadas con banco Davivienda
+const TC_BASE_2025 = [
+  {id:1,tipo:'compra',desc:'Vuelo',cat:'✈️ Vuelos',valor:77150,fecha:'2025-03-01',cuotas:1},
+  {id:2,tipo:'compra',desc:'Vuelo',cat:'✈️ Vuelos',valor:115330,fecha:'2025-03-01',cuotas:1},
+  {id:3,tipo:'compra',desc:'Vuelo',cat:'✈️ Vuelos',valor:154400,fecha:'2025-03-01',cuotas:1},
+  {id:4,tipo:'compra',desc:'Didifood',cat:'🍔 Comida',valor:30429,fecha:'2025-03-01',cuotas:1},
+  {id:5,tipo:'compra',desc:'Vuelo',cat:'✈️ Vuelos',valor:62251,fecha:'2025-03-01',cuotas:1},
+  {id:6,tipo:'compra',desc:'Rappiunivers',cat:'🔧 Varios',valor:59650,fecha:'2025-03-01',cuotas:1},
+  {id:7,tipo:'compra',desc:'Easy Pintura y Closet',cat:'🏠 Casa',valor:1859680,fecha:'2025-03-10',cuotas:8},
+  {id:8,tipo:'compra',desc:'Fkte Closet',cat:'🏠 Casa',valor:51200,fecha:'2025-03-10',cuotas:1},
+  {id:9,tipo:'compra',desc:'Mundimotos',cat:'🔧 Varios',valor:65100,fecha:'2025-03-10',cuotas:1},
+  {id:10,tipo:'compra',desc:'Combustible',cat:'⛽ Gasolina',valor:36951,fecha:'2025-03-10',cuotas:1},
+  {id:11,tipo:'compra',desc:'Piso',cat:'🏠 Casa',valor:1404920,fecha:'2025-03-12',cuotas:8},
+  {id:12,tipo:'compra',desc:'Almuerzo Pereira',cat:'🍔 Comida',valor:20320,fecha:'2025-03-15',cuotas:1},
+  {id:13,tipo:'compra',desc:'Taxi Aeropuerto Pereira',cat:'✈️ Vuelos',valor:8300,fecha:'2025-03-15',cuotas:1},
+  {id:14,tipo:'compra',desc:'Pintura Puertas y Vent.',cat:'🏠 Casa',valor:80000,fecha:'2025-03-15',cuotas:8},
+  {id:15,tipo:'compra',desc:'Baldosas',cat:'🏠 Casa',valor:71000,fecha:'2025-03-15',cuotas:8},
+  {id:16,tipo:'compra',desc:'Cocina Integral',cat:'🏠 Casa',valor:1795000,fecha:'2025-03-18',cuotas:17},
+  {id:17,tipo:'compra',desc:'Baño',cat:'🏠 Casa',valor:465000,fecha:'2025-03-18',cuotas:8},
+  {id:18,tipo:'compra',desc:'Gasolina carro',cat:'⛽ Gasolina',valor:30000,fecha:'2025-03-20',cuotas:1},
+  {id:19,tipo:'compra',desc:'Gasolina Moto esp',cat:'⛽ Gasolina',valor:30780,fecha:'2025-03-20',cuotas:1},
+  {id:20,tipo:'compra',desc:'Cortinas',cat:'🏠 Casa',valor:246100,fecha:'2025-03-22',cuotas:8},
+  {id:21,tipo:'compra',desc:'Cortinas',cat:'🏠 Casa',valor:30000,fecha:'2025-03-22',cuotas:1},
+  {id:22,tipo:'compra',desc:'Gasolina carro',cat:'⛽ Gasolina',valor:45960,fecha:'2025-03-25',cuotas:1},
+  {id:23,tipo:'compra',desc:'Peaje',cat:'⛽ Gasolina',valor:43300,fecha:'2025-03-25',cuotas:1},
+  {id:24,tipo:'compra',desc:'Bus Pereira',cat:'✈️ Vuelos',valor:108000,fecha:'2025-03-25',cuotas:1},
+];
+// Nuevas transacciones reales Marzo 2026
 const TC_BASE_2026 = [
-  {id:1,tipo:'compra',desc:'Deuda Davivienda',cat:'🔧 Varios',valor:8392527,fecha:'2026-05-03',cuotas:1},
+  {id:201,tipo:'pago',desc:'Zona de Pagos',cat:'💰 Abono',valor:100000,fecha:'2026-03-30',cuotas:1},
+  {id:202,tipo:'compra',desc:'Interés Mora',cat:'🔧 Varios',valor:318,fecha:'2026-03-30',cuotas:1},
+  {id:203,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:14200,fecha:'2026-03-28',cuotas:1},
+  {id:204,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:6500,fecha:'2026-03-27',cuotas:1},
+  {id:205,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:7890,fecha:'2026-03-27',cuotas:1},
+  {id:206,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:18100,fecha:'2026-03-26',cuotas:1},
+  {id:207,tipo:'compra',desc:'Facebook Ads',cat:'📱 Digital',valor:13453,fecha:'2026-03-25',cuotas:1},
+  {id:208,tipo:'compra',desc:'EDS Intexzona',cat:'⛽ Gasolina',valor:35657,fecha:'2026-03-25',cuotas:1},
+  {id:209,tipo:'compra',desc:'Sodimac Colombia',cat:'🏠 Casa',valor:214400,fecha:'2026-03-23',cuotas:1},
+  {id:210,tipo:'compra',desc:'Homecenter',cat:'🏠 Casa',valor:159900,fecha:'2026-03-23',cuotas:1},
+  {id:211,tipo:'pago',desc:'Zona de Pagos',cat:'💰 Abono',valor:143000,fecha:'2026-03-23',cuotas:1},
+  {id:212,tipo:'compra',desc:'Autocombustibles',cat:'⛽ Gasolina',valor:59000,fecha:'2026-03-18',cuotas:1},
+  {id:213,tipo:'pago',desc:'Pago',cat:'💰 Abono',valor:848,fecha:'2026-03-18',cuotas:1},
+  {id:214,tipo:'pago',desc:'Zona de Pagos',cat:'💰 Abono',valor:211000,fecha:'2026-03-18',cuotas:1},
+  {id:215,tipo:'compra',desc:'EDS Alvasar',cat:'⛽ Gasolina',valor:38788,fecha:'2026-03-17',cuotas:1},
+  {id:216,tipo:'compra',desc:'Bamboo Redbus',cat:'✈️ Vuelos',valor:107100,fecha:'2026-03-17',cuotas:1},
+  {id:217,tipo:'pago',desc:'Pago',cat:'💰 Abono',valor:287000,fecha:'2026-03-17',cuotas:1},
+  {id:218,tipo:'compra',desc:'Icotrans',cat:'🔧 Varios',valor:29760,fecha:'2026-03-16',cuotas:1},
+  {id:219,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:31800,fecha:'2026-03-13',cuotas:1},
+  {id:220,tipo:'compra',desc:'EDS Primax Americana',cat:'⛽ Gasolina',valor:29720,fecha:'2026-03-13',cuotas:1},
+  {id:221,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:26200,fecha:'2026-03-09',cuotas:1},
 ];
 
 // ══════════════════════════════════════════════
@@ -1071,7 +834,6 @@ function mergeTc(existing, newBase) {
 
 // Estado global
 let tcMovs    = loadData(KEYS.tc, () => [...TC_BASE_2025, ...TC_BASE_2026]);
-let nuBankMovs = loadData('NU_BANK_MOVS', () => []); // ✨ DATOS INDEPENDIENTES NU BANK
 let finExtras = []; // legacy — now handled per-month
 let claMovs   = loadData(KEYS.clases, () => []);
 let vueMovs   = loadData(KEYS.vuelos, () => []);
@@ -1259,7 +1021,7 @@ function renderModulo(m) {
   if(m===0)renderTC();
   if(m===1)renderFinanzas();
   if(m===2){renderClases();renderVuelos();}
-  if(m===3)renderNuBank(); // ✨ NU BANK - MÓDULO INDEPENDIENTE
+  if(m===3)renderVentas();
 }
 
 // ══════════════════════════════════════════════
@@ -1270,7 +1032,7 @@ function fmtF(f){return new Date(f+'T12:00:00').toLocaleDateString('es-CO',{day:
 function fmtFull(f){return new Date(f+'T12:00:00').toLocaleDateString('es-CO',{day:'2-digit',month:'long'});}
 function hoy(){return new Date().toISOString().split('T')[0];}
 function uid(){return Date.now()+'_'+Math.random().toString(36).slice(2,6);}
-function getCiclo(corte=CORTE){const h=new Date(),d=h.getDate(),mes=h.getMonth(),a=h.getFullYear();let ini,fin;if(d>=corte){ini=new Date(a,mes,corte);fin=new Date(a,mes+1,corte-1);}else{ini=new Date(a,mes-1,corte);fin=new Date(a,mes,corte-1);}return{ini,fin};}
+function getCiclo(){const h=new Date(),d=h.getDate(),mes=h.getMonth(),a=h.getFullYear();let ini,fin;if(d>=CORTE){ini=new Date(a,mes,CORTE);fin=new Date(a,mes+1,CORTE-1);}else{ini=new Date(a,mes-1,CORTE);fin=new Date(a,mes,CORTE-1);}return{ini,fin};}
 function inCiclo(f,c){const d=new Date(f+'T12:00:00');return d>=c.ini&&d<=c.fin;}
 function fmtCiclo(c){return`${c.ini.getDate()} ${MS[c.ini.getMonth()]} – ${c.fin.getDate()} ${MS[c.fin.getMonth()]} ${c.fin.getFullYear()}`;}
 function diasR(ciclo){return Math.max(0,Math.ceil((new Date(ciclo.fin).setHours(23,59,59)-new Date())/86400000));}
@@ -1279,30 +1041,19 @@ function diasR(ciclo){return Math.max(0,Math.ceil((new Date(ciclo.fin).setHours(
 //  RENDER TC
 // ══════════════════════════════════════════════
 function renderTC(){
-  // ✅ DAVIVIENDA - Configuración fija, sin multi-tarjeta
-  const cupoTotal = CUPO_TOTAL;
-  const corteActual = CORTE;
-  const cuotaManejoActual = CUOTA_MANEJO;
-
-  // DEBUG: Log de render
-  console.log('🎯 renderTC() - Davivienda - Corte:', corteActual, 'Cupo:', cupoTotal);
-
-  // ✅ Siempre usa tcMovs (sin condiciones)
-  const movsActivos = tcMovs;
-
-  const comp=movsActivos.filter(m=>m.tipo==='compra');
-  const pag=movsActivos.filter(m=>m.tipo==='pago');
+  const comp=tcMovs.filter(m=>m.tipo==='compra');
+  const pag=tcMovs.filter(m=>m.tipo==='pago');
   const sumC=comp.reduce((s,m)=>s+m.valor,0);
   const sumP=pag.reduce((s,m)=>s+m.valor,0);
   const deuda=Math.max(0,sumC-sumP);
-  const cupoD=cupoTotal-deuda;
-  const pct=Math.min(100,(deuda/cupoTotal)*100);
-  const ciclo=getCiclo(corteActual);  // ✅ Ahora recibe corte correcto de cfg
+  const cupoD=CUPO_TOTAL-deuda;
+  const pct=Math.min(100,(deuda/CUPO_TOTAL)*100);
+  const ciclo=getCiclo();
   const cc=comp.filter(m=>inCiclo(m.fecha,ciclo));
   const cC=cc.reduce((s,m)=>s+m.valor,0);
   const cP=pag.filter(m=>inCiclo(m.fecha,ciclo)).reduce((s,m)=>s+m.valor,0);
   const neto=Math.max(0,cC-cP);
-  const aplC=cC<cuotaManejoActual;
+  const aplC=cC<UMBRAL_CUOTA;
   const pm={};comp.forEach(m=>{const k=m.fecha.slice(0,7);pm[k]=(pm[k]||0)+m.valor;});
   let mkH=null,mvH=0;Object.entries(pm).forEach(([k,v])=>{if(v>mvH){mvH=v;mkH=k;}});
   const porCat={};comp.forEach(m=>{const c=m.cat||'🔧 Varios';if(!porCat[c])porCat[c]={total:0,items:[]};porCat[c].total+=m.valor;porCat[c].items.push(m);});
@@ -1318,24 +1069,10 @@ function renderTC(){
   $('tc-cupo-pct').textContent=ps+'% utilizado';$('tc-cupo-bar').style.width=ps+'%';
   $('tc-usado').textContent='Usado: '+fmt(deuda);$('tc-disp').textContent='Disponible: '+fmt(cupoD);
 
-  // ✅ Alerta con color-coding dinámico
+  // Alerta
   const al=$('tc-alerta');
-  if(pct>=90){
-    al.classList.remove('hide');
-    al.style.borderLeftColor='#ef4444';
-    al.style.background='linear-gradient(135deg, rgba(239,68,68,0.12), rgba(239,68,68,0.05))';
-    $('tc-al-tit').textContent='🚨 CUPO CRÍTICO — '+ps+'% USADO';
-    $('tc-al-tit').style.color='#ef4444';
-    $('tc-al-desc').textContent='Solo quedan '+fmt(cupoD)+'. Evita nuevas compras.';
-  }
-  else if(pct>=80){
-    al.classList.remove('hide');
-    al.style.borderLeftColor='#f97316';
-    al.style.background='linear-gradient(135deg, rgba(249,115,22,0.12), rgba(249,115,22,0.05))';
-    $('tc-al-tit').textContent='⚠️ ALERTA — '+ps+'% DEL CUPO USADO';
-    $('tc-al-tit').style.color='#f97316';
-    $('tc-al-desc').textContent='Tienes '+fmt(cupoD)+' disponibles. Controla tus gastos.';
-  }
+  if(pct>=90){al.classList.remove('hide');$('tc-al-tit').textContent='🚨 CUPO CRÍTICO — '+ps+'% USADO';$('tc-al-desc').textContent='Solo quedan '+fmt(cupoD)+'. Evita nuevas compras.';}
+  else if(pct>=80){al.classList.remove('hide');$('tc-al-tit').textContent='⚠️ ALERTA — '+ps+'% DEL CUPO USADO';$('tc-al-desc').textContent='Tienes '+fmt(cupoD)+' disponibles. Controla tus gastos.';}
   else{al.classList.add('hide');}
 
   // Ciclo big
@@ -1352,11 +1089,11 @@ function renderTC(){
 
   // Ciclo lat
   $('sc-ciclo').textContent=fmtCiclo(ciclo);$('sc-comp').textContent=fmt(cC);$('sc-pag').textContent=fmt(cP);$('sc-neto').textContent=fmt(neto);
-  const sce=$('sc-cuota');sce.textContent=aplC?'❌ Aplica ('+fmt(cuotaManejoActual)+')':'✅ Sin cobro';sce.style.color=aplC?'var(--red)':'var(--emerald)';
+  const sce=$('sc-cuota');sce.textContent=aplC?'❌ Aplica ('+fmt(CUOTA_MANEJO)+')':'✅ Sin cobro';sce.style.color=aplC?'var(--red)':'var(--emerald)';
 
   // Dash tabla (últimos 8)
   const tb=$('tc-dash-tb');
-  const d8=[...movsActivos].sort((a,b)=>new Date(b.fecha)-new Date(a.fecha)).slice(0,8);
+  const d8=[...tcMovs].sort((a,b)=>new Date(b.fecha)-new Date(a.fecha)).slice(0,8);
   tb.innerHTML=d8.map(m=>`<tr><td>${m.desc}</td><td style="font-size:12px">${(m.cat||'🔧').split(' ')[0]}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2)">${fmtF(m.fecha)}</td><td style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);text-align:center">${(m.cuotas||1)>1?m.cuotas+'x':'—'}</td><td class="${m.tipo==='compra'?'vn':'vp'}">${m.tipo==='compra'?'–':'+'}${fmt(m.valor)}</td></tr>`).join('')||'<tr><td colspan="5"><div class="empty">SIN DATOS</div></td></tr>';
 
   // Chart
@@ -1369,201 +1106,6 @@ function renderTC(){
   const total2=Object.values(porCat).reduce((s,c)=>s+c.total,0)||1;
   const sorted=Object.entries(porCat).sort((a,b)=>b[1].total-a[1].total);
   $('tc-cat-grid').innerHTML=sorted.map(([cat,data])=>{const col=CATS[cat]||'var(--text3)';const p=((data.total/total2)*100).toFixed(1);return`<div class="cat-card" onclick="filtrarCat('${cat}')"><div class="cat-top"><span class="cat-emoji">${cat.split(' ')[0]}</span><span class="cat-name" style="color:${col}">${cat.split(' ').slice(1).join(' ')}</span></div><div class="cat-amt" style="color:${col}">${fmt(data.total)}</div><div class="cat-cnt">${data.items.length} gastos · ${p}%</div><div class="cat-bar-bg"><div class="cat-bar-fill" style="width:${p}%;background:${col}"></div></div></div>`;}).join('');
-
-  // ✅ Actualizar elementos de tarjeta Davivienda (valores fijos)
-  const cardIssuer = $('card-issuer');
-  if(cardIssuer) {
-    cardIssuer.textContent = 'DAVIVIENDA';
-    console.log('✅ card-issuer: DAVIVIENDA');
-  }
-
-  const cardCiclo = $('card-ciclo');
-  if(cardCiclo) {
-    cardCiclo.textContent = CORTE;
-    console.log('✅ card-ciclo:', CORTE);
-  }
-
-  const cicloLatLbl = $('ciclo-lat-lbl');
-  if(cicloLatLbl) {
-    cicloLatLbl.textContent = 'CICLO · CORTE DÍA ' + CORTE;
-    console.log('✅ ciclo-lat-lbl:', cicloLatLbl.textContent);
-  }
-
-  // ✅ Estilo de tarjeta Davivienda
-  const tarjetaCard=$('tarjeta-card');
-  if(tarjetaCard){
-    tarjetaCard.style.background='linear-gradient(135deg, rgba(255,122,26,0.12), rgba(255,122,26,0.05))';
-    tarjetaCard.style.borderColor='rgba(255,122,26,0.3)';
-  }
-}
-
-// ══════════════════════════════════════════════════════════════════════
-//  RENDER NU BANK - MÓDULO INDEPENDIENTE
-// ══════════════════════════════════════════════════════════════════════
-function renderNuBank(){
-  console.log('🟣 renderNuBank() - Iniciando render NU BANK...');
-
-  // Configuración fija NU BANK (COMPLETAMENTE INDEPENDIENTE)
-  const NU_CONFIG = {
-    nombre: 'NU BANK',
-    cupo: 1000000,
-    corte: 15,
-    pagoMin: 4
-  };
-
-  // Datos locales (separados de TC)
-  const compras = nuBankMovs.filter(m => m.tipo === 'compra');
-  const pagos = nuBankMovs.filter(m => m.tipo === 'pago');
-  const sumC = compras.reduce((s, m) => s + m.valor, 0);
-  const sumP = pagos.reduce((s, m) => s + m.valor, 0);
-  const deuda = Math.max(0, sumC - sumP);
-  const cupoDisp = NU_CONFIG.cupo - deuda;
-  const pctUso = Math.min(100, (deuda / NU_CONFIG.cupo) * 100);
-
-  console.log('📊 NU BANK Estado:', { deuda, cupoDisp, pctUso, compras: compras.length, pagos: pagos.length });
-
-  // Actualizar KPI principal
-  $('nu-cupo-disp').textContent = fmt(cupoDisp);
-  $('nu-cupo-pct').textContent = pctUso.toFixed(1) + '%';
-
-  // Actualizar barra de uso
-  const barFill = $('nu-cupo-bar');
-  if(barFill) barFill.style.width = pctUso + '%';
-
-  // Actualizar stats
-  $('nu-usado').textContent = fmt(deuda);
-  $('nu-disp').textContent = fmt(cupoDisp);
-
-  // Actualizar info cards
-  $('nu-deuda').textContent = fmt(deuda);
-  $('nu-corte').textContent = `Día ${NU_CONFIG.corte}`;
-  $('nu-pago-min').textContent = `Día ${NU_CONFIG.pagoMin}`;
-
-  // Renderizar movimientos recientes
-  const listaMovs = [...nuBankMovs].sort((a, b) => new Date(b.fecha) - new Date(a.fecha)).slice(0, 8);
-  const movsList = $('nu-movs-list');
-
-  if(listaMovs.length === 0) {
-    movsList.innerHTML = '<div class="nu-empty">Sin movimientos aún</div>';
-  } else {
-    movsList.innerHTML = listaMovs.map(m => `
-      <div class="nu-mov-item">
-        <div class="nu-mov-left">
-          <div class="nu-mov-ico">${m.tipo === 'compra' ? '💳' : '✅'}</div>
-          <div class="nu-mov-desc">
-            <span class="nu-mov-title">${m.desc}</span>
-            <span class="nu-mov-date">${fmtF(m.fecha)}</span>
-          </div>
-        </div>
-        <div class="nu-mov-val ${m.tipo}">${m.tipo === 'compra' ? '−' : '+'}${fmt(m.valor)}</div>
-      </div>
-    `).join('');
-  }
-
-  console.log('✅ renderNuBank() completado');
-}
-
-// ══════════════════════════════════════════════
-//  NU BANK - MANEJO DE MODALES Y GUARDADO
-// ══════════════════════════════════════════════
-function openNuCompraModal() {
-  $('nu-g-desc').value = '';
-  $('nu-g-valor').value = '';
-  $('nu-g-fecha').value = hoy();
-  openM('m-nu-compra');
-}
-
-function openNuPagoModal() {
-  $('nu-p-desc').value = '';
-  $('nu-p-valor').value = '';
-  $('nu-p-fecha').value = hoy();
-  openM('m-nu-pago');
-}
-
-function guardarNuCompra() {
-  const desc = $('nu-g-desc')?.value?.trim() || '';
-  const valorStr = $('nu-g-valor')?.value?.trim() || '';
-  const fecha = $('nu-g-fecha')?.value || '';
-
-  // ✅ Validaciones
-  if(!desc) { toast('Ingresa descripción', 'error'); return; }
-  if(!valorStr) { toast('Ingresa valor', 'error'); return; }
-  if(!fecha) { toast('Ingresa fecha', 'error'); return; }
-
-  const valor = parseFloat(valorStr);
-  if(isNaN(valor) || valor <= 0) { toast('Valor debe ser > 0', 'error'); return; }
-
-  const dateObj = new Date(fecha + 'T12:00:00');
-  if(isNaN(dateObj.getTime())) { toast('Fecha inválida', 'error'); return; }
-
-  // ✅ Registrar movimiento
-  nuBankMovs.push({
-    id: uid(),
-    tipo: 'compra',
-    desc: desc,
-    valor: valor,
-    fecha: fecha,
-    cat: '💳 NU'
-  });
-
-  saveData('NU_BANK_MOVS', nuBankMovs);
-  renderNuBank();
-  closeM('m-nu-compra');
-  toast('✅ Compra registrada', 'ok');
-  console.log('💳 Compra guardada:', desc, 'COP$' + valor);
-}
-
-function guardarNuPago() {
-  const desc = $('nu-p-desc')?.value?.trim() || '';
-  const valorStr = $('nu-p-valor')?.value?.trim() || '';
-  const fecha = $('nu-p-fecha')?.value || '';
-
-  // ✅ Validaciones
-  if(!desc) { toast('Ingresa descripción', 'error'); return; }
-  if(!valorStr) { toast('Ingresa valor', 'error'); return; }
-  if(!fecha) { toast('Ingresa fecha', 'error'); return; }
-
-  const valor = parseFloat(valorStr);
-  if(isNaN(valor) || valor <= 0) { toast('Valor debe ser > 0', 'error'); return; }
-
-  const dateObj = new Date(fecha + 'T12:00:00');
-  if(isNaN(dateObj.getTime())) { toast('Fecha inválida', 'error'); return; }
-
-  // ✅ Validar que el pago no exceda la deuda
-  const deudaActual = nuBankMovs
-    .filter(m => m.tipo === 'compra')
-    .reduce((s, m) => s + m.valor, 0) - nuBankMovs
-    .filter(m => m.tipo === 'pago')
-    .reduce((s, m) => s + m.valor, 0);
-
-  if(valor > deudaActual + 100) { // +100 de tolerancia para redondeos
-    toast(`Pago mayor a deuda ($${fmt(deudaActual)})`, 'error');
-    return;
-  }
-
-  // ✅ Registrar movimiento
-  nuBankMovs.push({
-    id: uid(),
-    tipo: 'pago',
-    desc: desc,
-    valor: valor,
-    fecha: fecha,
-    cat: '✅ Pago'
-  });
-
-  saveData('NU_BANK_MOVS', nuBankMovs);
-  renderNuBank();
-  closeM('m-nu-pago');
-  toast('✅ Pago registrado', 'ok');
-  console.log('💳 Pago guardado:', desc, 'COP$' + valor);
-}
-
-function elimNuMovimiento(id) {
-  if(!confirm('¿Eliminar movimiento?')) return;
-  nuBankMovs = nuBankMovs.filter(m => String(m.id) !== String(id));
-  saveData('NU_BANK_MOVS', nuBankMovs);
-  renderNuBank();
-  toast('Movimiento eliminado', 'ok');
 }
 
 function filtrarCat(c){$('tc-cat-fil').value=c;setMod(0);setInner(0,1);}
@@ -1903,7 +1445,7 @@ function guardarVenta(){
   venMovs.unshift(nuevaVenta);
   saveData(KEYS.ventas,venMovs);
   $('vc-total').value='';$('vc-cliente').value='';$('vc-preview').style.display='none';$('vc-com-badge').style.display='none';
-  // renderVentas removed - sales tab deleted; setInner(3,0);toast('✓ Venta registrada · Comisión: '+fmt(com),'ok');
+  renderVentas();setInner(3,0);toast('✓ Venta registrada · Comisión: '+fmt(com),'ok');
   enviarSheets({modulo:'ventas', ...nuevaVenta});
 }
 
@@ -2009,7 +1551,7 @@ async function syncAll(){
     modoOnline = true;
     setSyncState('ok','✓ SHEETS CONECTADO');
     renderTC();
-    // if(moduloActual===3) renderVentas(); - sales tab deleted
+    if(moduloActual===3) renderVentas();
 
   } catch(e){
     setSyncState('','OFFLINE');
@@ -2121,25 +1663,4 @@ function dismissInstall(){localStorage.setItem('cirox_no_install','1');document.
 // ══════════════════════════════════════════════
 const DATOS_PDF_NUEVO = [
   {id:1000,tipo:'compra',desc:'AVIANCASA',cat:'✈️ Vuelos',valor:115330,fecha:'2026-02-11',cuotas:1},
-  {id:1001,tipo:'compra',desc:'SPOTIFY',cat:'🎵 Suscripciones',valor:19900,fecha:'2026-02-15',cuotas:1}
-];
-
-// ══════════════════════════════════════════════
-//  INICIALIZAR APP AL CARGAR
-// ══════════════════════════════════════════════
-window.addEventListener('load', function() {
-  try {
-    console.log('🚀 CIROX iniciando...');
-    // Inicializar con TC Davivienda (módulo 0)
-    setTimeout(() => {
-      setMod(0);
-      console.log('✅ CIROX cargado - TC Davivienda activo');
-    }, 100);
-  } catch(err) {
-    console.error('❌ Error en inicialización:', err);
-  }
-});
-
-</script>
-</body>
-</html>
+  {id:1001,tipo:'c

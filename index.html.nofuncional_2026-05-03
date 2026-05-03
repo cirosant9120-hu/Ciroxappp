@@ -429,7 +429,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
   <div class="mod-tab active" onclick="setMod(0)"><div class="mod-tab-emoji">💳</div><div class="mod-tab-label">TC</div></div>
   <div class="mod-tab" onclick="setMod(1)"><div class="mod-tab-emoji">💰</div><div class="mod-tab-label">Finanzas</div></div>
   <div class="mod-tab" onclick="setMod(2)"><div class="mod-tab-emoji">📚</div><div class="mod-tab-label">Clases &amp; Vuelos</div></div>
-  <div class="mod-tab" onclick="setMod(3)"><div class="mod-tab-emoji">💳</div><div class="mod-tab-label">NU BANK</div></div>
+  <div class="mod-tab" onclick="setMod(3)"><div class="mod-tab-emoji">💜</div><div class="mod-tab-label">NU BANK</div></div>
 </div>
 
 <!-- STATUS BAR -->
@@ -457,32 +457,33 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
     </div>
 
 
-    <!-- ✅ TARJETA DAVIVIENDA COMPACTA STYLE NU BANK -->
-    <div style="background:linear-gradient(135deg, #E24B4A 0%, #d63a3a 100%);border-radius:16px;padding:20px;margin-bottom:24px;box-shadow:0 12px 32px rgba(226,75,74,0.2), 0 4px 8px rgba(0,0,0,0.1);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;color:white;aspect-ratio:16/10;max-width:400px" id="tarjeta-card">
-      <!-- Efecto shine -->
-      <div style="position:absolute;top:-50%;right:-20%;width:60%;height:60%;background:radial-gradient(ellipse, rgba(255,255,255,0.15), transparent 70%);pointer-events:none"></div>
-
-      <!-- Contenido Principal -->
-      <div style="position:relative;z-index:2">
-        <!-- Header: Logo y chip -->
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;letter-spacing:2px">DAVIVIENDA</div>
-          <div style="width:40px;height:26px;background:linear-gradient(135deg, #60a5fa, #3b82f6);border-radius:6px;border:1px solid rgba(255,255,255,0.3);opacity:0.85"></div>
-        </div>
-
-        <!-- Número tarjeta -->
-        <div style="font-family:'Space Mono',monospace;font-size:16px;letter-spacing:3px;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,0.2)">•••• •••• •••• 8762</div>
-      </div>
-
-      <!-- Footer: Info tarjeta -->
-      <div style="position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end">
+    <!-- ✅ TARJETA DAVIVIENDA MEJORADA -->
+    <div style="background:linear-gradient(135deg, rgba(255,122,26,0.15), rgba(255,122,26,0.08));border:2px solid rgba(255,122,26,0.4);border-radius:16px;padding:24px;margin-bottom:24px;box-shadow:0 8px 32px rgba(255,122,26,0.15), inset 0 1px 0 rgba(255,255,255,0.1);backdrop-filter:blur(10px);position:relative;overflow:hidden" id="tarjeta-card">
+      <div style="position:absolute;top:-50%;right:-50%;width:100%;height:100%;background:radial-gradient(ellipse 60% 60% at 100% 0%, rgba(255,122,26,0.2), transparent 70%);pointer-events:none"></div>
+      <!-- ✅ CONTENIDO TARJETA -->
+      <div style="position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px">
         <div>
-          <div style="font-family:'Space Mono',monospace;font-size:8px;opacity:0.7;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase">Titular</div>
-          <div style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700">CIRO SANTACRUZ</div>
+          <div style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;font-weight:600">Tarjeta de Crédito</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:24px;color:var(--text);letter-spacing:2px;text-shadow:0 2px 8px rgba(0,0,0,0.2)" id="card-issuer">DAVIVIENDA</div>
         </div>
-        <div style="text-align:right">
-          <div style="font-family:'Space Mono',monospace;font-size:8px;opacity:0.7;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase">Vence</div>
-          <div style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700" id="card-expiry">04/28</div>
+        <div style="text-align:right;background:rgba(255,122,26,0.15);padding:8px 12px;border-radius:8px;border:1px solid rgba(255,122,26,0.3)">
+          <div style="font-family:'Space Mono',monospace;font-size:7px;color:var(--text2);margin-bottom:4px;letter-spacing:1px">VÁLIDA</div>
+          <div style="font-family:'Space Mono',monospace;font-size:13px;color:#ff7a1a;font-weight:700" id="card-expiry">04/25</div>
+        </div>
+      </div>
+      <div style="background:rgba(0,0,0,0.2);height:1px;margin-bottom:16px"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+        <div>
+          <div style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Titular</div>
+          <div style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text)">CIRO V. SANTOS</div>
+        </div>
+        <div>
+          <div style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Últimos dígitos</div>
+          <div style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text)">···· 8762</div>
+        </div>
+        <div>
+          <div style="font-family:'Space Mono',monospace;font-size:8px;color:var(--text2);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Ciclo</div>
+          <div style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text)" id="card-ciclo">8</div>
         </div>
       </div>
     </div>
@@ -917,7 +918,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
     <!-- INFORMACIÓN CICLO -->
     <div class="nu-info-grid">
       <div class="nu-info-card">
-        <div class="nu-info-label">💳 Deuda actual</div>
+        <div class="nu-info-label">💜 Deuda actual</div>
         <div class="nu-info-value" id="nu-deuda">$0</div>
       </div>
       <div class="nu-info-card">
@@ -1004,7 +1005,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 
 <!-- ── MODALES NU BANK ── -->
 <div class="modal-ov" id="m-nu-compra"><div class="modal" style="border-top:3px solid #8b3ddc">
-  <div class="m-drag"></div><h2 style="color:#8b3ddc">💳 Registrar Compra NU</h2>
+  <div class="m-drag"></div><h2 style="color:#8b3ddc">💜 Registrar Compra NU</h2>
   <div class="fg"><label class="fl">Descripción</label><input class="fi" id="nu-g-desc" type="text" placeholder="Ej: Amazon, Mercado…" autocomplete="off"></div>
   <div class="fg"><label class="fl">Valor (COP)</label><input class="fi" id="nu-g-valor" type="number" placeholder="0" inputmode="numeric"></div>
   <div class="fg"><label class="fl">Fecha</label><input class="fi" id="nu-g-fecha" type="date"></div>
@@ -1012,7 +1013,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 </div></div>
 
 <div class="modal-ov" id="m-nu-pago"><div class="modal" style="border-top:3px solid #d946ef">
-  <div class="m-drag"></div><h2 style="color:#d946ef">💳 Registrar Pago NU</h2>
+  <div class="m-drag"></div><h2 style="color:#d946ef">💜 Registrar Pago NU</h2>
   <div class="fg"><label class="fl">Descripción</label><input class="fi" id="nu-p-desc" type="text" placeholder="Ej: Pago NU, Abono…" autocomplete="off"></div>
   <div class="fg"><label class="fl">Valor (COP)</label><input class="fi" id="nu-p-valor" type="number" placeholder="0" inputmode="numeric"></div>
   <div class="fg"><label class="fl">Fecha</label><input class="fi" id="nu-p-fecha" type="date"></div>
@@ -1034,13 +1035,65 @@ const MS = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','D
 const CATS = {'🏠 Casa':'#00e5ff','✈️ Vuelos':'#7c4dff','⛽ Gasolina':'#ff7a1a','🍔 Comida':'#ffd600','📱 Digital':'#ff4d9e','🔧 Varios':'#3b82f6'};
 
 // ══════════════════════════════════════════════
-//  DATOS BASE TC - DATOS REALES DEL BANCO (Mayo 2026)
+//  DAVIVIENDA CONFIGURACIÓN FIJA
 // ══════════════════════════════════════════════
-const TC_BASE_2025 = [];
+const CORTE = 8;
+const PAGO_MIN_DIA = 25;
+const CUPO_TOTAL = 8400000;
+const CUOTA_MANEJO = 500000;
 
-// Transacciones actuales - Sincronizadas con banco Davivienda
+// ══════════════════════════════════════════════
+//  DATOS BASE TC (2025 + nuevos 2026)
+// ══════════════════════════════════════════════
+const TC_BASE_2025 = [
+  {id:1,tipo:'compra',desc:'Vuelo',cat:'✈️ Vuelos',valor:77150,fecha:'2025-03-01',cuotas:1},
+  {id:2,tipo:'compra',desc:'Vuelo',cat:'✈️ Vuelos',valor:115330,fecha:'2025-03-01',cuotas:1},
+  {id:3,tipo:'compra',desc:'Vuelo',cat:'✈️ Vuelos',valor:154400,fecha:'2025-03-01',cuotas:1},
+  {id:4,tipo:'compra',desc:'Didifood',cat:'🍔 Comida',valor:30429,fecha:'2025-03-01',cuotas:1},
+  {id:5,tipo:'compra',desc:'Vuelo',cat:'✈️ Vuelos',valor:62251,fecha:'2025-03-01',cuotas:1},
+  {id:6,tipo:'compra',desc:'Rappiunivers',cat:'🔧 Varios',valor:59650,fecha:'2025-03-01',cuotas:1},
+  {id:7,tipo:'compra',desc:'Easy Pintura y Closet',cat:'🏠 Casa',valor:1859680,fecha:'2025-03-10',cuotas:8},
+  {id:8,tipo:'compra',desc:'Fkte Closet',cat:'🏠 Casa',valor:51200,fecha:'2025-03-10',cuotas:1},
+  {id:9,tipo:'compra',desc:'Mundimotos',cat:'🔧 Varios',valor:65100,fecha:'2025-03-10',cuotas:1},
+  {id:10,tipo:'compra',desc:'Combustible',cat:'⛽ Gasolina',valor:36951,fecha:'2025-03-10',cuotas:1},
+  {id:11,tipo:'compra',desc:'Piso',cat:'🏠 Casa',valor:1404920,fecha:'2025-03-12',cuotas:8},
+  {id:12,tipo:'compra',desc:'Almuerzo Pereira',cat:'🍔 Comida',valor:20320,fecha:'2025-03-15',cuotas:1},
+  {id:13,tipo:'compra',desc:'Taxi Aeropuerto Pereira',cat:'✈️ Vuelos',valor:8300,fecha:'2025-03-15',cuotas:1},
+  {id:14,tipo:'compra',desc:'Pintura Puertas y Vent.',cat:'🏠 Casa',valor:80000,fecha:'2025-03-15',cuotas:8},
+  {id:15,tipo:'compra',desc:'Baldosas',cat:'🏠 Casa',valor:71000,fecha:'2025-03-15',cuotas:8},
+  {id:16,tipo:'compra',desc:'Cocina Integral',cat:'🏠 Casa',valor:1795000,fecha:'2025-03-18',cuotas:17},
+  {id:17,tipo:'compra',desc:'Baño',cat:'🏠 Casa',valor:465000,fecha:'2025-03-18',cuotas:8},
+  {id:18,tipo:'compra',desc:'Gasolina carro',cat:'⛽ Gasolina',valor:30000,fecha:'2025-03-20',cuotas:1},
+  {id:19,tipo:'compra',desc:'Gasolina Moto esp',cat:'⛽ Gasolina',valor:30780,fecha:'2025-03-20',cuotas:1},
+  {id:20,tipo:'compra',desc:'Cortinas',cat:'🏠 Casa',valor:246100,fecha:'2025-03-22',cuotas:8},
+  {id:21,tipo:'compra',desc:'Cortinas',cat:'🏠 Casa',valor:30000,fecha:'2025-03-22',cuotas:1},
+  {id:22,tipo:'compra',desc:'Gasolina carro',cat:'⛽ Gasolina',valor:45960,fecha:'2025-03-25',cuotas:1},
+  {id:23,tipo:'compra',desc:'Peaje',cat:'⛽ Gasolina',valor:43300,fecha:'2025-03-25',cuotas:1},
+  {id:24,tipo:'compra',desc:'Bus Pereira',cat:'✈️ Vuelos',valor:108000,fecha:'2025-03-25',cuotas:1},
+];
+// Nuevas transacciones reales Marzo 2026
 const TC_BASE_2026 = [
-  {id:1,tipo:'compra',desc:'Deuda Davivienda',cat:'🔧 Varios',valor:8392527,fecha:'2026-05-03',cuotas:1},
+  {id:201,tipo:'pago',desc:'Zona de Pagos',cat:'💰 Abono',valor:100000,fecha:'2026-03-30',cuotas:1},
+  {id:202,tipo:'compra',desc:'Interés Mora',cat:'🔧 Varios',valor:318,fecha:'2026-03-30',cuotas:1},
+  {id:203,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:14200,fecha:'2026-03-28',cuotas:1},
+  {id:204,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:6500,fecha:'2026-03-27',cuotas:1},
+  {id:205,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:7890,fecha:'2026-03-27',cuotas:1},
+  {id:206,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:18100,fecha:'2026-03-26',cuotas:1},
+  {id:207,tipo:'compra',desc:'Facebook Ads',cat:'📱 Digital',valor:13453,fecha:'2026-03-25',cuotas:1},
+  {id:208,tipo:'compra',desc:'EDS Intexzona',cat:'⛽ Gasolina',valor:35657,fecha:'2026-03-25',cuotas:1},
+  {id:209,tipo:'compra',desc:'Sodimac Colombia',cat:'🏠 Casa',valor:214400,fecha:'2026-03-23',cuotas:1},
+  {id:210,tipo:'compra',desc:'Homecenter',cat:'🏠 Casa',valor:159900,fecha:'2026-03-23',cuotas:1},
+  {id:211,tipo:'pago',desc:'Zona de Pagos',cat:'💰 Abono',valor:143000,fecha:'2026-03-23',cuotas:1},
+  {id:212,tipo:'compra',desc:'Autocombustibles',cat:'⛽ Gasolina',valor:59000,fecha:'2026-03-18',cuotas:1},
+  {id:213,tipo:'pago',desc:'Pago',cat:'💰 Abono',valor:848,fecha:'2026-03-18',cuotas:1},
+  {id:214,tipo:'pago',desc:'Zona de Pagos',cat:'💰 Abono',valor:211000,fecha:'2026-03-18',cuotas:1},
+  {id:215,tipo:'compra',desc:'EDS Alvasar',cat:'⛽ Gasolina',valor:38788,fecha:'2026-03-17',cuotas:1},
+  {id:216,tipo:'compra',desc:'Bamboo Redbus',cat:'✈️ Vuelos',valor:107100,fecha:'2026-03-17',cuotas:1},
+  {id:217,tipo:'pago',desc:'Pago',cat:'💰 Abono',valor:287000,fecha:'2026-03-17',cuotas:1},
+  {id:218,tipo:'compra',desc:'Icotrans',cat:'🔧 Varios',valor:29760,fecha:'2026-03-16',cuotas:1},
+  {id:219,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:31800,fecha:'2026-03-13',cuotas:1},
+  {id:220,tipo:'compra',desc:'EDS Primax Americana',cat:'⛽ Gasolina',valor:29720,fecha:'2026-03-13',cuotas:1},
+  {id:221,tipo:'compra',desc:'Didi Ride',cat:'🔧 Varios',valor:26200,fecha:'2026-03-09',cuotas:1},
 ];
 
 // ══════════════════════════════════════════════
@@ -1510,7 +1563,7 @@ function guardarNuCompra() {
   renderNuBank();
   closeM('m-nu-compra');
   toast('✅ Compra registrada', 'ok');
-  console.log('💳 Compra guardada:', desc, 'COP$' + valor);
+  console.log('💜 Compra guardada:', desc, 'COP$' + valor);
 }
 
 function guardarNuPago() {
@@ -1555,7 +1608,7 @@ function guardarNuPago() {
   renderNuBank();
   closeM('m-nu-pago');
   toast('✅ Pago registrado', 'ok');
-  console.log('💳 Pago guardado:', desc, 'COP$' + valor);
+  console.log('💜 Pago guardado:', desc, 'COP$' + valor);
 }
 
 function elimNuMovimiento(id) {
@@ -2123,22 +2176,6 @@ const DATOS_PDF_NUEVO = [
   {id:1000,tipo:'compra',desc:'AVIANCASA',cat:'✈️ Vuelos',valor:115330,fecha:'2026-02-11',cuotas:1},
   {id:1001,tipo:'compra',desc:'SPOTIFY',cat:'🎵 Suscripciones',valor:19900,fecha:'2026-02-15',cuotas:1}
 ];
-
-// ══════════════════════════════════════════════
-//  INICIALIZAR APP AL CARGAR
-// ══════════════════════════════════════════════
-window.addEventListener('load', function() {
-  try {
-    console.log('🚀 CIROX iniciando...');
-    // Inicializar con TC Davivienda (módulo 0)
-    setTimeout(() => {
-      setMod(0);
-      console.log('✅ CIROX cargado - TC Davivienda activo');
-    }, 100);
-  } catch(err) {
-    console.error('❌ Error en inicialización:', err);
-  }
-});
 
 </script>
 </body>
